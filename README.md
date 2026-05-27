@@ -170,3 +170,4 @@ Use this BibTeX entry:
 - [Erich's packing center](https://erich-friedman.github.io/packing/) - a repository of packing problems in various geometries
 - [The Analytic Number Theory Exponent Database](https://github.com/teorth/expdb) (ANTEDB) - a repository of exponents in analytic number theory
 - [Index of Mathematical Databases](https://mathbases.org/) - a large collection of mathematical databases
+- [Fast matrix multiplication algorithms](https://fmm.univ-lille.fr) - a catalogue of matrix multiplication schemes for fixed-sized matrices, maintained by Alexandre Sedoglavic
