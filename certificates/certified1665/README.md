@@ -45,3 +45,5 @@ refereed.
 
 **AI disclosure.** This is a fully AI-derived result: the construction, the proofs and the checkers were produced and
 checked by Mosaic Intelligence's automated system, and this text was AI-prepared.
+
+**Acknowledgment.** The collision-exclusion approach of the open pull request [teorth/optimizationproblems#180](https://github.com/teorth/optimizationproblems/pull/180) inspired part of this route; the certificate does not depend on it, and no file, theorem, constant or code from it is used.
