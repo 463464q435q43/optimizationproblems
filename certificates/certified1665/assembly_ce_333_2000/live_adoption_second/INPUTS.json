@@ -1,0 +1,9 @@
+{
+  "exterior_sha256": "194798fc8464b817e2c672edcd057faf04a03e89384e2dead953fee966348eca",
+  "tail_sha256": "808278ace704916895c8033a9d807b8b3a757cb7e85a53aafd9e5c9e7e23fc3f",
+  "finite_exterior_adoption_status": "conditional on the exact finite-model premise listed in AUDIT.md; bank618 not in our opening snapshot",
+  "bank605_output_sha256": {
+    "BANK605_primary.json": "567aaee836a1e515a6aaf8c61778c1b17d7c47ac8b5c4b2ad7fbfc7d04dc6f0a",
+    "BANK605_independent.json": "41c1df5f6110f763650e4a0c5ce3a9ba62f4cd8afb25841f502730d1f23d92ce"
+  }
+}

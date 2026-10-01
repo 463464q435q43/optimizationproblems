@@ -1,0 +1,248 @@
+# FOUNDATION — L11 real-gauge transversality through infinity
+
+## 0. New conclusion, citations, and exact quantifiers
+
+This is a composition and a direct quantitative conversion of the banked L11
+majorant, not another majorant computation or a claim about general L7.
+Snapshot: 604 entries in bank_ref at the start of this session. The exact
+consumed statements are copied in BANK_INPUTS.json:
+
+* line 591, wildcard_astra-s4: exact heat-shifted phase/model and derivative;
+* line 597, numerics_astra-s5: RAW approximation value and fixed-index
+  derivative bounds, including transitions;
+* line 604, dynamics_astra-s5: complete Euler-13 majorant, mollifier bounds,
+  proxy denominators, and the cell N1-1 rectangle joint.
+
+No pending general-resultant or improved-charge fact is consumed. Kornaus
+is credited for the collision/resultant architecture, but no unrefereed
+result or file is a proof input. No RH input is needed. This proves no new
+Lambda bound, no separator, and no assertion that every complex tail zero
+is real. Only real-axis transversality is asserted.
+
+For EVERY real t in the CLOSED interval [a,b]=[333/2000,3/16], EVERY real
+x in the CLOSED half-line [X1,infinity), X1=28274333882307, put
+
+    s=(1+i*x)/2, alpha(s)=1/(2*s)+1/(s-1)+Log(s/(2*pi))/2,
+    M_t(s)=M_0(s)*exp(t*alpha(s)^2/4),
+    M_0(s)=s*(s-1)*sqrt(2*pi)/16*pi^(-s/2)
+             *exp((s/2-1/2)*Log(s/2)-s/2),
+    u(t,x)=H_t(x)/|M_t(s)|.
+
+Then u is a real differentiable function of x, and the NEW conclusion is
+
+    (123/130)*|u(t,x)|+(9/65)*|d_x u(t,x)| > 6999/50000.       (T)
+
+Consequently H_t and its x derivative never vanish together on this
+rectangle. All real zeros there are simple. Reflection supplies the same
+exclusion at x<=-X1. N is always the natural integer
+floor(sqrt(x/(4*pi)+t/16)); y=0 only. Each cell is left-closed/right-open.
+The derivative is that of H_t, not that of a moving-index polynomial.
+
+## 1. What exactly is reused
+
+For the natural N, line 604 defines
+
+    w=s+(t/2)*alpha(s)=sigma+i*tau, tau=x/2+eta,
+    b_n=exp(t*log(n)^2/4), S=sum_(n<=N) b_n*n^(-w),
+    D=30030, P={2,3,5,7,11,13},
+    lambda_d=mu(d)*product_(p|d)b_p for d|D,
+    E=sum_(d|D)lambda_d*d^(-w)=product_(p in P)(1-b_p*p^(-w)),
+    Shat=E*S=sum_m c_m*m^(-w),
+    c_m=sum_(d|D,d|m,m/d<=N)lambda_d*b_(m/d).
+
+All coefficients, including those for m>N, are grouped before absolute
+values. lambda_1=c_1=1. For each fixed t these coefficients are independent
+of x. E and S have the SAME shifted exponent w. The mollifier is allowed
+to depend on t because every differentiation here fixes t.
+
+The accepted line-604 bounds on the whole domain include
+
+    |E|>12/25, |E|<9/5, |E'|<3/5,
+    |E_w/E|<=Lambda1<87/100, |w'|<c=500000000001/10^12,
+    0<eta'<e=1/10^24,
+    Q0=log(x/(4*pi))-4*c*Lambda1>26,
+    ell0=Q0/(1+2*e)>26,
+    M0=sum_(m>=2)max(1,2*log(m)/ell0-1)*|c_m|*m^(-sigma)<43/50.
+
+These are consumed as banked statements, not re-certified by reading frozen
+PASS markers. The only new analytic step needed to identify Q0 with a
+physical phase lower bound is proved in section 2. No conditional charge
+corollary is used: section 4 substitutes the RAW line-597 bounds directly.
+
+The exact raw bounds used are the rational upper endpoints
+
+    Ev=682857503579/10^18,
+    Ed=114077128828636/10^18.
+
+With B(z)=M_t((1-i*z)/2), and fixed natural index N at the center, define
+R_N(z)=H_t(z)/B(z)-f_N(z). Line 597 proves |R_N(x)|<=Ev and
+|R_N'(x)|<=Ed for every x>=6000000185827 and t in [a,b], including all
+transition centers and both neighboring indices on its Cauchy disk.
+Our X1 is larger, so that domain is consumed in the valid direction.
+
+## 2. Phase lower bound by sign, not subtracting near-equal numbers
+
+Locally choose Theta=arg(M_t(s)). Since M_0'/M_0=alpha,
+
+    4*Theta'=2*Re alpha+t*Re(alpha*alpha').
+
+Let d=1+x^2, L=log(x/(4*pi)), and set
+
+    A=Re alpha=L/2+log(1+x^(-2))/4-1/d,
+    B1=Im alpha=atan(x)/2-3*x/d,
+    P1=Re alpha'=(7*x^2-5)/d^2,
+    C1=-Im alpha'=x*(x^2+5)/d^2.
+
+On x>=5100, A>0, P1>0, C1>0. For A, pi<4 implies
+x/(4*pi)>5100/16, and log(5100/16)>1; hence A>1/2-1/d>0.
+The elementary identities
+
+    C1-1/x=(3*x^2-1)/(x*d^2)>=0,
+    x*C1=x^2*(x^2+5)/d^2<=3/2
+
+hold for x>=5100. The second residual is (x^2-1)*(x^2-3)/(2*d^2).
+Also atan(x)=pi/2-atan(1/x)>=pi/2-1/x. Thus
+
+    Re(alpha*alpha')=A*P1+B1*C1
+      >= (pi/4-1/(2*x))*C1-3*x*C1/d
+      >= pi/(4*x)-1/(2*x^2)-9/(2*d)
+      >= pi/(4*x)-11/(2*x^2).
+
+Here pi/4-1/(2*x)>0, so substituting the lower bound C1>=1/x
+has the stated direction; multiplication of a possibly signed B1 is not
+used. Furthermore 2*A-L>=-2/d>=-2/x^2. Consequently
+
+    4*Theta'-L >= [t*(pi*x/4-11/2)-2]/x^2.                 (H5-tail)
+
+For t>=333/2000 and x>=5100 the numerator is strictly positive, already
+using pi>3 and the exact endpoint rational. The bracket pi*x/4-11/2
+is positive and increases with x, so increasing t also improves it.
+This is a uniform sign proof; the fact that the lower bound tends to zero
+at infinity is harmless. The statement is NOT asserted positive at t=0.
+This deliberately looser internal H5 estimate differs from the broader
+pending L7 proof and is ample on the present tail.
+
+Let phi=arg E and theta=Theta-phi, h=theta'. Then
+
+    4*h >=4*Theta'-4*|E'/E| >= L-4*c*Lambda1=Q0>26.
+
+The exact phase scale is ell=2*h/tau'=4*h/(1+2*eta')>=ell0.
+The coefficient weight max(1,2*log(m)/ell-1) decreases with ell.
+Therefore the actual majorant M_ell is at most M0<43/50.
+Every derivative and phase in this argument is local; no global choice
+of an argument at a large x, or phase winding computation, is required.
+
+## 3. Direct real-linear transversality witness
+
+Freeze N at the point under study. Write
+
+    Z=exp(i*theta)*Shat, W=exp(i*theta)*Lhat,
+    Lhat=sum_m c_m*log(m)*m^(-w),
+    V=2*Re(exp(i*Theta)*S), Vhat=|E|*V=2*Re Z,
+    G=exp(i*theta)*(Shat-Lhat/ell)
+                   +exp(-i*theta)*conj(Lhat)/ell.
+
+Set a0=Re Z, b0=Im Z, c0=Re W, d0=Im W. Then
+
+    G=a0+i*(b0-2*d0/ell),
+    Vhat'=-2*h*(b0-2*d0/ell)-2*sigma'*c0.                (I)
+
+This follows from Shat'=-w'*Lhat and ell=2*h/tau'. It is an
+identity for all values of Z,W, not only at a zero, and keeps the real
+sigma' term. Separately, the constant c_1 contributes exp(i*theta) to G.
+For m>=2 write r=log(m)/ell and z_m=exp(i*theta)*c_m*m^(-w).
+Its contribution is (1-r)*z_m+r*conj(z_m), with real-linear singular
+values 1 and |1-2*r|. For r>=0 its norm is max(1,2*r-1), giving
+
+    |G|>=1-M_ell>7/50.                                  (II)
+
+This uses neither complete-coefficient positivity nor a unit-weight
+assumption for the high edge. The line-604 majorant already has every
+required weight and coefficient.
+
+## 4. Remove the normalization phase by a real projection
+
+On the real axis B=|M_t(s)|*exp(-i*Theta). The accepted exact model is
+f_N=exp(i*Theta)*V. Therefore, defining r=u-V (real),
+
+    R_N=exp(i*Theta)*r,
+    exp(-i*Theta)*R_N'=r'+i*Theta'*r.
+
+In particular |r|<=Ev and |r'|<=Ed. The latter is the real projection
+of the derivative error, NOT a triangle bound which pays Theta'*Ev.
+The reality of u and V is essential. The identity holds at all points,
+not only at zeros. Fixed-index holomorphy and the transition-inclusive
+line-597 derivative bound make it valid at RS walls as well.
+
+Since |(|E|)'|<=|E'|, identity (I) and |G|<=|Re G|+|Im G| give
+
+    |G| <= |E|*(|u|+Ev)/2
+        +[ |E'|*(|u|+Ev)+|E|*(|u'|+Ed)+Asigma ]/(2*h),
+    Asigma=2*|sigma'|*sum_m |c_m|*m^(-sigma)*log(m).
+
+The log(1) term vanishes. With |E|<9/5, |E'|<3/5, 4*h>26,
+
+    |G| <= (123/130)*|u|+(9/65)*|u'|+C,
+    C=(123/130)*Ev+(9/65)*Ed+Asigma/13.                  (III)
+
+## 5. Uniform Asigma envelope on the unbounded half-line
+
+The exact derivative is sigma'=t*x*(x^2+5)/(4*(1+x^2)^2), positive.
+It is at most b*(1/(4*x)+1/x^3). The unweighted nonconstant
+coefficient mass is <=M0<43/50. Since c_m vanishes for m>D*N and
+
+    N^2<=x/(4*pi)+t/16<x   (x>=X1, pi>3, t<=3/16),
+
+we have log(m)<=log(D)+log(x)/2. Therefore
+
+    Asigma <= (2*b)*(43/50)*(1/(4*x)+1/x^3)
+                                *(log D+log x/2).
+
+This decreases for x>=X1: for k=1 and k=3, the derivative of
+(log D+log x/2)*x^(-k) has sign 1/2-k*(log D+log x/2),
+which is negative throughout this half-line. At x=X1, the independent
+checks show log D<11, log X1<32, so log D+log X1/2<27. Thus use
+
+    Abar=(2*b)*(43/50)*(1/(4*X1)+1/X1^3)*27.
+
+All factors and the final charge cap Cbar in (III) are rational.
+Both checkers derive Cbar<1/50000. Combining (II) and (III) yields
+(T), because 7/50-1/50000=6999/50000. At a simultaneous zero of
+H_t,H_t', both u and u' vanish since |M_t(s)| is nonzero and smooth,
+contradicting (T).
+
+## 6. Endpoints, COVER line, and scope of the two lines
+
+X1=floor(4*pi*(1500000^2-3/256)) is accepted in line 604 and independently
+rechecked here with Arb and rational Machin series. Put h0=1499999 and
+x_n(t)=4*pi*(n^2-t/16). The exact strict inequalities
+
+    x_h0(a)<X1<x_1500000(b)
+
+show that X1 is inside cell h0 for every t in [a,b]. The left endpoint
+belongs to that cell. All x>=X1 have N>=h0. At each later wall x_n(t),
+the floor convention assigns index n (the cell on the right). The
+pointwise real-linear identity may freeze that n even if the Cauchy
+circle meets a neighboring cell; line 597 already includes its cost.
+Time endpoints a and b are closed in every consumed fact. No upper
+spatial endpoint is introduced. Hence this is an actual H_t module:
+
+    COVER module=tail t=[333/2000,3/16] x=[28274333882307,inf]
+
+This line certifies no interior or finite-exterior region. A full record
+still needs those modules, the anchor/stall theorem, and their record-use
+second lines. A claim of simplicity here means only that REAL zeros in
+the stated tail are simple; reality of all tail zeros is not inferred.
+
+The primary checker uses symbolic generic identities, exact rationals,
+and Arb geometry. The separate second checker uses Gaussian-rational
+arithmetic on sparse polynomials for the generic identity, formal Laurent
+polynomials for alpha, rational exponential and Machin series for all
+endpoint constants, and a distinct matrix/squared-norm proof. It imports
+no primary helpers. SHA256 pins both source files and the snapshot input;
+no input is fetched from another workspace. Negative mutations exercise
+both the symbolic boundary and closed-cell coverage boundary. The new
+coercivity conversion requests FOUNDATION rung (b); the majorant and RAW
+error theorems retain their already accepted bank status. An external
+record-use adoption audit remains numerics' responsibility, not an
+assertion made by this internal pair of checkers.

@@ -1,0 +1,85 @@
+{
+  "audited_hashes": {
+    "PRODUCER_SEPARATOR.md": "70cc54cfc3932efaa495687dc3565f9af090594deca67b65faa88dde853cc196",
+    "PRODUCER_INTERIOR.md": "bdc313246fb5927e7605ba048deca2c2b0566eda9fb98a2a12cae8f53c9d1842",
+    "CITATIONS.json": "910263e1f4eea41c2cd694791b413de98fd3c9083ba29552a6c27eb3746ae539"
+  },
+  "orthogonality_controls": [
+    {
+      "m": 2,
+      "forward": "w**2 - 2",
+      "backward": "w**2 + 2",
+      "norm": "8"
+    },
+    {
+      "m": 3,
+      "forward": "w**3 - 6*w",
+      "backward": "w**3 + 6*w",
+      "norm": "48"
+    },
+    {
+      "m": 4,
+      "forward": "w**4 - 12*w**2 + 12",
+      "backward": "w**4 + 12*w**2 + 12",
+      "norm": "384"
+    },
+    {
+      "m": 5,
+      "forward": "w**5 - 20*w**3 + 60*w",
+      "backward": "w**5 + 20*w**3 + 60*w",
+      "norm": "3840"
+    },
+    {
+      "m": 6,
+      "forward": "w**6 - 30*w**4 + 180*w**2 - 120",
+      "backward": "w**6 + 30*w**4 + 180*w**2 + 120",
+      "norm": "46080"
+    },
+    {
+      "m": 7,
+      "forward": "w**7 - 42*w**5 + 420*w**3 - 840*w",
+      "backward": "w**7 + 42*w**5 + 420*w**3 + 840*w",
+      "norm": "645120"
+    },
+    {
+      "m": 8,
+      "forward": "w**8 - 56*w**6 + 840*w**4 - 3360*w**2 + 1680",
+      "backward": "w**8 + 56*w**6 + 840*w**4 + 3360*w**2 + 1680",
+      "norm": "10321920"
+    },
+    {
+      "m": 9,
+      "forward": "w**9 - 72*w**7 + 1512*w**5 - 10080*w**3 + 15120*w",
+      "backward": "w**9 + 72*w**7 + 1512*w**5 + 10080*w**3 + 15120*w",
+      "norm": "185794560"
+    },
+    {
+      "m": 10,
+      "forward": "w**10 - 90*w**8 + 2520*w**6 - 25200*w**4 + 75600*w**2 - 30240",
+      "backward": "w**10 + 90*w**8 + 2520*w**6 + 25200*w**4 + 75600*w**2 + 30240",
+      "norm": "3715891200"
+    },
+    {
+      "m": 11,
+      "forward": "w**11 - 110*w**9 + 3960*w**7 - 55440*w**5 + 277200*w**3 - 332640*w",
+      "backward": "w**11 + 110*w**9 + 3960*w**7 + 55440*w**5 + 277200*w**3 + 332640*w",
+      "norm": "81749606400"
+    },
+    {
+      "m": 12,
+      "forward": "w**12 - 132*w**10 + 5940*w**8 - 110880*w**6 + 831600*w**4 - 1995840*w**2 + 665280",
+      "backward": "w**12 + 132*w**10 + 5940*w**8 + 110880*w**6 + 831600*w**4 + 1995840*w**2 + 665280",
+      "norm": "1961990553600"
+    }
+  ],
+  "joint": {
+    "T": "3000175332800",
+    "X": "6000000185827",
+    "required_height": "6000000185827/2",
+    "margin": "350479773/2",
+    "padding_squared_min": 3,
+    "endpoint_mutation_crossing_time": "1/8",
+    "cover": "COVER module=interior t=[333/2000,3/16] x=[0,6000000185827]"
+  },
+  "quantifiers": "For all permitted continuous s and all closed t in [0,A]: reality; only (0,A]: simplicity. Stationary H_t instantiation consumes the specified banked separator, not its numerical second-line qualification."
+}

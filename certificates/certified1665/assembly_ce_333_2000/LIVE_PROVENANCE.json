@@ -1,0 +1,86 @@
+[
+  {
+    "author": "numerics_astra-s8",
+    "dest": "live_model_second/check.py",
+    "sha256": "57659617d01247f55a71c70d687082b97f6733851190dfdaad043a425204eb41",
+    "status": "LIVE rederived independent campaign source, not a banked citation"
+  },
+  {
+    "author": "numerics_astra-s8",
+    "dest": "live_model_second/iv_check.py",
+    "sha256": "f70ae63598d19aabae5b0780fa3f0f95893727b17845f3512eb0b81671fa3525",
+    "status": "LIVE rederived independent campaign source, not a banked citation"
+  },
+  {
+    "author": "numerics_astra-s8",
+    "dest": "live_model_second/AUDIT.md",
+    "sha256": "b20c42ff8507af10dcd49f7bf2cbb6e171dc1e3be2f0afb973d000b889795948",
+    "status": "LIVE rederived independent campaign source, not a banked citation"
+  },
+  {
+    "author": "numerics_astra-s8",
+    "dest": "live_model_second/AUDITED_PROOF.md",
+    "sha256": "764506e8a5120d92629a956517ebd2ad2373613534884f72ec34019aea6e7008",
+    "status": "LIVE rederived independent campaign source, not a banked citation"
+  },
+  {
+    "author": "numerics_astra-s8",
+    "dest": "live_model_second/INPUTS.json",
+    "sha256": "58fceb3a07dd6c3aa572c048d2e54eddd4ce0cc845be7e3dffb7e0f8d97a60ff",
+    "status": "LIVE rederived independent campaign source, not a banked citation"
+  },
+  {
+    "author": "numerics_astra-s8",
+    "dest": "live_model_second/CONSUMED_CORNER.md",
+    "sha256": "43e1f210fcabb3751fafda9695b4881b06a1e2664e2ee370117fe6a57600b6a5",
+    "status": "LIVE rederived independent campaign source, not a banked citation"
+  },
+  {
+    "author": "numerics_astra-s8",
+    "dest": "live_model_second/CONSUMED_CORNER_OUTPUT.log",
+    "sha256": "18f70610b6170bf976be75f845d51a81b548aa7593fa981a031eaa5b5600fce9",
+    "status": "LIVE rederived independent campaign source, not a banked citation"
+  },
+  {
+    "author": "numerics_astra-s8",
+    "dest": "live_adoption_second/check.py",
+    "sha256": "923bc5cf7b43a10b5f7c22013226ce6c43f3e6869151585df1a602d7002f98fe",
+    "status": "LIVE rederived independent campaign source, not a banked citation"
+  },
+  {
+    "author": "numerics_astra-s8",
+    "dest": "live_adoption_second/AUDIT.md",
+    "sha256": "c28976ad0237ceaa7ac3544f32938f727c06e4ce2177c9bc58645fc9daad0ce1",
+    "status": "LIVE rederived independent campaign source, not a banked citation"
+  },
+  {
+    "author": "numerics_astra-s8",
+    "dest": "live_adoption_second/AUDITED_EXTERIOR.md",
+    "sha256": "194798fc8464b817e2c672edcd057faf04a03e89384e2dead953fee966348eca",
+    "status": "LIVE rederived independent campaign source, not a banked citation"
+  },
+  {
+    "author": "numerics_astra-s8",
+    "dest": "live_adoption_second/AUDITED_TAIL.md",
+    "sha256": "808278ace704916895c8033a9d807b8b3a757cb7e85a53aafd9e5c9e7e23fc3f",
+    "status": "LIVE rederived independent campaign source, not a banked citation"
+  },
+  {
+    "author": "numerics_astra-s8",
+    "dest": "live_adoption_second/INPUTS.json",
+    "sha256": "50a8548203781c12972489d1d2aea8cdebb3df5c4ba289f92ef9e69f3fb8517b",
+    "status": "LIVE rederived independent campaign source, not a banked citation"
+  },
+  {
+    "author": "numerics_astra-s8",
+    "dest": "live_adoption_second/BANK605_primary.json",
+    "sha256": "567aaee836a1e515a6aaf8c61778c1b17d7c47ac8b5c4b2ad7fbfc7d04dc6f0a",
+    "status": "LIVE rederived independent campaign source, not a banked citation"
+  },
+  {
+    "author": "numerics_astra-s8",
+    "dest": "live_adoption_second/BANK605_independent.json",
+    "sha256": "41c1df5f6110f763650e4a0c5ce3a9ba62f4cd8afb25841f502730d1f23d92ce",
+    "status": "LIVE rederived independent campaign source, not a banked citation"
+  }
+]

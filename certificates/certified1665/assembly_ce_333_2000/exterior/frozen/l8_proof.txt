@@ -1,0 +1,395 @@
+# FOUNDATION — L8_DAMPING_FAMILY, transition-inclusive true-function charges
+
+## 1. Exact statement, novelty and citation scope
+
+Set X=6000000185827, a=333/2000, T=3/16. At every real t in the
+**closed** interval [a,T] and every real x in the **closed half-line**
+[X,infinity), let
+
+    Lx=log(x/(4*pi)), r(x)=4/Lx,
+    N=floor(sqrt(x/(4*pi)+t/16)).
+
+Freeze this N on the whole complex disk |z-x|<=r(x). The model and remainder
+are
+
+    h=(1-i*z)/2, s=(1+i*z)/2,
+    alpha(v)=1/(2*v)+1/(v-1)+Log(v/(2*pi))/2,
+    Mt(v)=M0(v)*exp(t*alpha(v)^2/4),
+    B(z)=Mt(h), gamma(z)=Mt(s)/Mt(h),
+    f_N(z)=sum_{n<=N}b_t(n)*n^(-h-t*alpha(h)/2)
+               +gamma(z)*sum_{n<=N}b_t(n)*n^(-s-t*alpha(s)/2),
+    b_t(n)=exp(t*log(n)^2/4), R_N=H_t/B-f_N.
+
+M0 and the branches are the published Polymath normalization. The disk
+avoids the cuts, and B is nonzero. Both f_N and R_N are holomorphic there.
+The derivative is **not** a derivative of a discontinuous variable-index
+model. The natural cell convention is left-closed/right-open; exact wall
+points and disks meeting either neighboring cell are included.
+
+New conclusions, with outward ceilings independently recomputed:
+
+    |R_N(x)|  <= 0.000000655217372417 CEIL18,
+    |R_N'(x)| <= 0.000037300347933869 CEIL18.
+
+If the disk stays in its center's natural cell, the derivative bound improves
+to 0.000012116996356662 CEIL18. This applies at x=X for the entire time band.
+
+For each of the following two mollifier classes, at every such center the
+true-function charge in the exact amplitude-free resultant is bounded by
+
+    C <= 0.000010581704117220 CEIL18 < 1/80000 < 1/50000.
+
+The same-cell version is <=0.000003971074328203 CEIL18.
+
+**Class R (universal frozen-anchor reciprocal family):** choose K=64 or 1024,
+any tau in the closed interval [a,T], and any t in the closed interval
+[tau,T]. Define lambda_tau as the exact Dirichlet inverse of b_tau, through
+K. Use coefficients c_d, held constant in x on the local model, with
+
+    c_1=1 exactly,
+    |c_d-lambda_tau(d)| <= 2^(-40), 2<=d<=K,
+    E(w)=sum_{d<=K}c_d*d^(-w), w=s+t*alpha(s)/2 at s=(1+i*x)/2.
+
+The perturbations may be complex. The equality c_1=1 is essential. There
+is no derivative in tau or t; E is frozen when differentiating in x.
+The coefficients may therefore be chosen separately on closed slabs, and
+at a shared endpoint either valid slab's choice may be used. This theorem
+covers **every** tau and every permitted coefficient vector, not just the
+checker leaf endpoints. To consume it for rounded floating coefficients a
+producer must verify that exact coefficient vector's distance from the
+exact inverse is <=2^(-40). This artifact DOES NOT automatically identify
+any producer's floating recurrence or final rounding convention.
+
+**Class E (Euler-13):** use
+
+    E(w)=product_{p in {2,3,5,7,11,13}}(1-b_t(p)*p^(-w)),
+
+at the current t, with its exact expansion supported on divisors of 30030.
+This covers the entire half-line, hence also any far-tail subregion.
+
+No M bound or assumed complete coefficient mass enters the charge theorem.
+It does not certify exterior collision exclusion, a coefficient sweep, a
+producer band audit, a separator, or a Lambda bound. RH dependency: none.
+The stage-one threshold is not an asserted record.
+
+**Snapshot / supersession:** memory snapshot 598 lines. This sharpens the
+raw-error/conditional-charge interface of memory line 597,
+L8_SHRINKING_DISK (numerics_astra-s5), and DISCHARGES specified mollifier
+premises instead of borrowing its Qphase>=20 corollary. Line 598 is a
+singleton at one time and site; we use only its reference-control constants
+as regression anchors, not its mass or its older charge. This is not a
+re-claim of line 598's full convolution. Memory line 594 supplies a second,
+different support/time reference-control anchor. V1-H-064 and V1-H-220
+supply two index-geometry anchors. No statement about a live successor's
+absence is made.
+
+## 2. Sources and independence
+
+Only one outside mathematical source is read, the immutable published
+Polymath source in the v1 archive, sha256
+`560a28fe31bec92dd793820222e9e73a1fc6958a08344033a946b2ccaba225e5`.
+The checker pins it before using its formula labels. The input is Theorem
+1.3 (ratio-form-eff, gamma-bound, res-bound, kappa-bound, eab-bound,
+ec-bound), plus the **absolute** error in the proof of Proposition
+estimates(i) before its last one-sided bound. These are the audited formulas
+underlying V1-H-018. We neither copy nor cite third-party or operator code.
+
+Credit: Kornaus for the mollify-first collision/resultant and transition-
+Cauchy architecture; functional_astra for the finite-reciprocal/reference-
+product method; the operator's charge note prompted retaining vertical
+damping. Everything needed here is proved below and recomputed locally.
+
+Rung requested: **(b)** for the new damping/half-line/family claim. Primary
+Arb uses normalized divisor-scatter reciprocal coefficients. A separate
+mpmath.iv script uses raw divisor-gather coefficients, raw subset reference
+products, a different quotient formula, and a different complete adaptive
+time partition. It reads no primary output or helper and certifies every
+leaf itself. Both also reproduce the support-1024 and support-64 banked
+reference-control anchors at their distinct times. These anchors validate
+old machinery; they do not replace the new universal proof. Scripts check
+the import boundary with AST and print their own hashes. The verifier
+selects the accepted rung.
+
+## 3. Half-line envelopes
+
+For an upper-half-disk point z=v+iy let
+
+    v>=u=x-1>=U=X-1, 0<=y<=r(x)<1/2,
+    q=v/(4*pi), L=log(q), h0=1/100000,
+    delta(v)=T*(1+8/v^2)/(2*v^2),
+    A(v)=252*(T^2*L^2/16+313/500)/v,
+    g(v)=exp(-L/4-a*L^2/16),
+    rho(v)=(T*L/4+321/100)/(v-6).
+
+Every function A, g, delta, rho decreases for v>=U. For A its logarithmic
+numerator derivative is <=2/(v*L)<1/v. For rho the numerator derivative
+T/(4v) is smaller than its numerator divided by v-6. The remaining
+statements follow directly by differentiating the displayed powers and
+exponential. All sufficient endpoint inequalities are strict Arb gates.
+
+### 3.1 Improved A+B envelope without a sqrt(N) loss
+
+The local natural index k satisfies k^2<=q+T/16, k<=sqrt(v),
+log(k)<=L/2+h0, and |log(q/n^2)|<=L for every 1<=n<=k. These follow from
+the floor definition and the checked half-line conditions q+1/32<q^2,
+q+1/32<v, and log(1+T/(16*q))/2<h0; each improves as v increases.
+
+The published saddle bound implies
+
+    b_t(n)*n^(-Re(s_*)) <= n^(-p(v)-y/2),
+    p(v)=1/2+a*L/8-a*h0/4-delta(v) >= 21/20.
+
+Indeed replace log n by L/2+h0 in the positive quadratic exponent and
+then use t>=a, since L/8-h0/4>0. The function p increases, so its lower
+bound is checked only at U. Also
+
+    |gamma|*k^|kappa|*n^y
+      <= exp(1/100+h0/2+T*log(v)/(8*(v-6))) < 2.
+
+Here y<=1/2, n<=k and k<=sqrt(v) were used. The exponent decreases.
+For W=(T^2*L^2/16+313/500)/(v-333/50), the checker proves W<=1/2 and
+v-333/50>=v/2. Thus exp(W)-1<=2W. Since
+
+    sum_{n>=1}n^(-21/20) <= 1+integral_1^infinity u^(-21/20)du = 21,
+
+(1+ratio)<=3 in eab-bound gives
+
+    e_A+e_B <= 3*21*4*(T^2*L^2/16+313/500)/v = A(v).
+
+This term is retained separately to infinity; no global assertion of
+Gaussian dominance is made.
+
+### 3.2 C error with damping retained
+
+In ec-bound, k>=sqrt(q)-1 and 3^y+3^(-y)<=3 for y<=1/2. Hence the
+non-Gaussian exponential correction is <=J(v), where
+
+    J(v)=(93/25)/(sqrt(q)-9/8)
+         +(3*sqrt(L^2+(pi/2)^2)+261/25)/(v-12).
+
+It decreases. For the second term its numerator derivative is <=3/v,
+whereas its numerator is >3. At U, exp(J)<101/100. Therefore
+
+    e_C0(v+iy) <= (101/100)*g(v)*exp(-y*L/4).
+
+We preserve this dependence on y through the reflection step; replacing
+it by one before reflection would lose the gain.
+
+## 4. Every index crossing, with closed endpoints
+
+The disk has diameter <1 and successive walls
+x_j(t)=4*pi*(j^2-t/16) differ by more than one. The natural index at a
+point in the disk differs from its center's frozen index by at most one.
+The changed index n belongs to {k,k+1} and obeys
+
+    |n-sqrt(q)|<2, log n=L/2+e, |e|<h0, n<=sqrt(v).
+
+The last two inequalities follow from strict endpoint checks
+sqrt(q)*(1-exp(-h0))>2, sqrt(q)*(exp(h0)-1)>2, and sqrt(q)+2<sqrt(v),
+all persistent on the half-line.
+
+Complete the square exactly:
+
+    (log n)^2-L*log n = -L^2/4+e^2.
+
+Using the same saddle lower bound, a single first-chirality boundary term is
+at most
+
+    g(v)*exp(-y*L/4)*exp(3*h0/4+T*h0^2/4+1/1000).
+
+The factor 3*h0/4 is from (1+y)|e|/2 with y<=1/2; it must not be replaced
+by h0/2. The delta*log n term is <=1/1000. The ratio of the second
+chirality to the first is <=exp(11/1000), by the same gamma/kappa estimate.
+Their combined constant is checked strictly below 21/10. Consequently the
+upper-half bound for the **fixed-index** remainder is
+
+    |R_N(v+iy)| <= A(v)+(311/100)*g(v)*exp(-y*L/4).
+
+This remains valid at the exact wall, from both sides, for the stipulated
+floor convention. At a real center its own natural model needs no crossing
+addition: |R_N(x)|<=A(x)+(101/100)*g(x).
+
+## 5. Reflection with correlated damping and Cauchy's estimate
+
+From reality and the explicit two-chirality model,
+
+    R_N(conj z)=gamma(conj z)*conj(R_N(z)),
+    |gamma(conj z)|=1/|gamma(z)|.
+
+The absolute remainder before the final sign choice in the published gamma
+proof gives
+
+    1/|gamma(v+iy)| <= exp(y*(L/2+rho(v))).
+
+This is **not** obtained by inverting a one-sided upper bound. Since
+v<=x+1, L<=Lx+1/U, y<=4/Lx and Lx>=20,
+
+    y*(L/2+rho(v)) <= 2+1/(10*U)+rho(U)/5 < log 8,
+    y*(L/4+rho(v)) <= 1+1/(20*U)+rho(U)/5 < log(11/4).
+
+The first factor multiplies A. The second multiplies the already damped C
+and crossing terms. Both bounds also dominate the upper-half values.
+Writing u=x-1 yields on the full circle
+
+    sup |R_N| <= 8*A(u)+(3421/400)*g(u).
+
+As r=4/Lx and Lx<=L(u)+1/u<=L(u)+eps0 with eps0=1/10^12,
+
+    |R_N'(x)| <= (L(u)+eps0)*(8*A(u)+(3421/400)*g(u))/4.
+
+This last expression decreases on u>=U: the logarithmic derivatives of
+(L+eps0)*A and (L+eps0)*g have signs controlled respectively by
+
+    1/(L+eps0)+2/L-1 < 0,
+    1/(L+eps0)-1/4-a*L/8 < 0.
+
+The adverse endpoint is thus U, not a sampled location. Replacing 3421/400
+by 1111/400 gives the same-cell derivative. Evaluating the explicit
+formulas at U gives the advertised Ev and Ed. Both arithmetic libraries
+recompute them independently. The derivative comparison is on the whole
+real half-line, with every integer N and every transition included.
+
+## 6. Discharging the mollifier premises for an arbitrary slab grid
+
+At a real point use w=s+t*alpha(s)/2=sigma+i*vartheta. Its exact real part is
+
+    sigma(t,x)=1/2+t*C(x),
+    C(x)=log(sqrt(1+x^2)/(4*pi))/4-1/(2*(1+x^2)).
+
+C(x)>0 and C'(x)>0 on the half-line. In class R, fix one leaf
+[alpha,beta] in tau. For all tau in that leaf and all t>=tau, x>=X,
+
+    sigma(t,x) >= sigma(alpha,X)=sigma0.
+
+Arb or iv intervals enclose every inverse coefficient at tau in this
+closed interval. The error tube 2^(-40) is added adversely to every
+nonconstant coefficient. This directly certifies
+
+    Emax=sum |c_d|d^(-sigma0) <=21/10,
+    K1=sum |c_d|log(d)d^(-sigma0) <=5/2.
+
+For nonvanishing, expand the ENTIRE frozen Euler-29 product
+E0(w)=product(1-b_tau(p)*p^(-w)), including all its terms above K. Write
+beta_d for its coefficients and set, at sigma0,
+
+    q_p=b_tau(p)*p^(-sigma0), B0=product(1-q_p),
+    L0=sum q_p*log(p)/(1-q_p),
+    U0=sum |c_d-beta_d|d^(-sigma0),
+    V0=sum |c_d-beta_d|log(d)d^(-sigma0),
+    Emin=B0-U0, Lstar=L0+(V0+U0*L0)/(B0-U0).
+
+All q_p<1 and Emin>0. The product bounds and the identity
+
+    E_w/E-E0_w/E0 = (R_w-(E0_w/E0)R)/(E0+R), R=E-E0,
+
+prove |E|>=Emin and |E_w/E|<=Lstar for **every imaginary part**. Increasing
+sigma improves these bounds: q_p,L0,U0,V0 decrease, B0 increases, and
+B0-U0 increases. Thus Lstar decreases and Emin increases. Emax and K1
+also decrease. These monotonicities are coefficient-frozen statements;
+no sign assumption on the reciprocal coefficients or their derivatives in
+tau is used. Natural interval dependency may widen a box, never narrow it.
+
+The primary covers [a,T] by 10 closed leaves for K=1024 and one for K=64.
+The independent raw-inverse line uses nine and three leaves respectively.
+Each verifies exact abutment, both endpoints, and all four budgets on
+every leaf, then prints the exact aggregated extrema. This certifies the
+continuum family, not interpolation of a grid. Every slab grid, including
+one chosen later, inherits the bound only by checking its coefficient-
+vector membership in this family. A grid is not required as an input to
+an already universal theorem.
+
+For Euler-13 use exact product bounds at (a,X). Each
+log(q_p)=t*log(p)^2/4-sigma(t,x)*log(p) decreases in t and x because
+C(X)>log(p)/4. The primary product derivative and secondary full subset
+sum separately verify the same budgets. Its support is at most 30030.
+
+### 6.1 True phase denominator, not a flat-saddle shortcut
+
+With alpha=A+iBalpha, alpha'=C1+iD at s=(1+i*x)/2, direct algebra gives
+
+    A=log(sqrt(1+x^2)/(4*pi))/2-1/(1+x^2),
+    Balpha=atan(x)/2-3*x/(1+x^2),
+    C1=(7*x^2-5)/(1+x^2)^2,
+    D=-x*(x^2+5)/(1+x^2)^2,
+    sigma'= -t*D/4,
+    vartheta'=1/2+t*C1/4,
+    4*Theta'=2*A+t*(A*C1-Balpha*D), Theta=arg Mt(s).
+
+Throughout x>=X, A>0, C1>0, Balpha>3/4 and -D>1/(4*x). Also
+2*A>log(x/(4*pi))-2/x^2. The exact inequality 3*a*X>32 then gives
+4*Theta'>log(x/(4*pi)) throughout the domain. This is a sign proof,
+not subtraction of nearly equal floating numbers. Its conditions persist
+on the half-line and are gated independently of phase evaluation.
+
+The exact derivatives obey
+
+    0<vartheta'-1/2 <=7*T/(4*X^2),
+    0<sigma' <=T*(1/(4*X)+1/X^3),
+    |w'|<c, c=500000000001/10^12.
+
+At actual x, write theta=Theta-arg E. The leaf-wise phase bound is
+
+    Qphase=4*theta' >=log(x/(4*pi))-4*c*Lstar >=16.
+
+All leaves and the Euler case gate this bound. In particular we do NOT
+assume the stronger Qphase>=20 from the older conditional corollary.
+The true resultant scale is ell=2*theta'/vartheta', including eta'.
+
+## 7. True-function charge, no hidden complete-mass premise
+
+Let Shat=E*S=sum a_m*m^(-w), with the **complete** product coefficients
+(including m>N), and Lhat=sum a_m*log(m)*m^(-w). Define
+
+    G=exp(i*theta)*(Shat-Lhat/ell)+exp(-i*theta)*conj(Lhat)/ell,
+    ell=2*theta'/vartheta'.
+
+For the exact real model f_N=exp(i*Theta)*V, V real, one has
+
+    Re G=|E|*V/2,
+    (|E|*V)'=-2*theta'*Im G-2*sigma'*Re(exp(i*theta)*Lhat).
+
+At a hypothetical real multiple zero of H_t, f_N=-R_N and f_N'=-R_N'.
+Since f_N'=exp(i*Theta)*(V'+i*Theta'*V), V,V' real, |V'|<=Ed; no
+spurious extra Theta'*Ev term is required. Thus
+
+    |G| <= Emax*Ev/2 + (Eprime*Ev+Emax*Ed+A_sigma)/(2*theta'),
+    Eprime=c*K1,
+    A_sigma=2*|sigma'|*sum |a_m|m^(-sigma)log(m).
+
+Both Emax multipliers are retained. Here we discharge A_sigma without
+assuming any majorant M bound: the p-series argument gives S0<=21.
+The elementary inequality log n<=40*n^(1/40) gives
+
+    S1=sum b_t(n)n^(-sigma)log n
+       <=40*sum n^(-41/40)<=40*41=1640.
+
+Consequently the product triangle inequality gives
+
+    sum |a_m|m^(-sigma)log m <= Emax*S1+K1*S0
+                            <=(21/10)*1640+(5/2)*21.
+
+Substitute the uniform sigma' bound and 2*theta'>=8. The checker evaluates
+
+    A_sigma=2*T*(1/(4*X)+1/X^3)*((21/10)*1640+(5/2)*21),
+    C=(21/10)*Ev/2+(c*(5/2)*Ev+(21/10)*Ed+A_sigma)/8.
+
+The resulting CEIL18 is 0.000010581704117220. Its same-cell variant is
+0.000003971074328203. These are universal upper bounds for the two specified
+mollifier families, not pointwise estimated values, and establish the
+operator's 1/50000 line through every transition and out to infinity.
+
+## 8. Replay and adversarial hygiene
+
+Run `/usr/bin/python3 verify.py` from a fresh copy. It runs the separate
+`independent.py` with the same interpreter and inherited environment;
+there are no compilers, binaries, network operations, background tasks,
+or hidden workspace reads. JSON ledgers are rewritten from computation.
+Every printed decimal is derived from exact rational interval endpoints
+using floor/ceiling helpers, self-tested first on both negative directions.
+The check is small: there is no all-N or full-convolution sweep.
+
+The banked singleton M and producer operator targets are not numerical
+inputs. The two explicit old numerical regimes anchor only reference/
+phase control. Coverage and the new error theorem stand on the inequalities
+above plus the two complete interval-family covers. This is a certificate
+of the named fragment, never a claimed full collision-exclusion package.

@@ -1,0 +1,42 @@
+/* Second head line: descending prime convolution, not prefix/divisor sums.
+   Bin sums of absolute values need no numerical positivity assumption.
+   argv: cutoff reference t_num t_den ratio_num ratio_den. */
+#include <flint/arb.h>
+#include <flint/arf.h>
+#include <flint/fmpz.h>
+#include <stdio.h>
+#include <stdlib.h>
+#define BITS 160
+static void endpoint(const arb_t val,int upper){
+ arf_t x;fmpz_t j;arf_init(x);fmpz_init(j);
+ if(upper)arb_get_ubound_arf(x,val,BITS);else arb_get_lbound_arf(x,val,BITS);
+ arf_mul_ui(x,x,1000000000000000000UL,BITS,upper?ARF_RND_CEIL:ARF_RND_FLOOR);
+ arf_get_fmpz(j,x,upper?ARF_RND_CEIL:ARF_RND_FLOOR);fmpz_print(j);arf_clear(x);fmpz_clear(j);
+}
+int main(int argc,char **argv){
+ if(argc!=7)return 2;
+ ulong H=strtoul(argv[1],0,10),num=strtoul(argv[3],0,10),den=strtoul(argv[4],0,10),rn=strtoul(argv[5],0,10),rd=strtoul(argv[6],0,10);
+ if(H<30030 || H>20000000 || !den || !rd || rn<=rd)return 3;
+ arb_ptr v=_arb_vec_init(H+1);
+ arb_t tt,sg,a,b,l,k,q,tmp,mass,whole;
+ arb_init(tt);arb_init(sg);arb_init(a);arb_init(b);arb_init(l);arb_init(k);arb_init(q);arb_init(tmp);arb_init(mass);arb_init(whole);
+ arb_set_ui(tt,num);arb_div_ui(tt,tt,den,BITS);arb_set_str(a,argv[2],BITS);arb_log(l,a,BITS);arb_mul(a,a,a,BITS);arb_inv(a,a,BITS);
+ arb_div_ui(sg,l,2,BITS);arb_sub(sg,sg,a,BITS);arb_mul(sg,sg,tt,BITS);arb_one(a);arb_div_ui(a,a,2,BITS);arb_add(sg,sg,a,BITS);
+ for(ulong m=1;m<=H;m++){
+  arb_set_ui(a,m);arb_log(l,a,BITS);arb_mul(b,l,l,BITS);arb_mul(b,b,tt,BITS);arb_div_ui(b,b,4,BITS);arb_mul(a,sg,l,BITS);arb_sub(b,b,a,BITS);arb_exp(v+m,b,BITS);
+ }
+ const ulong primes[6]={13,11,7,5,3,2};
+ for(int j=0;j<6;j++){
+  ulong p=primes[j];arb_set_ui(a,p);arb_log(l,a,BITS);arb_mul(b,l,l,BITS);arb_mul(b,b,tt,BITS);arb_div_ui(b,b,4,BITS);arb_mul(a,sg,l,BITS);arb_sub(b,b,a,BITS);arb_exp(q,b,BITS);
+  for(ulong m=H/p;m>=1;m--){arb_mul(tmp,q,v+m,BITS);arb_sub(v+p*m,v+p*m,tmp,BITS);}
+ }
+ ulong first=2,number=0;arb_zero(whole);
+ while(first<=H){
+  ulong last=first*rn/rd;if(last>H)last=H;if(last<first)return 4;
+  arb_zero(mass);for(ulong m=first;m<=last;m++){arb_abs(tmp,v+m);arb_add(mass,mass,tmp,BITS);}
+  printf("BIN %lu %lu ",first,last);endpoint(mass,0);printf(" ");endpoint(mass,1);printf("\n");arb_add(whole,whole,mass,BITS);
+  first=last+1;number++;
+ }
+ printf("TOTAL ");endpoint(whole,0);printf(" ");endpoint(whole,1);printf("\nBINS %lu\nMETHOD coefficient_absolute_convolution\n",number);
+ _arb_vec_clear(v,H+1);arb_clear(tt);arb_clear(sg);arb_clear(a);arb_clear(b);arb_clear(l);arb_clear(k);arb_clear(q);arb_clear(tmp);arb_clear(mass);arb_clear(whole);flint_cleanup();return 0;
+}

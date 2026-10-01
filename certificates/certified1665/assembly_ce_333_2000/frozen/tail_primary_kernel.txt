@@ -1,0 +1,56 @@
+/* First line: positive complete Euler head as interval-valued log-bin masses.
+   Evaluate prefix sums of b_n n^{-sigma}, then sum signed divisor blocks.
+   No coefficients or samples are omitted. All arithmetic is FLINT/Arb.
+   argv: cutoff reference t_num t_den ratio_num ratio_den. */
+#include <flint/arb.h>
+#include <flint/arf.h>
+#include <flint/fmpz.h>
+#include <stdio.h>
+#include <stdlib.h>
+#define PREC 144
+static const ulong pp[6]={2,3,5,7,11,13};
+static void endpoint(const arb_t v,int up){
+ arf_t e;fmpz_t j;arf_init(e);fmpz_init(j);
+ if(up)arb_get_ubound_arf(e,v,PREC);else arb_get_lbound_arf(e,v,PREC);
+ arf_mul_ui(e,e,1000000000000000000UL,PREC,up?ARF_RND_CEIL:ARF_RND_FLOOR);
+ arf_get_fmpz(j,e,up?ARF_RND_CEIL:ARF_RND_FLOOR);fmpz_print(j);
+ arf_clear(e);fmpz_clear(j);
+}
+int main(int argc,char **argv){
+ if(argc!=7)return 2;
+ ulong h=strtoul(argv[1],0,10),tn=strtoul(argv[3],0,10),td=strtoul(argv[4],0,10);
+ ulong rn=strtoul(argv[5],0,10),rd=strtoul(argv[6],0,10);
+ if(h<30030 || h>20000000 || !td || rn<=rd || !rd)return 3;
+ arb_t t,sig,v,u,logr,tmp,s,term,total,part,mass,lp[6],lambda[64];
+ arb_init(t);arb_init(sig);arb_init(v);arb_init(u);arb_init(logr);arb_init(tmp);arb_init(s);arb_init(term);arb_init(total);arb_init(part);arb_init(mass);
+ arb_set_ui(t,tn);arb_div_ui(t,t,td,PREC);
+ arb_set_str(v,argv[2],PREC);arb_log(logr,v,PREC);arb_mul(v,v,v,PREC);arb_inv(v,v,PREC);
+ arb_div_ui(s,logr,2,PREC);arb_sub(s,s,v,PREC);arb_mul(sig,t,s,PREC);arb_one(v);arb_div_ui(v,v,2,PREC);arb_add(sig,sig,v,PREC);
+ for(int j=0;j<6;j++){arb_init(lp[j]);arb_set_ui(v,pp[j]);arb_log(lp[j],v,PREC);}
+ ulong d[64];
+ for(int mask=0;mask<64;mask++){
+  arb_init(lambda[mask]);arb_zero(u);arb_zero(v);d[mask]=1;int odd=0;
+  for(int j=0;j<6;j++)if((mask>>j)&1){d[mask]*=pp[j];odd^=1;arb_add(u,u,lp[j],PREC);arb_mul(tmp,lp[j],lp[j],PREC);arb_add(v,v,tmp,PREC);}
+  arb_mul(v,v,t,PREC);arb_div_ui(v,v,4,PREC);arb_mul(u,u,sig,PREC);arb_sub(v,v,u,PREC);arb_exp(lambda[mask],v,PREC);if(odd)arb_neg(lambda[mask],lambda[mask]);
+ }
+ arb_ptr pref=_arb_vec_init(h+1);arb_zero(pref);
+ for(ulong n=1;n<=h;n++){
+  arb_set_ui(u,n);arb_log(u,u,PREC);arb_mul(v,u,u,PREC);arb_mul(v,v,t,PREC);arb_div_ui(v,v,4,PREC);
+  arb_mul(tmp,sig,u,PREC);arb_sub(v,v,tmp,PREC);arb_exp(term,v,PREC);arb_add(pref+n,pref+n-1,term,PREC);
+ }
+ ulong lo=2,count=0;arb_zero(total);
+ while(lo<=h){
+  ulong hi=lo*rn/rd;if(hi>h)hi=h;if(hi<lo)return 4;
+  arb_zero(mass);
+  for(int j=0;j<64;j++){
+   arb_sub(part,pref+hi/d[j],pref+(lo-1)/d[j],PREC);arb_mul(part,part,lambda[j],PREC);arb_add(mass,mass,part,PREC);
+  }
+  printf("BIN %lu %lu ",lo,hi);endpoint(mass,0);printf(" ");endpoint(mass,1);printf("\n");
+  arb_add(total,total,mass,PREC);count++;lo=hi+1;
+ }
+ printf("TOTAL ");endpoint(total,0);printf(" ");endpoint(total,1);printf("\nBINS %lu\n",count);
+ printf("METHOD signed_divisor_prefix\n");
+ _arb_vec_clear(pref,h+1);
+ for(int j=0;j<6;j++)arb_clear(lp[j]);for(int j=0;j<64;j++)arb_clear(lambda[j]);
+ arb_clear(t);arb_clear(sig);arb_clear(v);arb_clear(u);arb_clear(logr);arb_clear(tmp);arb_clear(s);arb_clear(term);arb_clear(total);arb_clear(part);arb_clear(mass);flint_cleanup();return 0;
+}

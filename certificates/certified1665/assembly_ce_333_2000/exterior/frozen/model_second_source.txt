@@ -1,0 +1,145 @@
+#!/usr/bin/env python3
+"""Independent interval/scalar line, with finer, separately gathered prefix.
+No primary function or numerical bound is imported. Prefix source is its own C/Arb.
+"""
+from fractions import Fraction as Q
+from pathlib import Path
+import json,subprocess,sys,hashlib
+from mpmath import iv
+iv.dps=70
+D=1024;N=690988;NT=1499999;X=6000000185827
+TA=Q(333,2000);TB=Q(3,16);H=TB-TA;B=Q(891101027766,10**12)
+
+def V(q):
+ q=Q(q);return iv.mpf(q.numerator)/q.denominator
+def dy(v):
+ sign,m,e,b=v;return Q((-1 if sign else 1)*m*2**max(e,0),2**max(-e,0))
+def endpoints(x):return tuple(dy(v) for v in x._mpi_)
+def raw(text):
+ m,e,r,f=[int(x,16) for x in text.split()]
+ mm=Q(m*2**max(e,0),2**max(-e,0));rr=Q(r*2**max(f,0),2**max(-f,0));return mm-rr,mm+rr
+COUNT=0
+def ok(s,b):
+ global COUNT
+ assert bool(b),s
+ COUNT+=1;print('SECOND_PASS',s,flush=True)
+def show(s,x):
+ l,u=endpoints(x);print('SECOND_EXACT',s,l,u,flush=True);return {'lo':str(l),'hi':str(u)}
+def cap(x,q):return endpoints(x)[1]<Q(q)
+def floor_trunc(x,n):return (Q(x)*10**n).__floor__()
+def ceil_trunc(x,n):return -floor_trunc(-Q(x),n)
+for q,f,c in [(Q(-1231,1000),-124,-123),(Q(-1,1000),-1,0),(Q(1231,1000),123,124)]:ok('signed digits',floor_trunc(q,2)==f and ceil_trunc(q,2)==c)
+# Run an independent all-prefix gather from source, remove executable even on failure.
+try:
+ subprocess.run(['gcc','-O2','-std=c11','prefix_second.c','-o','prefix_second_run','-lflint','-lgmp','-lmpfr'],check=True,timeout=60)
+ r=subprocess.run(['./prefix_second_run'],capture_output=True,text=True,check=True,timeout=180)
+ Path('prefix_second.log').write_text(r.stdout)
+finally:Path('prefix_second_run').unlink(missing_ok=True)
+bins=[];raws={}
+for line in r.stdout.splitlines():
+ if line.startswith('BIN '):
+  _,l,h,z=line.split(' ',3);a,b=raw(z);bins.append((int(l),int(h),a,b))
+ if line.startswith('BALL '):
+  _,k,z=line.split(' ',2);raws[k]=raw(z)
+ if line.startswith('GATHER_COUNT '):
+  _,count,_,size=line.split();ok('independent pair count',int(count)==sum(N//d for d in range(1,D+1)));ok('independent bin count',int(size)==len(bins))
+ok('independent prefix partition',bins[0][0]==D+1 and bins[-1][1]==N and all(a[1]+1==b[0] for a,b in zip(bins,bins[1:])))
+# Expanded real formula for c and normalized divisor-gather inverse.
+xx=V(X);cc=(iv.log(xx)-iv.log(4*iv.pi))/4+iv.log(1+xx**-2)/8-1/(2*(1+xx*xx));ss=V(Q(1,2))+V(TA)*cc
+logd=[V(0)]+[iv.log(d) for d in range(1,D+1)]
+fsmall=[V(0)]+[iv.exp(V(TA)*logd[d]**2/4-ss*logd[d]) for d in range(1,D+1)]
+mu=[V(0)]*(D+1);mu[1]=V(1)
+for m in range(2,D+1):mu[m]=-sum((mu[d]*fsmall[m//d] for d in range(1,m) if m%d==0),V(0))
+for name,j in [('mu2',2),('mu1019',1019),('mu1024',1024)]:
+ l,h=endpoints(mu[j]);a,b=raws[name];ok('independent inverse containment '+name,a<=l and h<=b)
+# Reverse the forcing sum. On each n-segment both divisor cutoffs are fixed.
+P=[[V(0)] for _ in range(3)]
+for d in range(1,D+1):
+ for j in range(3):P[j].append(P[j][-1]+abs(mu[d])*logd[d]**j)
+klo,khi=endpoints(iv.exp(17));K=klo.__floor__();ok('independent weight kink',khi.__floor__()==K)
+L=iv.log(NT);R=V(0);left=1;blocks=0
+ok('independent amplitude decreasing',endpoints(V(TA)*L/2)[1]<endpoints(ss)[0])
+while left<=NT:
+ f=min(D,NT//left);g=min(D,K//left)
+ rf=NT//D if f==D else (NT//f if f else NT)
+ rg=K//D if g==D else (K//g if g else NT)
+ right=min(NT,rf,rg,max(left,left+max(1,left//128)-1))
+ ok('reverse cutoff ordering',right>=left and g>=f) if blocks==0 else None
+ u=iv.log(iv.mpf([left,right]));vL=iv.log(left);vR=iv.log(right)
+ fhi=iv.exp(V(TA)*vL*vL/4-ss*vL);flo=iv.exp(V(TA)*vR*vR/4-ss*vR)
+ amp=V(endpoints(flo)[0])+iv.mpf([0,1])*V(endpoints(fhi)[1]-endpoints(flo)[0])
+ # All coefficients remain interval-enclosed; no monotonicity of polynomial used.
+ tail=(L*L-u*u)/4
+ v=(P[2][f]+2*u*P[1][f])/4+tail*(P[0][g]-P[0][f])+tail*((2*u/17-1)*(P[0][D]-P[0][g])+(V(2)/17)*(P[1][D]-P[1][g]))
+ R+=(right-left+1)*amp*v
+ left=right+1;blocks+=1
+ok('independent forcing below 21',cap(R,21));show('FORCING_REVERSE',R)
+ok('independent common decay endpoints',endpoints(cc*iv.log(D+1)-iv.log(D+1)**2/4)[0]>34 and endpoints(cc*L-L*L/4)[0]>34)
+# Independent full Euler expansion and normalized difference, at the one freeze.
+ref={1:V(1)};bp=V(1);ll=V(0)
+for p in (2,3,5,7,11,13,17,19,23,29,31,37,41,43,47):
+ lp=iv.log(p);q=iv.exp(V(TA)*lp*lp/4-ss*lp);ok('reference factor '+str(p),endpoints(q)[1]<1)
+ bp*=1-q;ll+=q*lp/(1-q)
+ for d,v in tuple(ref.items()):ref[d*p]=-v*q
+U=V(0);W=V(0)
+for d in set(ref)|set(range(1,D+1)):
+ dd=abs((mu[d] if d<=D else V(0))-ref.get(d,V(0)));U+=dd;W+=dd*iv.log(d)
+emin=bp-U;lk=ll+(W+U*ll)/emin;speed=V(Q(500000000001,10**12));ell=(iv.log(xx/(4*iv.pi))-4*speed*lk)/(1+2*V(Q(1,10**20)))
+ok('independent reference modulus',endpoints(emin)[0]>Q(1,4));ok('independent scale',endpoints(ell)[0]>17);ok('independent log derivative',cap(lk,5))
+# Both norm caps independently; Euler29 weight-source comparison re-derived.
+e0=sum((abs(v) for v in mu),V(0));e1=speed*sum((abs(mu[d])*logd[d] for d in range(1,D+1)),V(0))
+ok('independent modulus upper',cap(e0,Q(41,20)))
+ok('independent x derivative upper',cap(e1,Q(51,50)))
+r29={1:V(1)};b29=V(1);l29=V(0)
+for p in (2,3,5,7,11,13,17,19,23,29):
+ lp=iv.log(p);q=iv.exp(V(TA)*lp*lp/4-ss*lp);b29*=1-q;l29+=q*lp/(1-q)
+ for d,v in tuple(r29.items()):r29[d*p]=-v*q
+u29=V(0);v29=V(0)
+for d in set(r29)|set(range(1,D+1)):
+ dd=abs((mu[d] if d<=D else V(0))-r29.get(d,V(0)));u29+=dd;v29+=dd*iv.log(d)
+k29=l29+(v29+u29*l29)/(b29-u29)
+ell29=(iv.log(xx/(4*iv.pi))-4*speed*k29)/(1+2*7*V(TB)/(4*xx*xx))
+ok('independent source-weight comparison',endpoints(ell29)[0]>0 and cap(ell29,17))
+ok('independent first cell across closed time',endpoints(xx/(4*iv.pi)+V(TA)/16)[0]>N*N and endpoints(xx/(4*iv.pi)+V(TB)/16)[1]<(N+1)**2)
+seam=4*iv.pi*((NT+1)**2-V(TB)/16)
+sl,sh=endpoints(seam)
+ok('independent rational last-wall floor',sl.__floor__()==sh.__floor__()==28274333882307 and sl>28274333882307)
+# Use supplied integer partition only; derive every scalar afresh.
+primary=json.loads(Path('certificate.json').read_text());rows=primary['rows'];ok('integer spatial cover',rows[0]['l']==N and rows[-1]['r']==NT and all(a['r']+1==b['l'] for a,b in zip(rows,rows[1:])))
+upper_prefix=sum((q[3] for q in bins),Q(0));ok('independent tail capacity',upper_prefix<B)
+new_rows=[]
+for row in rows:
+ na,nb=row['l'],row['r'];xxa=V(row['x_lower']);ok('independent block above X',row['x_lower']>=X)
+ if na>N:
+  wall=4*iv.pi*(na*na-V(TB)/16);ok('independent all-time lower wall '+str(na),endpoints(wall)[0]>row['x_lower'])
+ else:ok('independent head x lower',row['x_lower']==X)
+ ca=(iv.log(xxa)-iv.log(4*iv.pi))/4+iv.log(1+xxa**-2)/8-1/(2*(1+xxa*xxa))
+ delta=V(TA)*(ca-cc) if na>N else V(0);s=V(Q(1,2))+V(TA)*ca
+ old=V(B-upper_prefix)*iv.exp(-delta*iv.log(N+1))
+ for l,h,lo,hi in bins:old+=V(hi)*iv.exp(-delta*iv.log(l))
+ # Finer separately generated trapezoid upper. Convexity of log-integrand is universal.
+ vl=iv.log(N);vr=iv.log(nb);step=(vr-vl)/67;integral=V(0)
+ for j in range(68):
+  u=vl+step*j;val=iv.exp(V(TA)*u*u/4+(1-s)*u);integral+=val*(1 if j in (0,67) else 2)
+ integral*=step/2
+ E=V(0)
+ for d in range(1,D+1):
+  weight=2*(logd[d]+vr)/17-1
+  wl,wh=endpoints(weight);weight=V(max(Q(1),wl))+iv.mpf([0,1])*V(max(Q(1),wh)-max(Q(1),wl))
+  E+=abs(mu[d])*iv.exp(-delta*logd[d])*weight
+ initial=old+E*integral
+ ok('independent full spatial block '+str(na),cap(initial,Q(47,50)))
+ new_rows.append({'l':na,'r':nb,**show('BLOCK_'+str(na),initial)})
+endpoint=V(Q(47,50))*iv.exp(-34*V(H))+21*V(H)
+ok('independent all-time convex gate',cap(endpoint,Q(47,50)))
+ok('phase-family t endpoints',H==Q(21,1000))
+# New scalar identities checked without producer symbolic helpers.
+import sympy as sy
+h,k,r,z=sy.symbols('h k r z',nonnegative=True)
+v,c,t,s=sy.symbols('v c t s',real=True)
+q=sy.exp(t*v*v/4+(1-s)*v)
+ok('convex integral density identity',sy.simplify(sy.diff(q,v,2)/q-((t*v/2+1-s)**2+t/2))==0)
+ok('common relative-rate identity',sy.expand(c*z-sy.Symbol('L')**2/4+(sy.Symbol('L')**2-v**2)/4-(c*z-v**2/4))==0)
+ok('scalar envelope convex identity',sy.simplify(sy.diff(sy.exp(-k*h)*z+r*h,h,2)-k*k*z*sy.exp(-k*h))==0)
+Path('second_certificate.json').write_text(json.dumps({'R':show('FINAL_R',R),'rows':new_rows,'blocks_for_forcing':blocks,'prefix_bins':len(bins),'Emin':show('Emin',emin),'ell':show('ell',ell),'checks':COUNT},indent=2)+'\n')
+print('SECOND_LINE_COMPLETE',COUNT,'FORCING_BLOCKS',blocks,'PREFIX_BINS',len(bins),flush=True)

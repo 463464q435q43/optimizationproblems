@@ -1,0 +1,66 @@
+{
+  "route": "collision_exclusion",
+  "lambda_upper": "333/2000",
+  "t_lo": "333/2000",
+  "t_hi": "3/16",
+  "anchor_upper": "3/16",
+  "anchor_source": "V1-H-213 assembly_1875, independent record-assembly audit V1-H-220",
+  "X": "6000000185827",
+  "rh_height": "3000175332800",
+  "rh_source": "PT2021 (Platt-Trudgian, arXiv:2004.09765); separator initialization at X/2=6000000185827/2, exact margin 350479773/2. The anchor uses the same height.",
+  "conditional": false,
+  "verify_script": "verify_assembly.py",
+  "writeup": "ASSEMBLY.md",
+  "legs": [
+    {
+      "hypothesis": "positive stall with explicit uniform real-simple tail",
+      "cites": "memory line 590 prover_astra-s4; external second line memory 588 numerics_astra-s4",
+      "consumes": "For every r in (0,1/2], all complex zeros with |Re z|>=4*pi*exp(128/r)+1 are real and simple for every t in [r,1/2]. Thus positive Lambda has a finite multiple real zero. Use r=Lambda/2 or, on the putative band, fixed r=333/4000. No RH."
+    },
+    {
+      "hypothesis": "PT2021 initialization",
+      "cites": "PT2021 arXiv:2004.09765, memory 599/617",
+      "consumes": "All initial zeros inside |Re z|<=6000000185827 real. Required height 6000000185827/2, no initial simplicity, margin 350479773/2."
+    },
+    {
+      "hypothesis": "Hermite and compact separator",
+      "cites": "memory 590, 599; external analytic chain memory 617",
+      "consumes": "Reality on [0,3/16] and simplicity on (0,3/16] inside the full zero-free stationary padded rectangle. In particular no multiple real zero on CLOSED [333/2000,3/16] x [0,6000000185827]."
+    },
+    {
+      "hypothesis": "full stationary boundary",
+      "cites": "memory 596 rh_astra-s4; external full-domain numerical second line memory 616 numerics_astra-s7",
+      "consumes": "Nonvanishing at x=+/-6000000185827 for all t in CLOSED [0,3/16], all |y|<=1; published strip supplies 1<|y|<=2 and horizontal edges. Entire boundary is covered."
+    },
+    {
+      "hypothesis": "finite exterior majorant",
+      "cites": "memory 618 functional_astra-s6, corner input memory 598 and transport memory 609; additional full independent line rederived LIVE in live_model_second/check.py",
+      "consumes": "One exact support-1024 inverse frozen at 333/2000, same shifted exponent, complete fixed17 mass<47/50, all actual phase/modulus/derivative bounds on CLOSED t=[333/2000,3/16], natural N=690988..1499999, x>=X in each left-closed/right-open cell, y=0."
+    },
+    {
+      "hypothesis": "finite exterior true-H adoption",
+      "cites": "memory 605 universal charge and 607/606 general L7; new conversion rederived LIVE in exterior/verify.py with exterior/THEOREM.md; independent adoption proof rederived LIVE in live_adoption_second/check.py",
+      "consumes": "Exact zero-perturbation family membership; complete mass and charge concern the same E. Reserve>2999/50000 proves no multiple real zero on CLOSED [333/2000,3/16] x [6000000185827,28274333882307]. No pending external or own claim is consumed."
+    },
+    {
+      "hypothesis": "all index transitions",
+      "cites": "memory 605 for transition-inclusive fixed-index errors, 618 for full finite index range, 613 for unbounded tail; exact geometry LIVE",
+      "consumes": "At every natural wall use the right-hand index frozen on the analytic disk. Rational W lies strictly in predecessor cell1499999 for all closed times. Finite terminal wall excluded but tail already overlaps."
+    },
+    {
+      "hypothesis": "practical true-H tail",
+      "cites": "memory 613 prover_astra-s6 and independently 614 dynamics_astra-s6, majorant 604; external adoption proof rederived LIVE in live_adoption_second/check.py",
+      "consumes": "For every t in CLOSED [333/2000,3/16], all x>=28274333882307, y=0, (H_t,H_t_prime)!=(0,0). Every natural N>=1499999 and every transition included. This does not assert reality of off-axis zeros."
+    },
+    {
+      "hypothesis": "anchor",
+      "cites": "V1-H-213 assembly_1875 with V1-H-220 independent second line",
+      "consumes": "Unconditional Lambda<=3/16, with PT2021 at the same site. Anchor equals upper band endpoint."
+    }
+  ],
+  "coverage": {
+    "t": "Boundary and initial propagation: CLOSED [0,3/16], simplicity only t>0. All three collision modules: CLOSED [333/2000,3/16], including both endpoints. Stall tail uniform on [333/4000,1/2] at putative Lambda in the band.",
+    "N": "Interior unrestricted. Finite exterior every integer [690988,1499999] in natural left-closed/right-open cells. Tail every N>=1499999, overlap at rational W=28274333882307 in predecessor cell; every transition uses its natural right-hand index.",
+    "y": "Collision modules y=0, both signs of real x by evenness. Boundary all |y|<=1 and padded to2 via the published strip. Remote stall-tail statement all imaginary parts, distinct from the practical tail."
+  }
+}

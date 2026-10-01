@@ -1,0 +1,333 @@
+# L11-GT2: nested positive-head transport to infinity
+
+## Status, credit, ownership and snapshot
+
+FOUNDATION, majorant and mollifier-interface certificate, not a new bound on Lambda.
+RH dependency: none; no RH statement or height is consumed. The domain is the
+real axis y=0. Kornaus PR #180 suggested the collision-exclusion architecture;
+the operator's L11 study suggested a complete-head/per-pair-remainder split.
+Neither is an input or a citable leg, and this bundle reads no upstream file.
+
+This extends, rather than reclaims, verified-memory snapshot line 595
+(dynamics_astra-s4, 598 entries at session start): that fact covered t>=339/2000
+and N>=1200000, not the present lower time band. Its covered-graph proof is
+reused and its two numerical head regimes are reproduced as anchors. Line 592
+is the sign-defect warning: the conservative height loss and the positive
+exponent loss in the infinite split are retained here. Line 591 supplies the
+context of the exact-phase interface, not an H_t error theorem. The independent
+raw error/conditional charge fact at line 597 is discussed only as a future
+handoff. No unbanked H5, L7, or other seat's draft is consumed.
+
+The new device is **positive bin-mass transport**. Treat the complete head as a
+positive measure on log m. Compute its masses on disjoint integer bins once,
+then bound its Laplace transform at every larger saddle by reweighting each bin
+at its left endpoint. Use a second, nested complete head at the middle joint.
+There is no time-slab enumeration and no sweep over all RS cells.
+
+## 1. Exact quantifiers and definition
+
+Let
+
+    a=333/2000, b=3/16, N1=1500000, h=1499999,
+    j=6174242, Z=10^14, P={2,3,5,7,11,13}, D=30030,
+    c=500000000001/10^12, e=1/10^24.
+
+For EVERY real t in the CLOSED interval [a,b], EVERY integer N>=h, and EVERY
+real x in the LEFT-CLOSED/RIGHT-OPEN cell
+
+    x_N(t)<=x<x_(N+1)(t),  x_N(t)=4*pi*(N^2-t/16),
+
+put
+
+    b_n(t)=exp(t*log(n)^2/4),
+    lambda_d(t)=mu(d)*product_(p|d)b_p(t)  for d|D,
+    sigma(t,x)=1/2+t*(log(sqrt(1+x^2)/(4*pi))/4-1/(2*(1+x^2))),
+    eta(t,x)=t*atan(x)/4-3*t*x/(2*(1+x^2)),
+    w=sigma+i*(x/2+eta),
+    E(w)=product_(p in P)(1-b_p*p^(-w)),
+    q_p=b_p*p^(-sigma), Lambda_1=sum_p q_p*log(p)/(1-q_p),
+    Q0=log(x/(4*pi))-4*c*Lambda_1,
+    ell0=Q0/(1+2*e),
+    c_m=sum_(d|D,d|m,m/d<=N)lambda_d*b_(m/d),
+    M=sum_(m>=2)max(1,2*log(m)/ell0-1)*abs(c_m)*m^(-sigma).
+
+The last sum is finite, supported on m<=DN. Both E and the finite Dirichlet sum
+use the SAME exact heat-shifted exponent w. The coefficients lambda depend on
+t but not x, which is allowed by the resultant's fixed-t differentiation.
+
+The claimed bounds are
+
+    M < 43/50                  for all t,N,x above;
+    M < 2/5                    if N>=j;
+    M < 1/100                  if N>=Z.
+
+Uniform additional interfaces on the same domain are
+
+    q_p<1, |E|>12/25, |E|<9/5, |dE/dx|<3/5,
+    |E_s/E|<=Lambda_1<87/100,
+    |w'|<c, 0<eta'<e, Q0>26, ell0>26.
+
+The Q0 and ell0 assertions are about the displayed proxies. **This bundle does
+not assert H5, namely 4*Theta'>=log(x/(4*pi)), or that Q0 is an unconditional
+lower bound on the actual phase derivative.** Once H5 is supplied separately,
+4*(Theta-arg E)'>=Q0 and the exact resultant denominator
+4*(Theta-arg E)'/(1+2*eta')>=ell0 follow immediately. See section 8.
+
+The derived integer
+
+    X1=floor(4*pi*(N1^2-3/256))
+
+is output by the checker. For every t in [a,b], x>=X1 implies N(t,x)>=h. Thus
+the entire CLOSED rectangle [a,b] x [X1,infinity), y=0, is covered. The small
+strip before cell N1 is covered by cell N1-1, not silently assigned to N1.
+
+## 2. Conservative height, time and phase bounds
+
+Define for v>=h
+
+    s(v)=log(v)/2-1/v^2, L(v)=2*log(v)-1/v^2,
+    sigma_v(t)=1/2+t*s(v),
+    q_p(v,t)=exp(t*log(p)^2/4-sigma_v(t)*log p),
+    ell(v,t)=(L(v)-4*c*sum_p q_p(v,t)*log(p)/(1-q_p(v,t)))/(1+2*e).
+
+Direct differentiation gives sigma increasing in x. Let z=t/(16*N^2). The
+inequality log(1-z)>=-z/(1-z), pi>3, and x_N>=N^2 give
+
+    log(x/(4*pi)) >= L(N), sigma(t,x)>=sigma_N(t).
+
+Indeed z<=b/(16*h^2), b/(16*(1-z))<1, and the sigma loss is at most
+t*[b/(64*N^2*(1-z))+1/(2*N^4)]<t/N^2. All rational end inequalities are
+checked at h and strengthen thereafter. This avoids the false exact-start
+inequality identified in memory line 592.
+
+Both s and L increase. Since s(h)>log(13)/4, each q_p(v,t) decreases in v and t.
+Hence ell(v,t) increases in both variables. In particular ell0>=ell(N,t),
+which is >=ell(r,a)>log r for either head r=h or r=j whenever N>=r. All terms
+through that head have weight exactly one. The checker also proves
+ell(h,a)>26 and L(h)-4*c*Lambda_1(h,a)>26.
+
+The derivatives are exactly
+
+    sigma'=t*x/(4*(1+x^2))+t*x/(1+x^2)^2,
+    eta'=t*(7*x^2-5)/(4*(1+x^2)^2).
+
+For x>=h^2 they imply eta'<7*b/(4*h^4)<e and
+sigma'<b/(4*h^2)+b/h^6. Therefore
+|w'|<=1/2+eta'+|sigma'|<c. These are rational gates, not subtraction of almost
+equal floating-point phase terms.
+
+Since q_p<1, the Euler product never vanishes and
+
+    product(1-q_p)<=|E|<=product(1+q_p),
+    |E_s/E|<=Lambda_1,
+    |E'|<=c*product(1+q_p)*sum_p q_p*log(p)/(1+q_p).
+
+Every expression on the adverse side is monotone in the positive q_p, so the
+uniform bounds in section 1 follow by evaluation at (v,t)=(h,a). This proof
+covers time-dependent Euler coefficients; no per-slab freezing is needed.
+
+## 3. Complete-head positivity and time transport (banked device replay)
+
+For a complete coefficient beta_m=sum_(d|gcd(m,D))lambda_d*b_(m/d), let
+K={p in P:p|m}, k=|K|, r=m/product_(p in K)p, R=log r. On the k vertices place
+independent edges {p,q} of rate log(p)*log(q)/2 and a loop at p of rate
+R*log(p)/2. An edge of rate rho is present at t with probability 1-exp(-rho*t).
+Let C_m(t) be the probability that every vertex is incident to a present edge.
+The empty-vertex case has probability one. For a subset S of vertices,
+
+    (product_(p in S)b_p)*b_(m/product S)/b_m
+      =exp(-t/2*(R*sum_(p in S)log p
+             +sum_({p,q}: {p,q} meets S)log p*log q)).
+
+This is the probability that all vertices of S are uncovered. Exact
+inclusion-exclusion gives beta_m=b_m*C_m>=0, including repeated prime powers
+(the latter belong to r). This does NOT assert signs of truncated c_m for m>N.
+
+For 0<t1<t2, condition on the present edges at t2. They are independently
+retained at t1 with probabilities (1-exp(-rho*t1))/(1-exp(-rho*t2))>=t1/t2.
+Any covering configuration has a subcover of at most k edges: choose one
+incident edge per vertex. Thus C_m(t1)>=(t1/t2)^k*C_m(t2), yielding
+C_m'/C_m<=k/t where C_m>0. The selected primes themselves have C_m identically
+zero; all other k>=1 cases have positive cover probability for t>0. For m=6
+there is a single positive-rate ordinary edge, so the stronger 1/t bound holds.
+
+For either r=h or r=j, the code proves
+
+    log(m)*(s(r)-log(m)/4) >= k/a
+
+for every applicable 2<=m<=r. Concavity in log m reduces the check to endpoints
+[log(m_min),log r] with m_min=4,10,30,210,2310,30030 for k=1,...,6. The missing
+case m=6 uses 1/a; the six selected primes contribute zero. For k=0 the
+condition is simply s(r)>log(r)/4. Consequently
+
+    beta_m(t)*m^(-sigma_N(t)) <= beta_m(a)*m^(-sigma_N(a))
+
+for all t in [a,b], N>=r, m<=r. This is a quantified comparison, not a time
+sample. The complete head of the true M is bounded by the right-hand sum.
+
+## 4. New device: positive bin-mass (Laplace) transfer
+
+For each reference head r in {h,j}, make disjoint closed integer bins [l,u]:
+start l=2, set u=min(r,floor(101*l/100)), then replace l by u+1. Let
+
+    mu_[l,u]=sum_(m=l)^u beta_m(a)*m^(-sigma_r(a)) >= 0.
+
+The two numerical lines enclose every such bin mass. For every N>=A>=r put
+Delta=sigma_A(a)-sigma_r(a)>=0. Since m^(-Delta)<=l^(-Delta),
+
+    sum_(m<=r,m>=2) beta_m(a)*m^(-sigma_N(a))
+       <= sum_bins mu_[l,u]*l^(-Delta) =: Head_r(A).
+
+Using outward upper bin masses gives a certified envelope. This uses only
+positivity and monotonicity of an exponential, and works at every real saddle,
+not only a sampled one. A constant head would throw away these factors.
+
+The first numerical line obtains each mass by an exact divisor/prefix identity:
+
+    mu_[l,u]=sum_(d|D) lambda_d(a)*d^(-sigma_r(a))
+          *sum_(floor((l-1)/d)<n<=floor(u/d))b_n(a)*n^(-sigma_r(a)).
+
+It evaluates every prefix term in Arb and combines all 64 divisor terms. The
+second line instead initializes every weighted b_m, multiplies the six Euler
+factors by descending prime convolutions, and sums absolute values per bin.
+It needs no numerical coefficient-sign decision. Its bin enclosures overlap
+the first line's, and it independently proves the final inequalities.
+
+The first pre-registered one-head middle prediction did not pass. The completed
+device uses two nested heads: r=h for blocks with A<j, and r=j for blocks with
+A>=j. This was explicitly allowed by the original at-most-three-head card,
+and the two-head card was written before evaluating the second head. The
+failed one-head middle screen is retained as calibration, not asserted as a
+negative about the actual M.
+
+## 5. Finite remainder and complete block coverage
+
+For a closed integer-index block A<=N<=B, use its head r<=A and write
+
+    W_AB(t)=max(1,2*(log B+log D)/ell(A,t)-1),
+    I_d(A,B,t)=integral_(log floor(r/d))^(log B)
+                 exp(t*u^2/4-(sigma_A(t)-1)*u) du,
+    Phi_r(A,B,t)=W_AB(t)*sum_(d|D)|lambda_d(t)|*d^(-sigma_A(t))*I_d.
+
+For m<=r the coefficients are complete. For m>r use the triangle inequality
+only there, then reindex by (d,n) with dn>r, n<=N. On [1,B],
+f(n)=b_n*n^(-sigma_A(t)) decreases because
+
+    t*log(B)/2-sigma_A(t)
+       <= b*(log(B/A)/2+1/A^2)-1/2 < 0.
+
+The block ratio B/A is <=21/20+1/h. Therefore the remaining discrete n-sum
+is at most the displayed integral, starting at floor(r/d), not r/d and not
+ceil(r/d). The floor is positive for every divisor. Hence
+
+    M(t,x) <= Head_r(A)+Phi_r(A,B,t).
+
+All three factors in Phi are nonincreasing in t. The weight decreases because
+ell increases. The prefactor's logarithmic time derivative is
+sum_(p|d)log(p)^2/4-s(A)*log d<=0. The integrand derivative has sign
+u^2/4-s(A)*u<=0, since 0<=u<=log B<4*s(A). The latter inequality is checked
+with the BLOCK END and a ratio bound valid for all subsequent blocks; a
+pointwise N is not substituted after transport. Thus it suffices to evaluate
+Phi at a.
+
+The exact integer chain starts at h and repeatedly takes ceil(21*A/20), clipped
+first at j and then at Z. The next block starts at the previous right endpoint.
+All blocks include both index endpoints. The first branch is valid even at
+N=j; the second branch additionally gives the stronger middle bound there.
+The finite/analytic joint N=Z is included by both proofs. On each cell, the
+original x range is left-closed/right-open, so every RS transition is included
+by the next cell. There is no derivative-of-a-discontinuous-index argument.
+
+The first line encloses each integral using its Arb erfi antiderivative. The
+second uses a 64-panel trapezoid upper bound, because for F=exp(t*u^2/4-q*u),
+
+    F''/F=(t*u/2-q)^2+t/2 > 0.
+
+The upper-bound direction is a theorem of convexity, not an empirical
+quadrature error estimate. Both lines derive the maximum over the complete
+block chain and gate the claimed caps independently.
+
+## 6. Analytic closure for all N>=Z
+
+Let U=log N, epsilon=1/Z^2. Use
+sigma>=1/2+t*(U/2-epsilon). The discrete amplitudes on [1,N] still decrease:
+t*log(N)/2-sigma<=-1/2+b*epsilon<0. The complete head is bounded by Head_j(Z).
+For the weights, replace Lambda_1 by its upper value at (Z,a). The difference
+
+    (2*U-epsilon-4*c*Lambda_1(Z,a))-(1+2*e)*(U+log D)
+
+is increasing in U and positive at log Z, so every weight is one.
+
+For each d put l_d=log floor(j/d). The checker proves 0<l_d<U/2 at U=log Z.
+With kappa=3*t*U/8-1/2-t*epsilon, the lower half of its integral is bounded by
+
+    integral_(l_d)^(U/2) exp(t*u^2/4-(sigma-1)*u)du
+       <= exp(-kappa*l_d)/kappa.
+
+The term **-t*epsilon** in kappa is essential. Omitting it is exactly the
+lower-half sign mistake diagnosed in memory line 592. On [U/2,U], convexity
+bounds the integral by
+
+    U/2 * [ exp(-t*U^2/4+U/2+t*epsilon*U)
+           +exp(-3*t*U^2/16+U/4+t*epsilon*U/2) ].
+
+Using a sum rather than the maximum is conservative. Kappa is positive and
+increases in both t and U. Each displayed endpoint term INCLUDING its factor
+U decreases in U at (log Z,a), and the logarithmic derivative only decreases
+thereafter. Both terms decrease in t; the code checks those derivative signs.
+The prefactors |lambda_d|*d^(-sigma) also decrease in both variables. The
+endpoint evaluation therefore bounds all N>=Z, not a grid.
+
+The second line uses a different split, at 2*U/3, with slope
+t*U/3-1/2-t*epsilon and upper length U/3. It independently checks the derivative
+signs and the infinite cap. The head in both lines is transported from j;
+neither line re-enumerates a head at every new height.
+
+## 7. Closed rectangle joint
+
+The checker encloses 4*pi*(N1^2-3/256) strictly between two consecutive integers
+X1 and X1+1. It proves
+
+    x_h(a)<X1<x_N1(b).
+
+The left inequality implies X1>x_h(t) for all t>=a; the right inequality says
+X1 precedes cell N1 for every t<=b. Therefore x>=X1 belongs to one of the cells
+N>=h, including the needed N1-1 strip. The floor cannot be rounded the wrong
+way or replaced by an unverified printed decimal. Negative x are not part of
+the stated certificate (evenness is an external assembly simplification).
+
+Coverage inventory: t=[333/2000,3/16] closed, N all integers >=1499999,
+y=0; near blocks close at j=6174242, middle blocks close at Z=10^14, and the
+analytic branch starts at Z inclusively. This proves the M/mollifier rectangle
+x=[X1,infinity) only, not an H_t COVER module by itself.
+
+## 8. Handoff, limitations and independent lines
+
+The first-line numerical artifacts are config.json, head_bins.txt,
+head_bins2.txt, and certificate.json; the second line regenerates its own head
+and remainder tables. Every full check builds from the shipped C sources,
+uses one core, and deletes its executables. No outside file read is needed.
+The checker reproduces the banked line-595 complete heads at two disparate
+reference heights before computing the new heads. The fresh second line has
+no import from the first and uses different coefficient and integral formulas.
+The symbolic graph replay and independent coverage-DP check audit the old
+representation boundary. The new bin boundary has the elementary positivity
+proof in section 4 and is independently implemented in both lines. Requested
+FOUNDATION ladder: numerical anchors plus a full independent numerical line;
+the verifier decides the accepted rung.
+
+H5 and H_t errors are explicitly NOT part of this result. If H5 is provided
+separately, then Qphase=4*(Theta-arg E)'>=Q0>26>20 and the exact corrected ell
+is at least ell0. Also Emax<9/5<41/20, EprimeMax<3/5<4, support D=30030, and
+sum_(m>=2)|c_m|*m^(-sigma)<=M<43/50<1. These are precisely the extra mollifier
+hypotheses in memory line 597's conditional charge corollary. That banked
+corollary includes the Emax multiplier and all index transitions, but neither
+its raw errors nor H5 are recomputed or claimed here. A record package must
+cite them as separate accepted facts and use an accepted resultant theorem.
+No claim of H_t collision exclusion or a new Lambda bound is made here.
+
+The assembly should import this as a banked claim plus pinned frozen outputs,
+not compile C from its confined record script. The included Python-only replay
+rechecks exact joins, the maxima, a hash-seeded subset of the finite blocks and
+the full analytic-infinity branch. A reduced replay is supplementary; the
+claim's full check remains `python3 verify.py`.

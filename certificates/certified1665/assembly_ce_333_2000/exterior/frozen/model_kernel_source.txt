@@ -1,0 +1,39 @@
+/* Independent prefix arithmetic: factor every m, gather its divisors, use
+   a normalized inverse. No producer input or output is read. */
+#include <flint/arb.h>
+#include <stdio.h>
+#include <stdlib.h>
+#define P 224
+#define K 1024
+#define N 690988
+static void emit(const char *s,arb_t z){char *v=arb_dump_str(z);printf("BALL %s %s\n",s,v);flint_free(v);}
+int main(void){
+ arb_t x,c,s,t,l,z,v,coef,mass,total;arb_init(x);arb_init(c);arb_init(s);arb_init(t);arb_init(l);arb_init(z);arb_init(v);arb_init(coef);arb_init(mass);arb_init(total);
+ arb_set_str(x,"6000000185827",P);arb_set_ui(t,333);arb_div_ui(t,t,2000,P);
+ /* expanded reciprocal-x formula, not the direct square-root formula */
+ arb_log(c,x,P);arb_const_pi(z,P);arb_mul_ui(z,z,4,P);arb_log(z,z,P);arb_sub(c,c,z,P);arb_div_ui(c,c,4,P);
+ arb_inv(z,x,P);arb_mul(z,z,z,P);arb_add_ui(v,z,1,P);arb_log(v,v,P);arb_div_ui(v,v,8,P);arb_add(c,c,v,P);
+ arb_mul(v,x,x,P);arb_add_ui(v,v,1,P);arb_inv(v,v,P);arb_div_ui(v,v,2,P);arb_sub(c,c,v,P);
+ arb_mul(s,c,t,P);arb_set_ui(v,1);arb_div_ui(v,v,2,P);arb_add(s,s,v,P);
+ arb_ptr f=_arb_vec_init(N+1),mu=_arb_vec_init(K+1);
+ for(long n=1;n<=N;n++){arb_set_ui(l,n);arb_log(l,l,P);arb_mul(z,l,l,P);arb_mul(z,z,t,P);arb_div_ui(z,z,4,P);arb_mul(v,s,l,P);arb_sub(z,z,v,P);arb_exp(f+n,z,P);}
+ arb_one(mu+1);
+ for(long m=2;m<=K;m++)for(long d=1;d<m;d++)if(m%d==0)arb_submul(mu+m,mu+d,f+m/d,P);
+ long *spf=calloc(N+1,sizeof(long));if(!spf)return 2;
+ for(long p=2;p<=N;p++)if(!spf[p])for(long j=p;j<=N;j+=p)if(!spf[j])spf[j]=p;
+ long left=K+1,right=17*K/16;long long count=0;long bins=0;long divisors[512];
+ for(long m=1;m<=N;m++){
+  long r=m,nd=1;divisors[0]=1;
+  while(r>1){long p=spf[r],power=1,old=nd;while(r%p==0){r/=p;power*=p;for(long j=0;j<old;j++){if(nd>=512)return 3;divisors[nd++]=divisors[j]*power;}}}
+  arb_zero(coef);
+  for(long j=0;j<nd;j++){long d=divisors[j];if(d<=K){arb_addmul(coef,mu+d,f+m/d,P);count++;}}
+  if(m>=2&&m<=K&&!arb_contains_zero(coef))return 4;
+  if(m>K){arb_abs(z,coef);arb_add(mass,mass,z,P);arb_add(total,total,z,P);}
+  if(m==right){char *v=arb_dump_str(mass);printf("BIN %ld %ld %s\n",left,right,v);flint_free(v);arb_zero(mass);bins++;left=right+1;right=17*right/16;if(right>N)right=N;}
+ }
+ if(left!=N+1)return 5;
+ emit("TOTAL",total);emit("sigma",s);emit("mu2",mu+2);emit("mu1019",mu+1019);emit("mu1024",mu+1024);
+ printf("GATHER_COUNT %lld BINS %ld\n",count,bins);
+ _arb_vec_clear(f,N+1);_arb_vec_clear(mu,K+1);free(spf);
+ puts("PREFIX_SECOND_PASS");return 0;
+}

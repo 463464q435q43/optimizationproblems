@@ -1,0 +1,185 @@
+#!/usr/bin/env python3
+"""Single-freeze changing-index certificate. All gates use Arb or rationals."""
+from fractions import Fraction as F
+from pathlib import Path
+import json, hashlib, argparse, time
+from flint import arb,ctx
+ctx.prec=192;ctx.threads=1
+D=1024;N0=690988;NT=1499999;X=6000000185827
+A0=F(333,2000);T=F(3,16);H=T-A0;B=F(891101027766,10**12)
+P=(2,3,5,7,11,13,17,19,23,29,31,37,41,43,47)
+COUNT=0
+
+def ck(s,b):
+ global COUNT
+ assert bool(b),s
+ COUNT+=1;print('PASS',s,flush=True)
+def a(q):
+ q=F(q);return arb(q.numerator)/q.denominator
+def rat(x):
+ m,e=x.man_exp();m,e=int(m),int(e);return F(m*2**max(e,0),2**max(-e,0))
+def ep(x):return rat(x.lower()),rat(x.upper())
+def floor_trunc(x,n):return (F(x)*10**n).__floor__()
+def ceil_trunc(x,n):return -floor_trunc(-F(x),n)
+def dig(i,n):return ('-' if i<0 else '')+str(abs(i)//10**n)+'.'+str(abs(i)%10**n).zfill(n)
+def show(k,x):
+ l,u=ep(x) if isinstance(x,arb) else (F(x),F(x))
+ print(k,'FLOOR12',dig(floor_trunc(l,12),12),'CEIL12',dig(ceil_trunc(u,12),12),flush=True)
+ return {'lo':str(l),'hi':str(u)}
+def inv(t,k,s):
+ logs=[arb(0)]+[arb(d).log() for d in range(1,k+1)]
+ bt=[arb(0)]+[(a(t)*logs[d]**2/4).exp() for d in range(1,k+1)]
+ la=[arb(0) for _ in range(k+1)];la[1]=arb(1)
+ for d in range(1,k+1):
+  for n in range(2,k//d+1):la[d*n]-=la[d]*bt[n]
+ mu=[arb(0)]+[la[d]*(-s*logs[d]).exp() for d in range(1,k+1)]
+ for m in range(2,k+1):
+  res=sum((la[d]*bt[m//d] for d in range(1,m+1) if m%d==0),arb(0))
+  assert res.contains(0) and ep(abs(res))[1]<F(1,2**140)
+ ck('all exact inverse-head identities enclosed',True)
+ return la,mu,logs
+
+def cfun(x):return ((1+x*x).sqrt()/(4*arb.pi())).log()/4-1/(2*(1+x*x))
+def reference(t,k,s,mu,logs,pmax,eta):
+ ref={1:arb(1)};bp=arb(1);L=arb(0)
+ for p in P:
+  if p>pmax:break
+  lp=arb(p).log();q=(a(t)*lp*lp/4-s*lp).exp();ck('Euler factor '+str(p),q>0 and q<1)
+  bp*=1-q;L+=q*lp/(1-q)
+  for d,z in tuple(ref.items()):ref[d*p]=-z*q
+ U=arb(0);V=arb(0)
+ for d in set(ref)|set(range(1,k+1)):
+  diff=abs((mu[d] if d<=k else arb(0))-ref.get(d,arb(0)))
+  U+=diff;V+=diff*arb(d).log()
+ em=bp-U;ck('full-reference nonzero',em>0)
+ lk=L+(V+U*L)/em;speed=a(F(500000000001,10**12))
+ Q=(arb(X)/(4*arb.pi())).log()-4*speed*lk
+ el=Q/(1+2*eta)
+ E0=sum((abs(z) for z in mu),arb(0));E1=speed*sum((abs(mu[d])*logs[d] for d in range(1,k+1)),arb(0))
+ return {'Emin':em,'Lambda1':lk,'Q':Q,'ell':el,'Emax':E0,'EprimeMax':E1}
+
+def bin_boundaries():
+ e=[D]
+ while e[-1]<N0:e.append(min(N0,6*e[-1]//5))
+ return e
+
+def data(t,k,n,top,need_drift):
+ c=cfun(arb(X));s=arb(1)/2+a(t)*c
+ la,mu,logs=inv(t,k,s)
+ f=[arb(0)]*(top+1)
+ kink=arb(17).exp();kl,kh=ep(kink);kint=kl.__floor__();ck('exact fixed-weight kink',kh.__floor__()==kint)
+ thresholds={0,top}
+ if need_drift:
+  thresholds|={top//d for d in range(1,k+1)}|{min(top,kint//d) for d in range(1,k+1)}
+ prefix={0:tuple(arb(0) for _ in range(4))};mom=[arb(0) for _ in range(4)]
+ for j in range(1,top+1):
+  v=arb(j).log();ff=(a(t)*v*v/4-s*v).exp();f[j]=ff
+  if need_drift:
+   w=ff
+   for z in range(4):mom[z]+=w;w*=v
+   if j in thresholds:prefix[j]=tuple(mom)
+  if j%250000==0:print('HEARTBEAT input',j,top,flush=True)
+ co=[arb(0)]*(n+1)
+ pairs=0
+ for d in range(1,k+1):
+  for j in range(1,n//d+1):co[d*j]+=mu[d]*f[j];pairs+=1
+ ck('prefix pair count',pairs==sum(n//d for d in range(1,k+1)))
+ if not need_drift:
+  mass=sum((abs(z) for z in co[2:]),arb(0));return mass
+ bins=[];edges=bin_boundaries()
+ for l,r in zip(edges,edges[1:]):
+  mass=sum((abs(co[m]) for m in range(l+1,r+1)),arb(0))
+  bins.append({'l':l+1,'r':r,**show('PREFIX_'+str(l+1)+'_'+str(r),mass)})
+ ck('initial head removed by exact inverse, not rounding',all(co[m].contains(0) for m in range(2,D+1)))
+ # Exact relative forcing with two integer kink splits, moment degree <=3.
+ R=arb(0);logtop=arb(top).log()
+ for d in range(1,k+1):
+  ld=logs[d];q=top//d;g=min(top,kint//d)
+  cuts=sorted({0,q,g,top})
+  for l,r in zip(cuts,cuts[1:]):
+   rp=[ld*ld/4,ld/2,arb(0)] if r<=q else [logtop*logtop/4,arb(0),arb(-1)/4]
+   wp=[arb(1)] if r<=g else [2*ld/17-1,arb(2)/17]
+   poly=[arb(0) for _ in range(len(rp)+len(wp)-1)]
+   for i,v in enumerate(rp):
+    for j,w in enumerate(wp):poly[i+j]+=v*w
+   contribution=sum((v*(prefix[r][j]-prefix[l][j]) for j,v in enumerate(poly)),arb(0))
+   R+=abs(mu[d])*contribution
+ ck('global forcing positive and below 21',R>0 and R<21)
+ ck('positive pair decay whole range',c>logtop/4)
+ k1=c*arb(D+1).log()-arb(D+1).log()**2/4
+ k2=c*logtop-logtop**2/4
+ ck('global common decay above 34',k1>34 and k2>34)
+ return {'c':c,'s':s,'lambda':la,'mu':mu,'logs':logs,'bins':bins,'R':R,'k1':k1,'k2':k2,'pairs':pairs}
+
+def spatial_block(lo,hi,z):
+ if lo==N0:xx=X
+ else:
+  w=4*arb.pi()*(lo*lo-a(T)/16);wl,wh=ep(w);xx=wl.__floor__()
+  ck('unique integer lower cell wall '+str(lo),wh.__floor__()==xx and xx>=X)
+ c=cfun(arb(xx));s=arb(1)/2+a(A0)*c;delta=a(A0)*(c-z['c']) if xx!=X else arb(0)
+ ck('nonnegative spatial exponent increment '+str(lo),xx==X or delta>0)
+ us=[F(row['hi']) for row in z['bins']];remainder=B-sum(us,F(0));ck('positive initial tail capacity '+str(lo),remainder>0)
+ old=a(remainder)*(-delta*arb(N0+1).log()).exp()
+ for row,U in zip(z['bins'],us):old+=a(U)*(-delta*arb(row['l']).log()).exp()
+ lh=arb(hi).log();ln0=arb(N0).log();steps=32;h=(lh-ln0)/steps
+ integ=arb(0)
+ for j in range(steps+1):
+  v=ln0+j*h;val=(a(A0)*v*v/4+(1-s)*v).exp()
+  integ+=val*(1 if j in (0,steps) else 2)
+ integ*=h/2
+ ck('decreasing new-pair amplitude '+str(lo),a(A0)*lh/2<s)
+ esum=arb(0)
+ for d in range(1,D+1):
+  vv=2*(z['logs'][d]+lh)/17-1;ww=(1+vv+abs(1-vv))/2
+  esum+=abs(z['lambda'][d])*(-s*z['logs'][d]).exp()*ww
+ new=esum*integ;upper=old+new
+ return {'l':lo,'r':hi,'x_lower':xx,'old':old,'new':new,'initial':upper}
+
+def main():
+ ap=argparse.ArgumentParser();ap.add_argument('--anchors',action='store_true');args=ap.parse_args()
+ for q,fl,ce in [(F(-1231,1000),-124,-123),(F(-1,1000),-1,0),(F(1231,1000),123,124)]:ck('signed rounding self-test',floor_trunc(q,2)==fl and ceil_trunc(q,2)==ce)
+ if args.anchors:
+  for t,fl,ce in [(F(17,100),6182732024,6182732025),(F(21,125),6669190219,6669190220)]:
+   m=data(t,64,N0,N0,False);l,u=ep(m)
+   ck('banked main anchor '+str(t),floor_trunc(l,10)==fl and ceil_trunc(u,10)==ce)
+   show('ANCHOR_'+str(t),m)
+  print('ANCHORS_PASS');return
+ cit=Path('CITATIONS.json').read_bytes();print('CITATIONS_SHA256',hashlib.sha256(cit).hexdigest())
+ cj=json.loads(cit);ck('snapshot and exact consumed upper',cj['snapshot_count']==610 and any(r['line']==598 and '0.891101027766' in r['fact'] for r in cj['rows']))
+ ck('exact time width',H==F(21,1000))
+ z=data(A0,D,N0,NT,True)
+ ck('prefix has unit fixed weights',arb(N0).log()<17)
+ ck('positive c at global left',z['c']>0)
+ ref47=reference(A0,D,z['s'],z['mu'],z['logs'],47,a(F(1,10**20)))
+ ref29=reference(A0,D,z['s'],z['mu'],z['logs'],29,7*a(T)/(4*arb(X)**2))
+ ck('consumed Euler29 proxy smaller than fixed 17',ref29['ell']>0 and ref29['ell']<17)
+ ck('physical shifted scale strictly above fixed weight',ref47['ell']>17)
+ ck('uniform reference gates',ref47['Emin']>a(F(1,4)) and ref47['Lambda1']<5 and ref47['Emax']<a(F(41,20)) and ref47['EprimeMax']<a(F(51,50)))
+ fields={k:show('REF47_'+k,v) for k,v in ref47.items()};show('REF29_ell',ref29['ell']);show('FORCING',z['R']);show('COMMON_LEFT',z['k1']);show('COMMON_RIGHT',z['k2'])
+ rows=[];todo=[(N0,NT)];tests=0
+ while todo:
+  lo,hi=todo.pop();row=spatial_block(lo,hi,z);tests+=1
+  if row['initial']<a(F(47,50)):
+   rr={k:v for k,v in row.items() if isinstance(v,int)}
+   for k in ('old','new','initial'):rr[k]=show('BLOCK_'+str(lo)+'_'+str(hi)+'_'+k,row[k])
+   rows.append(rr)
+  else:
+   ck('subdivision possible',lo<hi);mid=(lo+hi)//2;todo.extend([(mid+1,hi),(lo,mid)])
+  ck('adaptive node budget',len(rows)+len(todo)<=256)
+ rows.sort(key=lambda r:r['l']);ck('integer-index union exact',rows[0]['l']==N0 and rows[-1]['r']==NT and all(r['r']+1==s['l'] for r,s in zip(rows,rows[1:])))
+ maxinit=max(F(r['initial']['hi']) for r in rows)
+ time_end=a(F(47,50))*(-34*a(H)).exp()+21*a(H)
+ ck('convex whole-time endpoint reduction',time_end<a(F(47,50)))
+ ck('preregistered full-range mass gate',maxinit<F(47,50)<F(19,20))
+ rslo=arb(X)/(4*arb.pi())+a(A0)/16;rshi=arb(X)/(4*arb.pi())+a(T)/16
+ ck('first partial RS cell whole time',rslo>N0*N0 and rshi<(N0+1)**2)
+ wall=4*arb.pi()*((NT+1)**2-a(T)/16);wl,wh=ep(wall);seam=wl.__floor__()
+ ck('closed rational seam strictly below next wall',wh.__floor__()==seam and arb(seam)<wall)
+ ck('stage1 rational tail joint',seam==28274333882307)
+ show('MAX_INITIAL',maxinit);show('TIME_ENDPOINT',time_end)
+ out={'domain':{'tlo':str(A0),'thi':str(T),'Nlo':N0,'Nhi':NT,'X':X,'seam':seam,'y':0},'fixed_weight':17,'mass_bound':'47/50','consumed_B':str(B),'bins':z['bins'],'forcing':show('FORCING_FINAL',z['R']),'reference':fields,'rows':rows,'leaf_count':len(rows),'node_count':tests,'prefix_pairs':z['pairs'],'max_initial_hi':str(maxinit),'time_endpoint':show('TIME_ENDPOINT_FINAL',time_end),'checks':COUNT}
+ Path('certificate.json').write_text(json.dumps(out,indent=2)+'\n')
+ print('CLOSED_N_LEAVES',len(rows),'ADAPTIVE_N_NODES',tests,'PREFIX_PAIR_VISITS',z['pairs'])
+ print('SCOPE fixed single inverse; t CLOSED [333/2000,3/16], all integers N=690988..1499999; natural RS cells including every left endpoint; X<=x, y=0. No H_t charge or Lambda conclusion.')
+ print('PRIMARY_PASS',COUNT,flush=True)
+if __name__=='__main__':main()

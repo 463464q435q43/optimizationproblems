@@ -1,0 +1,31 @@
+{
+  "RECORD_absent_in_both": true,
+  "all_required_gates": 1,
+  "checks": 156.0,
+  "confinement_violations": 0,
+  "copy_directories": [
+    "scratch/assembly_devscore/pkg",
+    ".evals/ev-8282ca89c0/run0/pkg"
+  ],
+  "exact_bound": "333/2000",
+  "first_resource_observation": "WALL_SECONDS 81.66\nUSER_SECONDS 80.36\nSYS_SECONDS 1.32\nMAX_RSS_KB 261804\n",
+  "mathematical_outputs_sha256": {
+    "assembly_audit.json": "db1845bd164c976007f9c08f56ea20d786a8cb41b57d8f9a071aa9861642e2dd",
+    "exterior/audit_summary.json": "0ab5b0d8caeacc6dffdca848d839e33d72f87946d1040492df3eb0b39bb177b8",
+    "exterior/second_summary.json": "7c73914aa8fe493ca34fc3afc2d80c1c86fb76bbf9c3924a828cb4a0b88569d3",
+    "live_adoption_second/audit_results.json": "0e48814b80cd3c74cea7340ce53fd156873bb68a0719869908e83068c29c863f",
+    "live_model_second/independent_certificate.json": "490deec0348ea30c0fbca73ae0a90eeb566284d8a833cb41334a2e90bd4704b0",
+    "live_model_second/iv_results.json": "a99e8fcfa0e99325789bbfd73e35fb6549c00e2100b52c0eef3878556186a092"
+  },
+  "mathematical_stdout_sha256": "f1ccbad756f01a8c68a7e1f3cad1df656d143a76a912cd9e989fec4c840d954a",
+  "official_eval_id": "ev-8282ca89c0",
+  "official_observed_duration_seconds": 86.629,
+  "score": 0.1665,
+  "source_package_files_before_receipts": 58,
+  "source_sha256": {
+    "ASSEMBLY.md": "4965b47492da4a5ffb0019322fc00ac9f41a1dc86a54bd8e65d0738eec9062df",
+    "verify_assembly.py": "3cdf4430f21a864b9937e732644c1da6bd2728c4f17739c49c41c115c6fb4e2c"
+  },
+  "status": "mechanical local observations, not an independent mathematical verdict",
+  "timing_normalization": "Only PREFIX_RECEIPT.cpu_seconds_diagnostic fields and CPU_SECONDS_DIAGNOSTIC lines excluded from stdout comparison; every mathematical line and every generated mathematical JSON byte matches."
+}

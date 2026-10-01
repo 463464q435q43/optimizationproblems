@@ -1,0 +1,315 @@
+# FOUNDATION — complete-coefficient L7 with a uniform H5 phase lemma
+
+prover_astra, iteration 5. This is an analytic conversion package, not an
+exterior certificate or a record assembly. All numerical gates use exact
+rationals or outward balls. The hypotheses below are not silently declared
+true for a particular mollifier.
+
+## 1. Statement and quantifier audit
+
+Use the standard Polymath normalization (arXiv:1904.12438):
+
+    alpha(s)=1/(2s)+1/(s-1)+Log(s/(2*pi))/2,
+    M0(s)=sqrt(2*pi)/16*s*(s-1)*pi^(-s/2)
+           *exp((s/2-1/2)*Log(s/2)-s/2),
+    Mt(s)=M0(s)*exp(t*alpha(s)^2/4),
+    s=(1+i*x)/2, w=s+t*alpha(s)/2=sigma+i*tau,
+    Theta=Im log Mt(s), B_t(z)=Mt((1-i*z)/2).
+
+M0 is an elementary function, not the exact Gamma factor. Therefore
+its logarithmic derivative is EXACTLY alpha; there is no Stirling
+remainder in the phase calculation here. The displayed logarithms use
+the published branches. B is nonzero on a neighbourhood of each real
+point considered.
+
+**Theorem L7 (pointwise, all finite supports).** Fix real t with
+0<t<=1/2 and x>=5100. Fix any positive integer N and any finite set D of
+positive integers containing 1. At this t choose arbitrary complex
+coefficients lambda_d with lambda_1=1, and keep them and N constant when
+differentiating in x. Put
+
+    b_n=exp(t*log(n)^2/4), A_N=sum_(n<=N)b_n*n^(-w),
+    E=E(w)=sum_(d in D)lambda_d*d^(-w), E_s=dE/dw,
+    c_m=sum_(d in D,d|m,m/d<=N)lambda_d*b_(m/d),
+    S=E*A_N=sum_m c_m*m^(-w),
+    L=sum_m c_m*log(m)*m^(-w).
+
+Every product m is included, in particular all m>N. The coefficients
+may have either sign or be complex. Assume E!=0. Take any local branch
+of arg E, and set h=(Theta-arg E)'. Assume h>0 and tau'>0. Suppose
+nonnegative v,d,E0,E1,P0,ell0 satisfy
+
+    |R_N(x)|<=v, |R_N'(x)|<=d,
+    |E|<=E0, |dE/dx|<=E1,
+    0<P0<=4*h, 0<ell0<=2*h/tau',
+
+where f_N is the holomorphic fixed-index Polymath model and
+R_N=H_t/B_t-f_N. Define
+
+    M=sum_(m>=2) max(1,2*log(m)/ell0-1)*|c_m|*m^(-sigma),
+    B1=sum_(m>=2)|c_m|*m^(-sigma)*log(m),
+    C=E0*v/2 + 2*(E1*v+E0*d+2*|sigma'|*B1)/P0.
+
+Then a real multiple zero H_t(x)=H_t'(x)=0 implies **1-M<=C**.
+In particular M+C<1 excludes every multiplicity at least two.
+All assumptions are pointwise; applying them at every point of any
+specified closed region gives exclusion on that region. There is no
+hypothesis on off-axis E, no division by A_N or S, and no derivative of
+lambda with respect to t in this theorem.
+
+**H5 phase lemma (unbounded x-domain).** For all x>=5100 and all t>=0,
+
+    4*Theta'-log(x/(4*pi))
+       >= (t*pi*x/4-t/2-3/2)/(1+x^2).                    (H5)
+
+The right side is strictly positive if t*(pi*x-2)>6. In particular it
+is strictly positive for all x>=5100 and t in [333/2000,3/16]. The
+statement is NOT that the right side is positive for every t>0.
+There is no positive uniform infimum as x tends to infinity; none is
+needed.
+
+**Convenient stage-one corollary (conditional on a mollifier).** Let
+X=6000000185827, a=333/2000, T=3/16, c=500000000001/10^12 and e=1/10^24.
+For every real t in CLOSED [a,T] and every real x>=X, take the natural
+index N=floor(sqrt(x/(4*pi)+t/16)). Suppose an x-frozen finite mollifier
+as above satisfies
+
+    E!=0, max(D)<=30030, |E|<=41/20, |E'|<=4,
+    |E_s/E|<=K<=27/5,
+    P=log(x/(4*pi))-4*c*K,
+    M computed at ell0=P/(1+2*e) is <=19/20.
+
+Then P>16, the L7 charge is strictly below 1/32000, and
+(H_t(x),H_t'(x))!=(0,0). One may replace ell0 by any smaller positive
+certified lower phase scale, provided the same M bound is proved.
+This also holds at every RS transition, with the natural right-hand
+index at the wall and the fixed-index derivative remainder described
+below. The corollary does NOT discharge these mollifier hypotheses on
+any nontrivial region. Its useful new feature is the denominator-16
+interface, rather than assuming a denominator at least 20.
+
+RH-height dependency: none for L7, H5 or this conditional corollary.
+They use no zeta-zero input. Any eventual Lambda upper bound uses the
+separator and anchor: PT2021 to height X/2=6000000185827/2, margin
+350479773/2 below T_PT=3000175332800, and V1-H-213. No new Lambda bound
+or complete stage-one exterior is asserted here.
+
+## 2. Proof of L7
+
+### 2.1 The exact model and the finite product
+
+On the real axis the two chiralities are conjugates up to
+exp(2*i*Theta), so
+
+    f_N=conj(A_N)+exp(2*i*Theta)*A_N=exp(i*Theta)*V,
+    V=2*Re(exp(i*Theta)*A_N) is real.
+
+The phases of A_N and E are BOTH -tau*log n, with
+
+    tau=x/2+eta,
+    eta=t*atan(x)/4-3*t*x/(2*(1+x^2)).
+
+Finite distributivity and d^(-w)*n^(-w)=(dn)^(-w) prove the c_m formula
+for every m, without a cutoff at m=N. With t,N,lambda fixed,
+S'=-w'*L. These are also the banked exact-phase identities at memory
+line 591; they are restated to identify the consumed model. The
+flat-exponent variant is not licensed by this theorem.
+
+### 2.2 The real two-coordinate identity
+
+Let theta=Theta-arg E, Z=exp(i*theta)*S and W=exp(i*theta)*L. Then
+Z=|E|exp(i*Theta)*A_N and Vhat:=2*Re Z=|E|V. Put ell=2*h/tau'>0 and
+
+    G=Z-W/ell+conj(W)/ell.
+
+Thus Re G=Re Z and Im G=Im Z-2*Im W/ell. Differentiating gives EXACTLY
+
+    Vhat'=-2*h*Im Z-2*sigma'*Re W+2*tau'*Im W
+          =-2*h*Im G-2*sigma'*Re W.                 (D)
+
+This formula includes the derivative of the real exponent sigma. The
+quantity ell is not 4*h unless eta'=0. There is no per-(d,n) remainder.
+
+### 2.3 What happens at a true multiple zero
+
+At H_t=H_t'=0, both H_t/B_t and its derivative vanish because B_t!=0.
+Consequently f_N=-R_N and f_N'=-R_N'. From f_N=exp(i*Theta)*V,
+
+    |V|<=v,
+    |f_N'|^2=(V')^2+(Theta'*V)^2, hence |V'|<=d.
+
+The real and imaginary coordinates are orthogonal: there is no
+additional Theta'*v charge. Also |(|E|)'|<=|E'|, so
+
+    |Re G|<=E0*v/2,
+    |Vhat'|<=E1*v+E0*d.
+
+Using (D) and |L|<=B1 yields
+
+    |Im G| <= (E1*v+E0*d+2*|sigma'|*B1)/(2*h).
+
+Finally |G|<=|Re G|+|Im G| and 4*h>=P0 give |G|<=C. The factor E0
+is retained on BOTH v and d. Bounds on E are used only at real x;
+the Cauchy disk for R_N is mollifier-free.
+
+### 2.4 The combined-coefficient lower bound
+
+The m=1 term of G is exp(i*theta), of modulus one. For m>=2 write
+z_m=exp(i*theta)*c_m*m^(-w), r_m=log(m)/ell>=0. Its contribution to G
+is (1-r_m)z_m+r_m*conj(z_m), of modulus at most
+
+    (|1-r_m|+r_m)|z_m|=max(1,2*r_m-1)|z_m|.
+
+For fixed m this bound decreases with ell. Replacing ell by ell0 and
+summing proves |G|>=1-M. Combine with |G|<=C. This proof is identical
+for every product m, whether m<=N or m>N. A per-pair triangle bound
+could only increase M, and is unnecessary. Taking absolute values
+AFTER the finite convolution is therefore legitimate.
+
+## 3. Proof of H5; no cancellation-prone subtraction
+
+Put Q=1+x^2, a0=log(Q/(16*pi^2))/4 and b0=atan(x)/2. Rationalizing
+alpha and differentiating with respect to its complex argument gives
+
+    alpha=(a0-1/Q)+i*(b0-3*x/Q),
+    alpha'=(1/Q+6*(x^2-1)/Q^2)-i*(x/Q+4*x/Q^2).
+
+As (log Mt)'=alpha+t*alpha*alpha'/2 and ds/dx=i/2,
+4*Theta'=2*Re(alpha)+t*Re(alpha*alpha'). Therefore, with Lx=log(x/(4*pi)),
+
+    4*Theta'-Lx = log(1+x^(-2))/2-2/Q+t*K,
+    K=(a0-1/Q)*(1/Q+6*(x^2-1)/Q^2)
+       +(b0-3*x/Q)*(x/Q+4*x/Q^2).                    (P)
+
+For x>=5100, a0>=3+13/Q. The endpoint is certified by Arb; the second
+arithmetic line proves the same sign by bounding pi<22/7 and the
+positive exponential series with an exact rational geometric tail.
+Moreover the derivative of a0-3-13/Q is x/(2*Q)+26*x/Q^2>0, so one
+endpoint proves the entire half-line, not just a grid.
+
+For A=a0-3-13/Q>=0, direct expansion gives the positive decomposition
+
+    K-b0*x/Q = A/Q+3/Q^2+12/Q^3
+       +6*(x^2-1)*(3+12/Q+A)/Q^2+4*b0*x/Q^2 >=0.
+
+Every term is nonnegative for x>=1 and b0>=0. The elementary integral
+inequalities log(1+u)>=u/(1+u) and atan(u)<=u for u>=0 imply
+log(1+x^(-2))>=1/Q and b0>=pi/4-1/(2*x). Substitute in (P) to obtain
+(H5). Its positivity on [333/2000,3/16] follows already from pi>3 and
+x>=5100. All comparisons are in the correct lower-bound direction.
+
+## 4. Phase lower bound and the charge corollary
+
+At x>=X, t in [a,T], memory line 591 gives
+
+    0<=eta'<1/10^26<e,
+    |w'|<1/2+1/10^26<c,
+    sigma'=t*x*(x^2+5)/(4*(1+x^2)^2)>=0.
+
+The package checks the exact rational weakenings; no sample extrapolation
+is made. If |E_s/E|<=K, then |(arg E)'|<=c*K. H5 gives
+4*h>=Lx-4*c*K=P. Since Lx increases with x and K<=27/5, the endpoint
+check at X proves P>16 everywhere. Also 2*tau'<=1+2*e, so
+ell=4*h/(1+2*eta')>=P/(1+2*e), as required in L7.
+
+The raw fixed-index remainder bounds consumed from memory line 597 are
+
+    v=682857503579/10^18,
+    d=114077128828636/10^18.
+
+They are certified CEIL18 outputs, frozen and hashed in this package.
+Their domain is EXACTLY t in CLOSED [333/2000,3/16], x>=X, natural N
+frozen on the Cauchy disk of radius 1/Lx. They cover every transition
+with its neighboring-index term and lower-half-disk reflection.
+We consume only these raw inequalities, not that fact's denominator-20
+mollifier corollary. Their derivation is not re-claimed here.
+
+Since all M weights are >=1, M<=19/20 implies the unweighted nonunit
+mass is <=1. With max(D)<=30030 and the natural N<=sqrt(x),
+
+    B1<=log(30030)+log(x)/2.
+
+Also sigma'<=T*(1/(4*x)+1/x^3). Hence
+
+    2*|sigma'|*B1
+      <=2*T*(1/(4*x)+1/x^3)*(log(30030)+log(x)/2)
+      <1/10^12.                                      (A)
+
+The upper envelope decreases on x>=X: writing J=log(30030)+log(x)/2>1/2,
+its derivative is
+2*T*((1/2-J)/(4*x^2)+(1/2-3*J)/x^4)<0. The endpoint gate at X is
+rigorous in two arithmetic representations. N<=sqrt(x) follows from
+pi>3 and x/(4*pi)+T/16<=x/12+1/32<x.
+
+Substitute E0=41/20, E1=4, P0=16 and (A) into L7. The resulting exact
+rational charge bound is computed live and is <1/32000. Thus
+M+C<19/20+1/32000=30401/32000<1. This proves the conditional corollary.
+
+## 5. Endpoints, slabs, switches and proof obligations for consumers
+
+The generic theorem allows any fixed N if its OWN raw v,d bounds are
+supplied. The corollary uses the natural floor index and no other one.
+At a wall x_N(t)=4*pi*(N^2-t/16), that index is N, not N-1. Do not apply
+the corollary at the wall using an old left-cell model unless its value
+and derivative bounds have separately been certified. A statement on
+an open cell does not by continuity exclude a multiple zero at its end.
+
+No differentiation of the natural selection N(x) occurs. At every point,
+freeze N, t and lambda, and differentiate that analytic model. This is
+valid even if the Cauchy circle crosses a wall: line 597 includes the
+extra index term. In the generic theorem this inclusion is a requirement
+on the supplied derivative bound, not an automatic zero charge.
+
+Mollifiers may change between time slabs, spatial blocks or a tail
+region. There need not be a globally continuous mollifier. At a joint,
+at least one adjacent certificate must cover that point with all its
+hypotheses, the correct index and the same frozen coefficients used in
+M and the charges. Time transport of signed combined coefficients
+requires a proved enclosure; coefficientwise monotonicity before
+combining is not supplied by L7. Any credited spatial fall must use
+the actual combined log-moment, not a larger per-pair surrogate.
+
+Coverage inventory: L7 is pointwise on y=0, at all fixed integers N
+under its stated bounds. H5 covers every real x>=5100 and t>=0, with
+positivity on the closed target band. The numeric corollary covers the
+closed t-band [333/2000,3/16], x>=X, and every NATURAL RS cell and wall,
+conditional at each point on H1-H4 and its complete M bound. It does
+not supply those bounds for all N or t. Separator propagation uses
+|y|<=1 and a different time domain; no such region is certified here.
+
+## 6. Scope, credit and second-line ladder
+
+Credit Daniel Martin Kornaus's PR #180 for the collision-exclusion
+architecture, mollify-first amplitude-free resultant and zero-local
+derivative idea. The proofs and code here are ours; no unrefereed
+result, constant, source or output is consumed. The own derivation was
+recorded in DERIVATION.md before comparing the operator reference.
+The exact-phase repair is consumed as our banked memory line 591.
+
+Novelty relative to the 598-entry snapshot: line 591 explicitly does
+not give a true-H_t error conversion; line 597 gives raw errors and a
+conditional denominator-20 charge, not this H5 half-line proof or the
+more general denominator-16 interface. Lines 593,594,598 certify
+singleton finite-model corners, not an all-support conversion.
+We neither re-claim those results nor promote them to a full band.
+
+Requested FOUNDATION rung (b) for the new H5/conversion machinery:
+exact generic symbolic identities and positivity certificates, Arb
+checks, and a separately implemented rational-series/interval second
+arithmetic line. The verifier determines the accepted rung. Toy finite
+sums and finite differences are normalization checks, NOT proofs for
+all supports or an H_t certificate. Numerics_astra's external second
+line is still required before a record consumes this package.
+
+## 7. Verification and digit law
+
+Run `/usr/bin/python3 verify.py` from this directory or a clean copy.
+It uses only package files and Python libraries; there are no binaries,
+network accesses or outside reads. `second_line.py` is invoked only as
+`[sys.executable, 'second_line.py']`. Source and frozen-input hashes are
+pinned in verify.py. The scripts use exact rational comparisons, Sympy
+identities, Arb balls and mpmath.iv above 200-bit precision. All printed
+decimals are FLOOR/CEIL from exact interval endpoints using self-tested
+helpers, including both negative rounding directions. No nearest-rounded
+Arb display is claimed as a directed bound. A successful script is not
+a substitute for auditing the universal proof in this writeup.

@@ -1,0 +1,28 @@
+{
+  "audited_manuscript_sha256": "764506e8a5120d92629a956517ebd2ad2373613534884f72ec34019aea6e7008",
+  "audited_version": "functional_astra s6 ce_single_freeze_exterior (pending at opening snapshot)",
+  "X": 6000000185827,
+  "a": "333/2000",
+  "b": "3/16",
+  "K": 1024,
+  "N0": 690988,
+  "Nmax": 1499999,
+  "B": "891101027766/1000000000000",
+  "mass_source": "memory598 numerics_astra-s5 CE_RECIP1024_INDEPENDENT_CORNER",
+  "main_anchors": [
+    {
+      "t": "17/100",
+      "K": 64,
+      "ceil10": "0.6182732025",
+      "source": 593
+    },
+    {
+      "t": "21/125",
+      "K": 64,
+      "ceil10": "0.6669190220",
+      "source": 594
+    }
+  ],
+  "consumed_corner_manuscript_sha256": "43e1f210fcabb3751fafda9695b4881b06a1e2664e2ee370117fe6a57600b6a5",
+  "consumed_corner_output_sha256": "18f70610b6170bf976be75f845d51a81b548aa7593fa981a031eaa5b5600fce9"
+}

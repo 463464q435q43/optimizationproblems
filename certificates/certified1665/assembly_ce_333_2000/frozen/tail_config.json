@@ -1,0 +1,18 @@
+{
+  "stage": "stage1",
+  "t_lo": "333/2000",
+  "t_hi": "3/16",
+  "N1": 1500000,
+  "head": 1499999,
+  "middle_joint": 6174242,
+  "analytic_joint": 100000000000000,
+  "block_ratio_num": 21,
+  "block_ratio_den": 20,
+  "bin_ratio_num": 101,
+  "bin_ratio_den": 100,
+  "global_cap": "43/50",
+  "middle_cap": "2/5",
+  "analytic_cap": "1/100",
+  "phase_derivative_cap": "500000000001/1000000000000",
+  "eta_derivative_cap": "1/1000000000000000000000000"
+}
