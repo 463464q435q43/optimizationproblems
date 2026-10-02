@@ -1,0 +1,74 @@
+{
+  "all_leaf_pair_comparisons": 196,
+  "all_original_integral_controls": 14,
+  "attained_formula_countermodels": 7,
+  "candidate": false,
+  "checks_driver": 459,
+  "closed_positive_boxes": 3,
+  "complete_counts": {
+    "entrants": 1609011,
+    "leaves": 14,
+    "rough_bins": 224,
+    "rough_fibres": 157939
+  },
+  "excess_components": 0,
+  "finite_surplus": "22375198391999/32000000000000000",
+  "found_load_bearing_discrepancy": false,
+  "fresh_source_only_replay_required": true,
+  "geometry_mutations": 12,
+  "initial_RH": {
+    "height": "3000175332800",
+    "margin": "350479773/2",
+    "required": "6000000185827/2",
+    "source": "PT2021 arXiv:2004.09765"
+  },
+  "minimum_sufficient_recovery_expression": {
+    "L": 1897746,
+    "U": 2098872,
+    "ceil": "0.011185589490",
+    "floor": "0.011185589489",
+    "hi": "42441204573773759846932023841532086619872547651715579759490803243573021670797493/3794275180128377091639574036764685364535950857523710002444946112771297432041422848",
+    "lo": "2652575285860859990433251482912349194449195887315617922215254024710627618055483/237142198758023568227473377297792835283496928595231875152809132048206089502588928",
+    "places": 12
+  },
+  "missing_components": 0,
+  "name": "EXTERNAL_GRAM_GLOBAL_COMPOSITION_AUDIT",
+  "new_source_or_tail_production": false,
+  "official_attestation": false,
+  "original_complete_weight_controls": 21,
+  "original_raw_controls": 30,
+  "own_gauge_controls": 12,
+  "record_package_audited": false,
+  "rungs_requested": [
+    "a_same_functions677_and_V1_anchors",
+    "b_external_composition_proof_and_exact_interfaces"
+  ],
+  "scope_mutations": 33,
+  "separate_complete_recovery774_external_audit_supplied": false,
+  "snapshot": 789,
+  "source_external_audit": 789,
+  "tail_squared_reserve": "291570840729/29414500000000",
+  "target_assembly_sha256": "a6c620eb9ffd110b641982129b1173bc4c7aa4262afc2f12ab08a2451f81773c",
+  "target_exact_fields": 18,
+  "target_memory": 786,
+  "target_scalar_fields": 13,
+  "target_snapshot": 777,
+  "theorem": "EVERY t in CLOSED[4/25,3/16], EVERY real x,y=0: no multiple real zero; hence STRICT Lambda<4/25",
+  "worker_runs": [
+    {
+      "exit": 0,
+      "stdout_sha256": "8f06e9446ff2f03f51a39aa6517f82ea2e5099d437c17fe563d9129892891fc0",
+      "worker": "numerical.py"
+    },
+    {
+      "exit": 0,
+      "stdout_sha256": "5cb1254b41c490e81db61b496d5d375f2e6b8f1196ba1ae0264231ad05204cb8",
+      "worker": "logical.py"
+    },
+    {
+      "exit": 0,
+      "stdout_sha256": "ef94fa371d840fd4e1e7b18ddd43f213720989f6d9c205d0267d81fee3daa084",
+      "worker": "controls.py"
+    }
+  ]
+}

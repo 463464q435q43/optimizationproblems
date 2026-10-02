@@ -1,0 +1,69 @@
+{
+  "RH_height": 3000175332800,
+  "RH_source": "PT2021",
+  "initial_X": 6000000185827,
+  "initial_margin": "350479773/2",
+  "live_author": "functional_astra-s27",
+  "live_role": "recovery774",
+  "live_source_manifest_sha256": "a4c29b98a06a07d0e896a1e4293fa47eac5a6bf5f4a32280532a8e0063d3329b",
+  "policy": "EXACT_ACCEPTED_AUDIT_OR_COMPLETE_LIVE_INDEPENDENT_PROOF",
+  "policy_justification": "Record contract permits complete LIVE rederivation, with independently authored proof/arithmetic satisfying the second-line obligation. Accepted board43521b7b536c uses this principle for its own external proof. Never reinterpret a LIVE result as bank acceptance.",
+  "previous_policy": "ALL_DESIGNATED_EXTERNAL_AUDITS_MUST_BE_ACCEPTED",
+  "required": {
+    "complete_source767": {
+      "obligations": [
+        "source_singleton_4/25_X690988_y0",
+        "all_prime_torus",
+        "complete_weighted_Gram",
+        "synthetic_delta_1/10",
+        "positive_normalized_weights",
+        "all_inverse_products",
+        "complete_discarded_Fourier_l1",
+        "all_3524_closed_leaves"
+      ],
+      "owner": "COMPLETE_memory789",
+      "target": 767,
+      "target_fact_sha256": "97d78eb2f4a973142a0f82f10a3b40a195f64df21f3a42264a187542f8b885ec",
+      "target_proof": "math/frozen/bank767_proof.txt",
+      "target_proof_sha256": "026b89ecc2fe2e42ef5dc62c513c01b567da609f4f73f7a6b7f6d8528022d806"
+    },
+    "composition786": {
+      "obligations": [
+        "exact_pinned_manuscript",
+        "all_consumed_bank_statements",
+        "three_closed_boxes_no_gaps_or_excess",
+        "all_axes_t_N_y",
+        "positive_time_general_interior",
+        "uniform_ALL_complex_stall_tail",
+        "initial_PT2021_only",
+        "anchor_V1-H-213",
+        "strict_stall_contradiction"
+      ],
+      "owner": "COMPLETE_memory795",
+      "target": 786,
+      "target_fact_sha256": "076bc7325cb326fdcf31fe5939a42f22d579190a56b40748ff5b7a9fa22c4aa3",
+      "target_proof": "math/ASSEMBLY.md",
+      "target_proof_sha256": "a6c620eb9ffd110b641982129b1173bc4c7aa4262afc2f12ab08a2451f81773c"
+    },
+    "recovery774": {
+      "obligations": [
+        "general_vector_ball_support_function",
+        "all_224_positive_bins",
+        "all_14_transport_leaves",
+        "all_1609011_entrants",
+        "time_closed_4/25_3/16",
+        "space_closed_X_W",
+        "natural_indices_690988_2299999",
+        "all_internal_RIGHT_walls",
+        "terminal2300000_excluded",
+        "balanced_REAL_lift738_754"
+      ],
+      "owner": "functional_astra_COMPLETE_LIVE_PROOF_NOT_BANK_CITATION",
+      "target": 774,
+      "target_fact_sha256": "b792c313ff1bd1b85d08b8c2720300b34ad081c6b393206dc2805ccc753b1703",
+      "target_proof": "math/frozen/bank774_proof.txt",
+      "target_proof_sha256": "41e09d60548b65e2c09c8c374c6e3a9378141fc9817998f2d527bdb8c45d44d8"
+    }
+  },
+  "selected_mathematical_target": 786
+}

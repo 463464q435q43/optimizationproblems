@@ -1,0 +1,1198 @@
+{
+  "accepted_inert_sources": [
+    {
+      "memory": 767,
+      "name": "primary.c",
+      "original_bytes_equal": true,
+      "sha256": "e57c7f15d532562334cbf6ce7de5cd06950ef51db7ce8d5056e37a736521b00e"
+    },
+    {
+      "memory": 767,
+      "name": "secondary.py",
+      "original_bytes_equal": true,
+      "sha256": "354dbf8ec5950bdee7550700b1b78dc6601e9d5b9ef540bb7308f8a870a92352"
+    },
+    {
+      "memory": 767,
+      "name": "secondary_trig.py",
+      "original_bytes_equal": true,
+      "sha256": "46a52697387f4a047ee26dcf1a935eab5523f0e54dff937d542aaddbd2e76b75"
+    },
+    {
+      "memory": 767,
+      "name": "leaf_check.c",
+      "original_bytes_equal": true,
+      "sha256": "0e8c643b89841d88410732c2d3441ba2a609343cf9425a08d675b65d3a59d5a2"
+    },
+    {
+      "memory": 767,
+      "name": "leaf_second.c",
+      "original_bytes_equal": true,
+      "sha256": "1ea4ff72ab9225d242f999c7c58afecb79d6b3bbdb92db34d9d3db1df7f9b234"
+    },
+    {
+      "memory": 767,
+      "name": "verify.py",
+      "original_bytes_equal": true,
+      "sha256": "00d6bbece7c2db4121e2e8de429329cdd41587327c04661fda11891f83028957"
+    },
+    {
+      "memory": 767,
+      "name": "SOURCE.sha256",
+      "original_bytes_equal": true,
+      "sha256": "23fa8cd774eecd9bd320af9f610434993e7db7a0f6ca0735b4232dd04440dbfc"
+    },
+    {
+      "memory": 789,
+      "name": "check.py",
+      "original_bytes_equal": true,
+      "sha256": "f03dba1b73ae4e5f7e6b71144e316773d74f9416db3e71f3d665834c5549dcf9"
+    },
+    {
+      "memory": 789,
+      "name": "complete.py",
+      "original_bytes_equal": true,
+      "sha256": "5a7cb3f8c06072f2d11372c858785e09b6d77ebafbbfb59f426461914956ad8d"
+    },
+    {
+      "memory": 789,
+      "name": "leaves.py",
+      "original_bytes_equal": true,
+      "sha256": "71792088cde83004f2942cbe5e678a4ac677bdf6baa29572ff27110c61edf5e1"
+    },
+    {
+      "memory": 789,
+      "name": "qinterval.py",
+      "original_bytes_equal": true,
+      "sha256": "9fdccc5208d7c8591d6833e930e08cdfa0b9bfb0e924fd53ce78d3f47e4e81c6"
+    },
+    {
+      "memory": 789,
+      "name": "residue_jets.c",
+      "original_bytes_equal": true,
+      "sha256": "beee03c2a462c27c7b5f26246e371bcb7a0cec9530009b461b5ec1a447722dbd"
+    },
+    {
+      "memory": 789,
+      "name": "complex_controls.py",
+      "original_bytes_equal": true,
+      "sha256": "37446791a71b8f8c8a55a21a1b746768f749686db92501a34dda1f703644bce2"
+    },
+    {
+      "memory": 789,
+      "name": "joints.py",
+      "original_bytes_equal": true,
+      "sha256": "c080d675b3606f50bbb90ecf19f35041e1b0dc0b5c567553c5adbec64c50c189"
+    },
+    {
+      "memory": 789,
+      "name": "adverse.py",
+      "original_bytes_equal": true,
+      "sha256": "65ea1d416b2fe5cb7982e55276374c752f73d8b6b085dfeed5a6896a921ceea2"
+    },
+    {
+      "memory": 789,
+      "name": "ARITHMETIC.md",
+      "original_bytes_equal": true,
+      "sha256": "3b5d5f1725bac7d56e0c93ea33183ee9870c85264021222e40fd73c4e43e3b25"
+    },
+    {
+      "memory": 789,
+      "name": "RELEASE_PINS.json",
+      "original_bytes_equal": true,
+      "sha256": "57c8a6423a6acd12efae84ff1e1cdbb896445cbe612b1879ce5c646a0e9d2e9d"
+    }
+  ],
+  "accepted_local_inputs": [
+    {
+      "local": "math/FROZEN.sha256",
+      "memory": 786,
+      "original_bytes_equal": true,
+      "sha256": "a7193ee6cb45583d0214fc5b5a990cdda3053a022ca18f27f19d3b314359f34e"
+    },
+    {
+      "local": "math/SOURCES.sha256",
+      "memory": 786,
+      "original_bytes_equal": true,
+      "sha256": "9412fef5dce0b7a695ff6af9c2e05e2b5bf0f458bf5f330a31023e023e37f700"
+    },
+    {
+      "local": "math/verify.py",
+      "memory": 786,
+      "original_bytes_equal": true,
+      "sha256": "8443786a74ca72114f30e4c6ba1acea36937efe78d8e848b8331ae046e3cd20f"
+    },
+    {
+      "local": "math/second_line.py",
+      "memory": 786,
+      "original_bytes_equal": true,
+      "sha256": "0674cdc709a12bcdf1c9957bcab64e9bcfe2e0d8c6ecee8c342029c47e6d1313"
+    },
+    {
+      "local": "math/ASSEMBLY.md",
+      "memory": 786,
+      "original_bytes_equal": true,
+      "sha256": "a6c620eb9ffd110b641982129b1173bc4c7aa4262afc2f12ab08a2451f81773c"
+    },
+    {
+      "local": "math/CITATIONS.json",
+      "memory": 786,
+      "original_bytes_equal": true,
+      "sha256": "ef9111d59d67d50a6efd2f1411f4d2775b00549d55e38a5dc65a3a9aef645959"
+    },
+    {
+      "local": "math/CONTRACTS.json",
+      "memory": 786,
+      "original_bytes_equal": true,
+      "sha256": "fa81345dd718f697811eaba3238b59c35091a3d97c839f8baee38580e385b545"
+    },
+    {
+      "local": "math/FACT.txt",
+      "memory": 786,
+      "original_bytes_equal": true,
+      "sha256": "0ec8e7cd2daafe4274b8072659796837b62fe464e3e8bb9420dbc1eaff2fa273"
+    },
+    {
+      "local": "math/PREREG.md",
+      "memory": 786,
+      "original_bytes_equal": true,
+      "sha256": "1216500da8bc30012ae632111ef7d028ce84e6f61ce4b81e06af82461cd898f4"
+    },
+    {
+      "local": "math/PROVENANCE.json",
+      "memory": 786,
+      "original_bytes_equal": true,
+      "sha256": "c2e7782b8f00d072be98ccb8612d0982812ec236da2e328e97d1a38da4482554"
+    },
+    {
+      "local": "math/QUANTIFIER_AUDIT.md",
+      "memory": 786,
+      "original_bytes_equal": true,
+      "sha256": "722bb0eddbd53e48b6a5f415f285c41b56198c83bbeb4403c7693c7880da0397"
+    },
+    {
+      "local": "math/READINESS.json",
+      "memory": 786,
+      "original_bytes_equal": true,
+      "sha256": "772cfe1d67df12ba084fee1fe1781e564eccd9cc0311fd440bf1328d08cc40f0"
+    },
+    {
+      "local": "math/SECOND_PROOF.md",
+      "memory": 786,
+      "original_bytes_equal": true,
+      "sha256": "640dab98b73910c413749ebcb43853b96ddfbaeb0f0f62770c79e14cf2e2dcb4"
+    },
+    {
+      "local": "math/frozen/analytic_separator_second.txt",
+      "memory": 786,
+      "original_bytes_equal": true,
+      "sha256": "fd5e4f351cdaf71dd2b0dfe505a48b95965be5db915403e2d3787a19e455d5df"
+    },
+    {
+      "local": "math/frozen/anchor.txt",
+      "memory": 786,
+      "original_bytes_equal": true,
+      "sha256": "874957ddc1caa202aeffa7573013dc161854c39b3f832d367fd5cd008e9ccb54"
+    },
+    {
+      "local": "math/frozen/bank720_theorem.txt",
+      "memory": 786,
+      "original_bytes_equal": true,
+      "sha256": "249aa74644189dd15c0e5bf9e6fcddcfd576e242bb2660542c844f8c0fe4bff3"
+    },
+    {
+      "local": "math/frozen/bank725_audit.txt",
+      "memory": 786,
+      "original_bytes_equal": true,
+      "sha256": "4ae59adc397d9e31bf1d0ca2cb4565943a2840495c7f4bfaba3534a7584fde35"
+    },
+    {
+      "local": "math/frozen/bank729_primary.json",
+      "memory": 786,
+      "original_bytes_equal": true,
+      "sha256": "463e204585233314aeeb78c4b0f3723907e713180c2def062f94b287634c8c56"
+    },
+    {
+      "local": "math/frozen/bank729_proof.txt",
+      "memory": 786,
+      "original_bytes_equal": true,
+      "sha256": "2415dac9b1ef172267133ce3f9a493621a671243295f6bf3a645c15e4c665191"
+    },
+    {
+      "local": "math/frozen/bank729_second.json",
+      "memory": 786,
+      "original_bytes_equal": true,
+      "sha256": "f8685c1bfeca0a21bfd69a6390dbf4ffff482320d49e597c7bb34dc2ce3d03eb"
+    },
+    {
+      "local": "math/frozen/bank733_audit.txt",
+      "memory": 786,
+      "original_bytes_equal": true,
+      "sha256": "f25f28713b887a2b26d120ad8cc7207b55ef537cf1a2a33682cf83b503f9365e"
+    },
+    {
+      "local": "math/frozen/bank738_primary.json",
+      "memory": 786,
+      "original_bytes_equal": true,
+      "sha256": "3fbb21ec83d23588a73fc53511a6fc177ff69be020c419ee0c82d6d0bab03d09"
+    },
+    {
+      "local": "math/frozen/bank738_proof.txt",
+      "memory": 786,
+      "original_bytes_equal": true,
+      "sha256": "0837a258f15c47d50f8186701d8b701129af415e1ecbd5b64572cf04fac33a92"
+    },
+    {
+      "local": "math/frozen/bank744_proof.txt",
+      "memory": 786,
+      "original_bytes_equal": true,
+      "sha256": "2c688d63297c8bb60ba9faa801aa2d4a40fca65a0c90f9b80b148624e8874f10"
+    },
+    {
+      "local": "math/frozen/bank754_audit.txt",
+      "memory": 786,
+      "original_bytes_equal": true,
+      "sha256": "ca2b8e0d5adf4768b57b625cd26ac8070e8449446d7147f34da96cd67a3f64fa"
+    },
+    {
+      "local": "math/frozen/bank754_summary.json",
+      "memory": 786,
+      "original_bytes_equal": true,
+      "sha256": "319a25d21b25970d58b9aaf165c305bdb2cd82df6d99486a10673e9ee22a16d9"
+    },
+    {
+      "local": "math/frozen/bank767_geometry.json",
+      "memory": 786,
+      "original_bytes_equal": true,
+      "sha256": "f9a2a6e1a4181c7a56ca457342b3e0680deda8f1aafb847cfeae3a97238caeb6"
+    },
+    {
+      "local": "math/frozen/bank767_leaves_primary.txt",
+      "memory": 786,
+      "original_bytes_equal": true,
+      "sha256": "3ed5ee0c88248509ed9fd2b30337e3736d09039050f5166a7a982a3e16ce73c5"
+    },
+    {
+      "local": "math/frozen/bank767_leaves_second.txt",
+      "memory": 786,
+      "original_bytes_equal": true,
+      "sha256": "dec6c0a8b2ff9559a3cf90a5cf75a11c4ae79752d99e92558e186ae314fe37c5"
+    },
+    {
+      "local": "math/frozen/bank767_outputs.txt",
+      "memory": 786,
+      "original_bytes_equal": true,
+      "sha256": "613d7df7f03c68af80e8a933ebe521ea6ab84f7bb5268c240155d18a5832c7df"
+    },
+    {
+      "local": "math/frozen/bank767_proof.txt",
+      "memory": 786,
+      "original_bytes_equal": true,
+      "sha256": "026b89ecc2fe2e42ef5dc62c513c01b567da609f4f73f7a6b7f6d8528022d806"
+    },
+    {
+      "local": "math/frozen/bank767_secondproof.txt",
+      "memory": 786,
+      "original_bytes_equal": true,
+      "sha256": "16310586a87b2bff2be351fc421ca3b7f1f3e643f8fc8068d23fde0e72300a7d"
+    },
+    {
+      "local": "math/frozen/bank767_summary.json",
+      "memory": 786,
+      "original_bytes_equal": true,
+      "sha256": "092da4612e585c102d19d63e07128111dd53147b0339219489091d64ef204baa"
+    },
+    {
+      "local": "math/frozen/bank772_audit.txt",
+      "memory": 786,
+      "original_bytes_equal": true,
+      "sha256": "678414019adc389f3c85815bb73012b9c6d8db4cd7ab1718dcc3625f82a162e9"
+    },
+    {
+      "local": "math/frozen/bank772_summary.json",
+      "memory": 786,
+      "original_bytes_equal": true,
+      "sha256": "adf0f852114db7ece61eead8ed40c89b880d73c1d026a0e638a5d25776b4ce89"
+    },
+    {
+      "local": "math/frozen/bank774_bins.txt",
+      "memory": 786,
+      "original_bytes_equal": true,
+      "sha256": "94d0610a407a302ee18a2330cf48ebc94cbf34c74fc20f6545de41de667f8f1e"
+    },
+    {
+      "local": "math/frozen/bank774_build_primary.c",
+      "memory": 786,
+      "original_bytes_equal": true,
+      "sha256": "19bc55ec0eb5634bda211f41a350982df9937e5e3d7819687d828f2001e0af23"
+    },
+    {
+      "local": "math/frozen/bank774_build_second.txt",
+      "memory": 786,
+      "original_bytes_equal": true,
+      "sha256": "bd4b83859f25c88ce213f5c150241ba2636a54142e0cf217ecd0b314d1bf6ee9"
+    },
+    {
+      "local": "math/frozen/bank774_geometry.json",
+      "memory": 786,
+      "original_bytes_equal": true,
+      "sha256": "1d6a6dc0577e18dd4c6bb49b8b746e353f7bf40490368ea032a3c24019a497d5"
+    },
+    {
+      "local": "math/frozen/bank774_outputs.txt",
+      "memory": 786,
+      "original_bytes_equal": true,
+      "sha256": "3e8f4148cd6880fd7e0533074e2a40a624e4b40bf13b8d61a40a125626e377f2"
+    },
+    {
+      "local": "math/frozen/bank774_primary.json",
+      "memory": 786,
+      "original_bytes_equal": true,
+      "sha256": "a83bcadbd63c5ba04be0a98ffa628d6b666616af944343de5b5a86a38e600137"
+    },
+    {
+      "local": "math/frozen/bank774_probes.json",
+      "memory": 786,
+      "original_bytes_equal": true,
+      "sha256": "1c2d17ecb293dfa584921bee211731f645d7c2951e706950156ffa4c88da6956"
+    },
+    {
+      "local": "math/frozen/bank774_proof.txt",
+      "memory": 786,
+      "original_bytes_equal": true,
+      "sha256": "41e09d60548b65e2c09c8c374c6e3a9378141fc9817998f2d527bdb8c45d44d8"
+    },
+    {
+      "local": "math/frozen/bank774_second.json",
+      "memory": 786,
+      "original_bytes_equal": true,
+      "sha256": "2d7227cd3797de39934feaae909d6c69cceecad457c9acafeadde115f12a0c8b"
+    },
+    {
+      "local": "math/frozen/bank774_secondproof.txt",
+      "memory": 786,
+      "original_bytes_equal": true,
+      "sha256": "e567ecd65edd93cdd967e6757afba5767efd5babee6577830b3b2944d3ea27c5"
+    },
+    {
+      "local": "math/frozen/bank774_source_pins.json",
+      "memory": 786,
+      "original_bytes_equal": true,
+      "sha256": "6d9a1ba0a7d661fbe3625190b0fc13b18d9bec9ad47c02660f0c6d43ad6e468f"
+    },
+    {
+      "local": "math/frozen/bank774_summary.json",
+      "memory": 786,
+      "original_bytes_equal": true,
+      "sha256": "e00c5a340faa03fca859c7bd7f67cfdccfebaf84a97f239c01cc5adc9e5db8e8"
+    },
+    {
+      "local": "math/frozen/boundary_proof.txt",
+      "memory": 786,
+      "original_bytes_equal": true,
+      "sha256": "2bebe2da8c1f28ed99ea856fe2d8134842ec450046077a8549374d84bbb56a54"
+    },
+    {
+      "local": "math/frozen/hermite_separator.txt",
+      "memory": 786,
+      "original_bytes_equal": true,
+      "sha256": "70cc54cfc3932efaa495687dc3565f9af090594deca67b65faa88dde853cc196"
+    },
+    {
+      "local": "math/frozen/interior.txt",
+      "memory": 786,
+      "original_bytes_equal": true,
+      "sha256": "bdc313246fb5927e7605ba048deca2c2b0566eda9fb98a2a12cae8f53c9d1842"
+    },
+    {
+      "local": "math/frozen/interior_audit.json",
+      "memory": 786,
+      "original_bytes_equal": true,
+      "sha256": "097749381b59ae0e47bf7d38ed11fad4df9789c378333bbc47ecc8c88a9d1342"
+    },
+    {
+      "local": "math/frozen/remote_tail.txt",
+      "memory": 786,
+      "original_bytes_equal": true,
+      "sha256": "b25f0abb8cccd94b36ea5ec89324c40d80f64724b8de82a40af7a885827069c9"
+    },
+    {
+      "local": "math/frozen/remote_tail_second.txt",
+      "memory": 786,
+      "original_bytes_equal": true,
+      "sha256": "78f6e660c543d9a1a6c741716197b60e58b05130e0b6f81490a7d0da1fe61b06"
+    },
+    {
+      "local": "math/frozen/separator_second_summary.json",
+      "memory": 786,
+      "original_bytes_equal": true,
+      "sha256": "e81b4ff81fb81da5141feeed77b90d2a8193e6c669924d83a37d64b09fbb10be"
+    },
+    {
+      "local": "frozen/accepted786_stdout.txt",
+      "memory": 786,
+      "original_bytes_equal": true,
+      "sha256": "e55cfc52690c2177ee2ec865dd8f2530ec71f2daa3e11e05012646c995bd95aa"
+    },
+    {
+      "local": "frozen/external789_AUDIT.txt",
+      "memory": 789,
+      "original_bytes_equal": true,
+      "sha256": "3da4fcfd073884f7e8c25919ecbaade9cac7c4ae07437185c0ed7dc22fed5684"
+    },
+    {
+      "local": "frozen/external789_SUMMARY.json",
+      "memory": 789,
+      "original_bytes_equal": true,
+      "sha256": "ec53e01772655ca1eab9bf522df996919d0b1bb4580f5a81ddd758d0d07d5d1e"
+    },
+    {
+      "local": "frozen/external789_COMPLETE_RESULTS.json",
+      "memory": 789,
+      "original_bytes_equal": true,
+      "sha256": "58db76fc8a5597fc4097996cee3cc14bf54578c95b5d48588fc70ecbff5e73d8"
+    },
+    {
+      "local": "frozen/external789_LEAF_RESULTS.json",
+      "memory": 789,
+      "original_bytes_equal": true,
+      "sha256": "3d46cd814c4e3aa5f0d9514555cbf3f89e43468b19a94d87cfb10808b8ab3cbd"
+    },
+    {
+      "local": "frozen/external789_ORIGINAL_PRODUCT_DIGESTS.json",
+      "memory": 789,
+      "original_bytes_equal": true,
+      "sha256": "e82910cd33531b01ef59d083e0d2795990f90262ded159f9ab07c7eef99fb4d7"
+    },
+    {
+      "local": "frozen/external795_AUDIT.txt",
+      "memory": 795,
+      "original_bytes_equal": true,
+      "sha256": "d286763b56d295af80c413b3a5946c989775796f7310c0cb302663a710ce14c6"
+    },
+    {
+      "local": "frozen/external795_ARITHMETIC.txt",
+      "memory": 795,
+      "original_bytes_equal": true,
+      "sha256": "a19a79aec16a2beec9947a17b3004b9fc619713ed4829c629e7c0a6b031ee8ea"
+    },
+    {
+      "local": "frozen/external795_SUMMARY.json",
+      "memory": 795,
+      "original_bytes_equal": true,
+      "sha256": "14b0a8763bd1c7b4aef10f3183a87e423f9b04b87faedc79c3f0ceea87ce9af0"
+    },
+    {
+      "local": "frozen/external795_NUMERICAL.json",
+      "memory": 795,
+      "original_bytes_equal": true,
+      "sha256": "7e2aa07512e70000a07f1bccd909d7c97a0aa49945093d5c1c2e174e71de9567"
+    },
+    {
+      "local": "frozen/external795_LOGICAL.json",
+      "memory": 795,
+      "original_bytes_equal": true,
+      "sha256": "376f80bd05526b78142b229d385a8aad7afa796cec545b9a8adc8b7a7d2f469e"
+    },
+    {
+      "local": "frozen/external795_CONTROLS.json",
+      "memory": 795,
+      "original_bytes_equal": true,
+      "sha256": "422612f28fa60307908ea837846be1b955dd42912885735d5f748a70a41de4b3"
+    }
+  ],
+  "full_fact_records": [
+    {
+      "fact_sha256": "34b0583350e5ae37f1bc7b4bcf92f4e5d315e0c21f8956f2197a98f9c325ab33",
+      "full_bank_record_equal": true,
+      "line": 526
+    },
+    {
+      "fact_sha256": "06136e3c9af7d86229e4c2b0a12a458428b09cbe8c7bef0bf7613bcfc82693d7",
+      "full_bank_record_equal": true,
+      "line": 549
+    },
+    {
+      "fact_sha256": "62faa2c31879375ada8532786eb14a1db98b50fe831df89af71e24e67b3d5025",
+      "full_bank_record_equal": true,
+      "line": 588
+    },
+    {
+      "fact_sha256": "86765e25429f0eca426332509aa2f4d3fdbabe3b65af39e474d2664ea9ca866a",
+      "full_bank_record_equal": true,
+      "line": 590
+    },
+    {
+      "fact_sha256": "6c81b4588b3b9c82addae1798e78fcae22709a26366516d852ba1da06a624c28",
+      "full_bank_record_equal": true,
+      "line": 596
+    },
+    {
+      "fact_sha256": "1431f8452f64ad49044ae6349caae18f187748cd5880402cd2e6cfa0635c500c",
+      "full_bank_record_equal": true,
+      "line": 599
+    },
+    {
+      "fact_sha256": "9fb0e3500d50a35de48c78644d74a59f8fe3de7dda4d4d9750111b2d5724ef80",
+      "full_bank_record_equal": true,
+      "line": 616
+    },
+    {
+      "fact_sha256": "0859ddd2d8c5003c2f0a23246145d7eacf1cf6c4fdf58348b30e05d06a7f90b5",
+      "full_bank_record_equal": true,
+      "line": 617
+    },
+    {
+      "fact_sha256": "bf91c8f9d5b1f212440c9171afa879b3c2d1729486365307c1ebdb072002fc2e",
+      "full_bank_record_equal": true,
+      "line": 655
+    },
+    {
+      "fact_sha256": "03b8dfdcfe6b7216e645dbb0800be91dfaea70c6bdd68e96df9b1f653afb6f20",
+      "full_bank_record_equal": true,
+      "line": 668
+    },
+    {
+      "fact_sha256": "82c0b6eb40b56e4c4a885e67fc4c682c91d647571e985a48cef15f330af41c64",
+      "full_bank_record_equal": true,
+      "line": 675
+    },
+    {
+      "fact_sha256": "64381384e5d49d0936db4d1b5d9875090e4dcbc23eb86a325221c6413b862983",
+      "full_bank_record_equal": true,
+      "line": 676
+    },
+    {
+      "fact_sha256": "d1cb0ea61aa9c7fe8fe3c70798eaec510d959d42a06e283ea6f59c60b4f5a00f",
+      "full_bank_record_equal": true,
+      "line": 677
+    },
+    {
+      "fact_sha256": "7781d5f81d6adcc27581974751b30e0ab5bb909210f1728286d2520b9142ac83",
+      "full_bank_record_equal": true,
+      "line": 684
+    },
+    {
+      "fact_sha256": "44bda963baf23ec38dc3f73e277b7ac81d975913f5a14a2cd3243c84dd9757b9",
+      "full_bank_record_equal": true,
+      "line": 710
+    },
+    {
+      "fact_sha256": "1d900cbfb0bfb2813477c63fd8a3e19010cd800bf0c7d8d33212055b67e2f9be",
+      "full_bank_record_equal": true,
+      "line": 720
+    },
+    {
+      "fact_sha256": "0f2903a1e53d90013b1cb8610ab0b60d629778f54a129f3ca568577e258680b8",
+      "full_bank_record_equal": true,
+      "line": 725
+    },
+    {
+      "fact_sha256": "29f4c1c264f22399a87abdc0e2454f08f16f07ab4179781f4dd8992ef10ce9ba",
+      "full_bank_record_equal": true,
+      "line": 729
+    },
+    {
+      "fact_sha256": "e458a96b475568ef9eb40b9ed07f02296b8e2001d6862fa813532aeb231c3cf0",
+      "full_bank_record_equal": true,
+      "line": 733
+    },
+    {
+      "fact_sha256": "4b6409684aee97ddcfea41674ecd79035b2f66d75dc25daa6dfe736e6a38bd62",
+      "full_bank_record_equal": true,
+      "line": 738
+    },
+    {
+      "fact_sha256": "97a60539940f5fb6157b33d4843f7a0901e7392c006f804c24d3168df937a2ed",
+      "full_bank_record_equal": true,
+      "line": 744
+    },
+    {
+      "fact_sha256": "05fce7f088c9722885bed6d7c6167af6d4fb685f24d8c32168a31f7d2e2dd519",
+      "full_bank_record_equal": true,
+      "line": 745
+    },
+    {
+      "fact_sha256": "e5bc9cef0c821164806240110c4acfc34fabb3e78590cb54cc594afed76d14a8",
+      "full_bank_record_equal": true,
+      "line": 754
+    },
+    {
+      "fact_sha256": "97d78eb2f4a973142a0f82f10a3b40a195f64df21f3a42264a187542f8b885ec",
+      "full_bank_record_equal": true,
+      "line": 767
+    },
+    {
+      "fact_sha256": "1f3ecba3bed19d2490a3aec367d8863469dc0cfedf2e443d84278a6bb6b2a45d",
+      "full_bank_record_equal": true,
+      "line": 772
+    },
+    {
+      "fact_sha256": "b792c313ff1bd1b85d08b8c2720300b34ad081c6b393206dc2805ccc753b1703",
+      "full_bank_record_equal": true,
+      "line": 774
+    },
+    {
+      "fact_sha256": "076bc7325cb326fdcf31fe5939a42f22d579190a56b40748ff5b7a9fa22c4aa3",
+      "full_bank_record_equal": true,
+      "line": 786
+    },
+    {
+      "fact_sha256": "b4839073a9061532ceb79aa5ee334a5cd42b0d554e4094d23c59b8ff75c3acbc",
+      "full_bank_record_equal": true,
+      "line": 789
+    },
+    {
+      "fact_sha256": "2248538c1d610ca9ab94343e02524678fd6ea92b621427dad0215d010e1d2fad",
+      "full_bank_record_equal": true,
+      "line": 791
+    },
+    {
+      "fact_sha256": "9191507992e4b7d69ade77732a3d55fd2de8e0fe1ee5b0ff8f1a43c3600fdc74",
+      "full_bank_record_equal": true,
+      "line": 795
+    }
+  ],
+  "live_author_source": [
+    {
+      "author_source_bytes_equal": true,
+      "bank_acceptance_asserted": false,
+      "name": "ARITHMETIC.md",
+      "sha256": "9d70bc4608b6af215c5bc56629ba88b48a06ca3c4fde9808b236dcca553348be"
+    },
+    {
+      "author_source_bytes_equal": true,
+      "bank_acceptance_asserted": false,
+      "name": "AUDIT.md",
+      "sha256": "8fea6e09a1a4001811e94bb4a467abe1cc8af1f81ae02fbb0983a0ec561c8ddc"
+    },
+    {
+      "author_source_bytes_equal": true,
+      "bank_acceptance_asserted": false,
+      "name": "CITATIONS.json",
+      "sha256": "81fb956f38a819778f083297855d834e43f15ee5e9be07b9ca47ca1bdefa3af9"
+    },
+    {
+      "author_source_bytes_equal": true,
+      "bank_acceptance_asserted": false,
+      "name": "COMPRESSION_MEMO.md",
+      "sha256": "e4f2de5f896e4d30db4368b9ef24ee3b713bcd982c14a681fd973f18ae515d43"
+    },
+    {
+      "author_source_bytes_equal": true,
+      "bank_acceptance_asserted": false,
+      "name": "FACT.txt",
+      "sha256": "82f8d2ab12d25fdc5ec5df19d037459713be4fc88be28fd470123d144e2c262c"
+    },
+    {
+      "author_source_bytes_equal": true,
+      "bank_acceptance_asserted": false,
+      "name": "INPUT_ORIGINS.json",
+      "sha256": "263c42cc45dcc1588ecd4373e6ba2605dc90f24976310685ff0bd4d034e716d7"
+    },
+    {
+      "author_source_bytes_equal": true,
+      "bank_acceptance_asserted": false,
+      "name": "OUTCOME.md",
+      "sha256": "4753134f52ac453f0980b315dfa2d51ea9cc5f943a7fcad11c531089a7324763"
+    },
+    {
+      "author_source_bytes_equal": true,
+      "bank_acceptance_asserted": false,
+      "name": "PREREG.md",
+      "sha256": "fd9fd472ee8325ea7ae404c03feb98e7b812d039972e4a86161b07df5cef27e5"
+    },
+    {
+      "author_source_bytes_equal": true,
+      "bank_acceptance_asserted": false,
+      "name": "QUANTIFIER_AUDIT.md",
+      "sha256": "865fec8e5e14e69dc2db3ad29fc4f94218181031d69e8b6914d640c671084823"
+    },
+    {
+      "author_source_bytes_equal": true,
+      "bank_acceptance_asserted": false,
+      "name": "RELEASE_PINS.json",
+      "sha256": "2c3de75eeb7de02ee75ca6acf633b332fb2d71645e3d350f3e6a115992bb1639"
+    },
+    {
+      "author_source_bytes_equal": true,
+      "bank_acceptance_asserted": false,
+      "name": "audit_primary.py",
+      "sha256": "a141cffc300a11094e94d9fe42955e6978c705f2fbef962d8ff33c818d82279d"
+    },
+    {
+      "author_source_bytes_equal": true,
+      "bank_acceptance_asserted": false,
+      "name": "audit_secondary.py",
+      "sha256": "02bcbcf5d21d9ea7fa774bb4b9e84dc0265646f30372e3acdaefe2cdd10c163a"
+    },
+    {
+      "author_source_bytes_equal": true,
+      "bank_acceptance_asserted": false,
+      "name": "check.py",
+      "sha256": "80ecaa900a43e4da21c0a45fd88bce5cb1c070d3b7a18ec912c8cb6a07d2325e"
+    },
+    {
+      "author_source_bytes_equal": true,
+      "bank_acceptance_asserted": false,
+      "name": "controls.py",
+      "sha256": "93103329adb344e9d5d97b0f4257512f9610c6935fb05030c680120591aacc11"
+    },
+    {
+      "author_source_bytes_equal": true,
+      "bank_acceptance_asserted": false,
+      "name": "frozen/m710_THEOREM.md",
+      "sha256": "6a3077be2307a296198cdee28d2b8c8604a8d62d12e67810950155f9c91480f9"
+    },
+    {
+      "author_source_bytes_equal": true,
+      "bank_acceptance_asserted": false,
+      "name": "frozen/m720_QUANTIFIER_AUDIT.md",
+      "sha256": "8c049e5cf3ae2057537fae3ccd4af1820eb11f6095c248a89cc25a585e995a22"
+    },
+    {
+      "author_source_bytes_equal": true,
+      "bank_acceptance_asserted": false,
+      "name": "frozen/m720_THEOREM.md",
+      "sha256": "249aa74644189dd15c0e5bf9e6fcddcfd576e242bb2660542c844f8c0fe4bff3"
+    },
+    {
+      "author_source_bytes_equal": true,
+      "bank_acceptance_asserted": false,
+      "name": "frozen/m729_PROOF.md",
+      "sha256": "2415dac9b1ef172267133ce3f9a493621a671243295f6bf3a645c15e4c665191"
+    },
+    {
+      "author_source_bytes_equal": true,
+      "bank_acceptance_asserted": false,
+      "name": "frozen/m729_primary_results.json",
+      "sha256": "463e204585233314aeeb78c4b0f3723907e713180c2def062f94b287634c8c56"
+    },
+    {
+      "author_source_bytes_equal": true,
+      "bank_acceptance_asserted": false,
+      "name": "frozen/m733_AUDIT.md",
+      "sha256": "f25f28713b887a2b26d120ad8cc7207b55ef537cf1a2a33682cf83b503f9365e"
+    },
+    {
+      "author_source_bytes_equal": true,
+      "bank_acceptance_asserted": false,
+      "name": "frozen/m738_PROOF.md",
+      "sha256": "0837a258f15c47d50f8186701d8b701129af415e1ecbd5b64572cf04fac33a92"
+    },
+    {
+      "author_source_bytes_equal": true,
+      "bank_acceptance_asserted": false,
+      "name": "frozen/m738_QUANTIFIER_AUDIT.md",
+      "sha256": "20af228a877ce833414e31873cee074fe6d8c555569eea8e5f8bc0b511f7f813"
+    },
+    {
+      "author_source_bytes_equal": true,
+      "bank_acceptance_asserted": false,
+      "name": "frozen/m744_PROOF.md",
+      "sha256": "2c688d63297c8bb60ba9faa801aa2d4a40fca65a0c90f9b80b148624e8874f10"
+    },
+    {
+      "author_source_bytes_equal": true,
+      "bank_acceptance_asserted": false,
+      "name": "frozen/m744_QUANTIFIER_AUDIT.md",
+      "sha256": "d2bcd1eac2e51a8badda1c6c92a84574e895cd3c1e931765a7164b4a6fd26e3b"
+    },
+    {
+      "author_source_bytes_equal": true,
+      "bank_acceptance_asserted": false,
+      "name": "frozen/m744_SECOND_PROOF.md",
+      "sha256": "7351bc608709440b3b5690a9e92ee06bb097be6814aa8b16f47c47b13803e3f7"
+    },
+    {
+      "author_source_bytes_equal": true,
+      "bank_acceptance_asserted": false,
+      "name": "frozen/m745_DIMENSION_PRIMARY.json",
+      "sha256": "00b5c5daed86187d9002bce2e70c284569e0dd05c93ce8efe91dd68a2b86a38a"
+    },
+    {
+      "author_source_bytes_equal": true,
+      "bank_acceptance_asserted": false,
+      "name": "frozen/m754_AUDIT.md",
+      "sha256": "ca2b8e0d5adf4768b57b625cd26ac8070e8449446d7147f34da96cd67a3f64fa"
+    },
+    {
+      "author_source_bytes_equal": true,
+      "bank_acceptance_asserted": false,
+      "name": "frozen/m767_COMPOSITION.md",
+      "sha256": "a4669ae4dab513241f7097bf292cfb0f57e57cf3c42a3ddef5f952c4c287ba0b"
+    },
+    {
+      "author_source_bytes_equal": true,
+      "bank_acceptance_asserted": false,
+      "name": "frozen/m767_COMPOSITION_RESULT.json",
+      "sha256": "2fd89ff79c294cccc7702b8ae03749b36becac3d0d61f5fce8e94de22539cd92"
+    },
+    {
+      "author_source_bytes_equal": true,
+      "bank_acceptance_asserted": false,
+      "name": "frozen/m767_PROOF.md",
+      "sha256": "026b89ecc2fe2e42ef5dc62c513c01b567da609f4f73f7a6b7f6d8528022d806"
+    },
+    {
+      "author_source_bytes_equal": true,
+      "bank_acceptance_asserted": false,
+      "name": "frozen/m767_primary_summary.txt",
+      "sha256": "8eb252464519cf83a1699735b232caeef974e754861e5d9299ffeead074aa9e3"
+    },
+    {
+      "author_source_bytes_equal": true,
+      "bank_acceptance_asserted": false,
+      "name": "frozen/m774_BANK_CONTEXT.json",
+      "sha256": "5e54478a42a071db4064dec68731ab49554080e21404b91d89eb1dad77914b2d"
+    },
+    {
+      "author_source_bytes_equal": true,
+      "bank_acceptance_asserted": false,
+      "name": "frozen/m774_GEOMETRY.json",
+      "sha256": "1d6a6dc0577e18dd4c6bb49b8b746e353f7bf40490368ea032a3c24019a497d5"
+    },
+    {
+      "author_source_bytes_equal": true,
+      "bank_acceptance_asserted": false,
+      "name": "frozen/m774_OUTPUTS.sha256",
+      "sha256": "3e8f4148cd6880fd7e0533074e2a40a624e4b40bf13b8d61a40a125626e377f2"
+    },
+    {
+      "author_source_bytes_equal": true,
+      "bank_acceptance_asserted": false,
+      "name": "frozen/m774_PRIMARY_RESULT.json",
+      "sha256": "a83bcadbd63c5ba04be0a98ffa628d6b666616af944343de5b5a86a38e600137"
+    },
+    {
+      "author_source_bytes_equal": true,
+      "bank_acceptance_asserted": false,
+      "name": "frozen/m774_PROOF.md",
+      "sha256": "41e09d60548b65e2c09c8c374c6e3a9378141fc9817998f2d527bdb8c45d44d8"
+    },
+    {
+      "author_source_bytes_equal": true,
+      "bank_acceptance_asserted": false,
+      "name": "frozen/m774_RESULT.json",
+      "sha256": "e00c5a340faa03fca859c7bd7f67cfdccfebaf84a97f239c01cc5adc9e5db8e8"
+    },
+    {
+      "author_source_bytes_equal": true,
+      "bank_acceptance_asserted": false,
+      "name": "frozen/m774_SECONDARY_RESULT.json",
+      "sha256": "2d7227cd3797de39934feaae909d6c69cceecad457c9acafeadde115f12a0c8b"
+    },
+    {
+      "author_source_bytes_equal": true,
+      "bank_acceptance_asserted": false,
+      "name": "frozen/m774_SECOND_PROOF.md",
+      "sha256": "e567ecd65edd93cdd967e6757afba5767efd5babee6577830b3b2944d3ea27c5"
+    },
+    {
+      "author_source_bytes_equal": true,
+      "bank_acceptance_asserted": false,
+      "name": "frozen/m774_SOURCE_PINS.json",
+      "sha256": "6d9a1ba0a7d661fbe3625190b0fc13b18d9bec9ad47c02660f0c6d43ad6e468f"
+    },
+    {
+      "author_source_bytes_equal": true,
+      "bank_acceptance_asserted": false,
+      "name": "frozen/m774_p_bins.txt",
+      "sha256": "94d0610a407a302ee18a2330cf48ebc94cbf34c74fc20f6545de41de667f8f1e"
+    },
+    {
+      "author_source_bytes_equal": true,
+      "bank_acceptance_asserted": false,
+      "name": "frozen/m774_p_summary.txt",
+      "sha256": "3c75ed8bbf75b234fa69831b60abecaa2e4c715d09457c294a2a67a81601be34"
+    },
+    {
+      "author_source_bytes_equal": true,
+      "bank_acceptance_asserted": false,
+      "name": "frozen/m774_s_bins.txt",
+      "sha256": "94d0610a407a302ee18a2330cf48ebc94cbf34c74fc20f6545de41de667f8f1e"
+    },
+    {
+      "author_source_bytes_equal": true,
+      "bank_acceptance_asserted": false,
+      "name": "frozen/m789_AUDIT.md",
+      "sha256": "3da4fcfd073884f7e8c25919ecbaade9cac7c4ae07437185c0ed7dc22fed5684"
+    },
+    {
+      "author_source_bytes_equal": true,
+      "bank_acceptance_asserted": false,
+      "name": "frozen/m789_COMPLETE_RESULTS.json",
+      "sha256": "58db76fc8a5597fc4097996cee3cc14bf54578c95b5d48588fc70ecbff5e73d8"
+    },
+    {
+      "author_source_bytes_equal": true,
+      "bank_acceptance_asserted": false,
+      "name": "frozen/m789_SUMMARY.json",
+      "sha256": "ec53e01772655ca1eab9bf522df996919d0b1bb4580f5a81ddd758d0d07d5d1e"
+    }
+  ],
+  "live_banked_inputs": [
+    {
+      "matching_original_paths": [
+        "THEOREM.md"
+      ],
+      "memory": 710,
+      "sha256": "6a3077be2307a296198cdee28d2b8c8604a8d62d12e67810950155f9c91480f9",
+      "shipped": "frozen/m710_THEOREM.md"
+    },
+    {
+      "matching_original_paths": [
+        "THEOREM.md"
+      ],
+      "memory": 720,
+      "sha256": "249aa74644189dd15c0e5bf9e6fcddcfd576e242bb2660542c844f8c0fe4bff3",
+      "shipped": "frozen/m720_THEOREM.md"
+    },
+    {
+      "matching_original_paths": [
+        "QUANTIFIER_AUDIT.md"
+      ],
+      "memory": 720,
+      "sha256": "8c049e5cf3ae2057537fae3ccd4af1820eb11f6095c248a89cc25a585e995a22",
+      "shipped": "frozen/m720_QUANTIFIER_AUDIT.md"
+    },
+    {
+      "matching_original_paths": [
+        "PROOF.md"
+      ],
+      "memory": 729,
+      "sha256": "2415dac9b1ef172267133ce3f9a493621a671243295f6bf3a645c15e4c665191",
+      "shipped": "frozen/m729_PROOF.md"
+    },
+    {
+      "matching_original_paths": [
+        "primary_results.json"
+      ],
+      "memory": 729,
+      "sha256": "463e204585233314aeeb78c4b0f3723907e713180c2def062f94b287634c8c56",
+      "shipped": "frozen/m729_primary_results.json"
+    },
+    {
+      "matching_original_paths": [
+        "AUDIT.md"
+      ],
+      "memory": 733,
+      "sha256": "f25f28713b887a2b26d120ad8cc7207b55ef537cf1a2a33682cf83b503f9365e",
+      "shipped": "frozen/m733_AUDIT.md"
+    },
+    {
+      "matching_original_paths": [
+        "PROOF.md"
+      ],
+      "memory": 738,
+      "sha256": "0837a258f15c47d50f8186701d8b701129af415e1ecbd5b64572cf04fac33a92",
+      "shipped": "frozen/m738_PROOF.md"
+    },
+    {
+      "matching_original_paths": [
+        "QUANTIFIER_AUDIT.md"
+      ],
+      "memory": 738,
+      "sha256": "20af228a877ce833414e31873cee074fe6d8c555569eea8e5f8bc0b511f7f813",
+      "shipped": "frozen/m738_QUANTIFIER_AUDIT.md"
+    },
+    {
+      "matching_original_paths": [
+        "PROOF.md"
+      ],
+      "memory": 744,
+      "sha256": "2c688d63297c8bb60ba9faa801aa2d4a40fca65a0c90f9b80b148624e8874f10",
+      "shipped": "frozen/m744_PROOF.md"
+    },
+    {
+      "matching_original_paths": [
+        "SECOND_PROOF.md"
+      ],
+      "memory": 744,
+      "sha256": "7351bc608709440b3b5690a9e92ee06bb097be6814aa8b16f47c47b13803e3f7",
+      "shipped": "frozen/m744_SECOND_PROOF.md"
+    },
+    {
+      "matching_original_paths": [
+        "QUANTIFIER_AUDIT.md"
+      ],
+      "memory": 744,
+      "sha256": "d2bcd1eac2e51a8badda1c6c92a84574e895cd3c1e931765a7164b4a6fd26e3b",
+      "shipped": "frozen/m744_QUANTIFIER_AUDIT.md"
+    },
+    {
+      "matching_original_paths": [
+        "DIMENSION_PRIMARY.json"
+      ],
+      "memory": 745,
+      "sha256": "00b5c5daed86187d9002bce2e70c284569e0dd05c93ce8efe91dd68a2b86a38a",
+      "shipped": "frozen/m745_DIMENSION_PRIMARY.json"
+    },
+    {
+      "matching_original_paths": [
+        "AUDIT.md"
+      ],
+      "memory": 754,
+      "sha256": "ca2b8e0d5adf4768b57b625cd26ac8070e8449446d7147f34da96cd67a3f64fa",
+      "shipped": "frozen/m754_AUDIT.md"
+    },
+    {
+      "matching_original_paths": [
+        "PROOF.md"
+      ],
+      "memory": 767,
+      "sha256": "026b89ecc2fe2e42ef5dc62c513c01b567da609f4f73f7a6b7f6d8528022d806",
+      "shipped": "frozen/m767_PROOF.md"
+    },
+    {
+      "matching_original_paths": [
+        "COMPOSITION.md"
+      ],
+      "memory": 767,
+      "sha256": "a4669ae4dab513241f7097bf292cfb0f57e57cf3c42a3ddef5f952c4c287ba0b",
+      "shipped": "frozen/m767_COMPOSITION.md"
+    },
+    {
+      "matching_original_paths": [
+        "REPLAY_COMPOSITION.json",
+        "COMPOSITION_RESULT.json"
+      ],
+      "memory": 767,
+      "sha256": "2fd89ff79c294cccc7702b8ae03749b36becac3d0d61f5fce8e94de22539cd92",
+      "shipped": "frozen/m767_COMPOSITION_RESULT.json"
+    },
+    {
+      "matching_original_paths": [
+        "primary_summary.txt"
+      ],
+      "memory": 767,
+      "sha256": "8eb252464519cf83a1699735b232caeef974e754861e5d9299ffeead074aa9e3",
+      "shipped": "frozen/m767_primary_summary.txt"
+    },
+    {
+      "matching_original_paths": [
+        "PROOF.md"
+      ],
+      "memory": 774,
+      "sha256": "41e09d60548b65e2c09c8c374c6e3a9378141fc9817998f2d527bdb8c45d44d8",
+      "shipped": "frozen/m774_PROOF.md"
+    },
+    {
+      "matching_original_paths": [
+        "SECOND_PROOF.md"
+      ],
+      "memory": 774,
+      "sha256": "e567ecd65edd93cdd967e6757afba5767efd5babee6577830b3b2944d3ea27c5",
+      "shipped": "frozen/m774_SECOND_PROOF.md"
+    },
+    {
+      "matching_original_paths": [
+        "GEOMETRY.json"
+      ],
+      "memory": 774,
+      "sha256": "1d6a6dc0577e18dd4c6bb49b8b746e353f7bf40490368ea032a3c24019a497d5",
+      "shipped": "frozen/m774_GEOMETRY.json"
+    },
+    {
+      "matching_original_paths": [
+        "PRIMARY_RESULT.json"
+      ],
+      "memory": 774,
+      "sha256": "a83bcadbd63c5ba04be0a98ffa628d6b666616af944343de5b5a86a38e600137",
+      "shipped": "frozen/m774_PRIMARY_RESULT.json"
+    },
+    {
+      "matching_original_paths": [
+        "SECONDARY_RESULT.json"
+      ],
+      "memory": 774,
+      "sha256": "2d7227cd3797de39934feaae909d6c69cceecad457c9acafeadde115f12a0c8b",
+      "shipped": "frozen/m774_SECONDARY_RESULT.json"
+    },
+    {
+      "matching_original_paths": [
+        "p_bins.txt",
+        "s_bins.txt"
+      ],
+      "memory": 774,
+      "sha256": "94d0610a407a302ee18a2330cf48ebc94cbf34c74fc20f6545de41de667f8f1e",
+      "shipped": "frozen/m774_p_bins.txt"
+    },
+    {
+      "matching_original_paths": [
+        "p_bins.txt",
+        "s_bins.txt"
+      ],
+      "memory": 774,
+      "sha256": "94d0610a407a302ee18a2330cf48ebc94cbf34c74fc20f6545de41de667f8f1e",
+      "shipped": "frozen/m774_s_bins.txt"
+    },
+    {
+      "matching_original_paths": [
+        "p_summary.txt"
+      ],
+      "memory": 774,
+      "sha256": "3c75ed8bbf75b234fa69831b60abecaa2e4c715d09457c294a2a67a81601be34",
+      "shipped": "frozen/m774_p_summary.txt"
+    },
+    {
+      "matching_original_paths": [
+        "SOURCE_PINS.json"
+      ],
+      "memory": 774,
+      "sha256": "6d9a1ba0a7d661fbe3625190b0fc13b18d9bec9ad47c02660f0c6d43ad6e468f",
+      "shipped": "frozen/m774_SOURCE_PINS.json"
+    },
+    {
+      "matching_original_paths": [
+        "OUTPUTS.sha256"
+      ],
+      "memory": 774,
+      "sha256": "3e8f4148cd6880fd7e0533074e2a40a624e4b40bf13b8d61a40a125626e377f2",
+      "shipped": "frozen/m774_OUTPUTS.sha256"
+    },
+    {
+      "matching_original_paths": [
+        "REPLAY_RESULT.json",
+        "RESULT.json"
+      ],
+      "memory": 774,
+      "sha256": "e00c5a340faa03fca859c7bd7f67cfdccfebaf84a97f239c01cc5adc9e5db8e8",
+      "shipped": "frozen/m774_RESULT.json"
+    },
+    {
+      "matching_original_paths": [
+        "BANK_CONTEXT.json"
+      ],
+      "memory": 774,
+      "sha256": "5e54478a42a071db4064dec68731ab49554080e21404b91d89eb1dad77914b2d",
+      "shipped": "frozen/m774_BANK_CONTEXT.json"
+    },
+    {
+      "matching_original_paths": [
+        "AUDIT.md"
+      ],
+      "memory": 789,
+      "sha256": "3da4fcfd073884f7e8c25919ecbaade9cac7c4ae07437185c0ed7dc22fed5684",
+      "shipped": "frozen/m789_AUDIT.md"
+    },
+    {
+      "matching_original_paths": [
+        "COMPLETE_RESULTS.json"
+      ],
+      "memory": 789,
+      "sha256": "58db76fc8a5597fc4097996cee3cc14bf54578c95b5d48588fc70ecbff5e73d8",
+      "shipped": "frozen/m789_COMPLETE_RESULTS.json"
+    },
+    {
+      "matching_original_paths": [
+        "SUMMARY.json"
+      ],
+      "memory": 789,
+      "sha256": "ec53e01772655ca1eab9bf522df996919d0b1bb4580f5a81ddd758d0d07d5d1e",
+      "shipped": "frozen/m789_SUMMARY.json"
+    }
+  ],
+  "scope": "Observed direct preflight comparisons only, not an official attestation. Accepted origins come from OWN bank_ref snapshot796. LIVE source is independently authored byte-exact code, whose later acceptance is not asserted; it is actually executed in the candidate.",
+  "snapshot_sha256": "53ec85a52cd46ae13c117fb9ae042989c950f8db2009cbed2cf95b14bc2441cb"
+}

@@ -1,0 +1,67 @@
+{
+  "X": "6000000185827",
+  "anchor_source": "V1-H-213 assembly_1875; independent V1-H-220",
+  "anchor_upper": "3/16",
+  "conditional": false,
+  "coverage": {
+    "N": "interior unrestricted; finite natural690988..2299999 CLOSED; tail everyN>=2299999, closed overlap and ALL RIGHT-index walls; terminal2300000 assigned to tail",
+    "t": "collision CLOSED[4/25,3/16]; boundary CLOSED[0,3/16]; interior simplicity(0,3/16]; uniform stall tail CLOSED[2/25,1/2]",
+    "y": "collision exactly0; separator|y|<=1 padded to2; remote stall tail ALL imaginary parts"
+  },
+  "lambda_upper": "4/25",
+  "legs": [
+    {
+      "cites": "memory590 + independent588",
+      "consumes": "ALL complex zeros beyond4*pi*exp(1600)+1 are real-simple uniformly on CLOSED[2/25,1/2]; compactness at every hypothetical Lambda in CLOSED[4/25,3/16].",
+      "hypothesis": "positive stall => finite real collision"
+    },
+    {
+      "cites": "V1-H-213 + V1-H-220",
+      "consumes": "unconditional Lambda<=3/16, same sole PT2021 height.",
+      "hypothesis": "anchor"
+    },
+    {
+      "cites": "memory596 + complete external616",
+      "consumes": "ALL t in CLOSED[0,3/16], x=+/-6000000185827, |y|<=1, with published strip padding to2.",
+      "hypothesis": "stationary separator"
+    },
+    {
+      "cites": "memory590/617, general599",
+      "consumes": "INITIAL reality at X/2 ONLY by PT2021; general simplicity(0,3/16] restricted to CLOSED[4/25,3/16] x CLOSED[0,X].",
+      "hypothesis": "Hermite positive-time interior"
+    },
+    {
+      "cites": "memory767 + COMPLETE external789",
+      "consumes": "SINGLETON t4/25,x6000000185827,N690988,y0; full-prime source and stronger normalized Gram inequality, complete inverse products, synthetic fibre, all3524 CLOSED leaves.",
+      "hypothesis": "complete strong weighted Gram source"
+    },
+    {
+      "cites": "memory774 with720/733,738/754 and710/725; complete independently authored LIVE recovery proof/arithmetic in RECOVERY_LIVE.json, not an unbanked citation",
+      "consumes": "ALL224 bins,ALL14 leaves,ALL1609011 entrants; naturalN690988..2299999 on CLOSED[4/25,3/16]xCLOSED[X,66476100549959],y0. The designated external second line is freshly executed COMPLETE, including ALL690988 raw/157940 weight cells, universal support proof, every original scalar and RIGHT wall.",
+      "hypothesis": "finite physical exterior"
+    },
+    {
+      "cites": "memory774 +729/772 + exact786",
+      "consumes": "ALL internal RIGHT walls, common CLOSED predecessor2299999 atW; finite terminal2300000 OPEN and tail includes it.",
+      "hypothesis": "all Riemann-Siegel transitions"
+    },
+    {
+      "cites": "memory729 + complete external772",
+      "consumes": "EVERY naturalN>=2299999, tCLOSED[4/25,3/16], y0; no terminal cutoff; x>=66476100549959.",
+      "hypothesis": "practical infinite REAL-axis tail"
+    },
+    {
+      "cites": "memory786 + COMPLETE external795",
+      "consumes": "Exact original ASSEMBLY hash a6c620eb9ffd110b641982129b1173bc4c7aa4262afc2f12ab08a2451f81773c. Three CLOSED positive-axis boxes meet exactly; evenness covers negative x; strict stall/anchor inference uses ONLY PT2021 at INITIALX/2.",
+      "hypothesis": "exact global composition and reflection"
+    }
+  ],
+  "release_status": "Constructive version: accepted source789 and composition795, plus COMPLETE LIVE independent recovery. Candidate submission, NOT candidate acceptance or publication approval.",
+  "rh_height": "3000175332800",
+  "rh_source": "PT2021 (Platt-Trudgian, arXiv:2004.09765); ONLY INITIAL X/2, exact margin350479773/2",
+  "route": "collision_exclusion",
+  "t_hi": "3/16",
+  "t_lo": "4/25",
+  "verify_script": "verify.py",
+  "writeup": "ASSEMBLY.md"
+}

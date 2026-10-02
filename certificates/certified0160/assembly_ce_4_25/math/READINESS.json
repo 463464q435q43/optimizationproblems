@@ -1,0 +1,23 @@
+{
+  "audits": {
+    "Gram_recovery774": "OPEN",
+    "analytic_interior": 617,
+    "complete_Gram_source767": "OPEN",
+    "heat_modulus_lift": 754,
+    "practical_tail": 772,
+    "remote_tail": 588,
+    "separator": 616,
+    "this_global_composition": "OPEN"
+  },
+  "candidate_release": "HELD",
+  "mathematical_inputs_all_banked": true,
+  "official_torus_certificate_used": false,
+  "required_before_record": [
+    "external complete Gram source767 audit",
+    "external recovery774 audit",
+    "external exact-manuscript global composition audit",
+    "new candidate/header and confined harness"
+  ],
+  "scope": "Procedural hold only, not an additional RH or mathematical source hypothesis.",
+  "snapshot_entries": 777
+}

@@ -1,0 +1,426 @@
+{
+  "candidate": false,
+  "checks": 2464,
+  "complete_real_axis_reflection": true,
+  "countermodels": [
+    {
+      "invalid": "-1669/360",
+      "name": "scalar_floor_not_arbitrary_Gram",
+      "reason": "P=1+3z/4 has full circle floor1/4 but given normalized Gram is negative",
+      "valid": "1/4"
+    },
+    {
+      "invalid": "1/2",
+      "name": "torus_nonzero_not_closed_stable",
+      "reason": "P=1+2z, outside-root lemma fails at z=1 without closed stability",
+      "valid": "2/3"
+    },
+    {
+      "invalid": "37/20",
+      "name": "shifted_lower_integral_omits_first_entrant",
+      "reason": "strictly decreasing positive f=2-(v-C)/10; [C+1,C+2] loses first entrant",
+      "valid": "19/5"
+    },
+    {
+      "invalid": "3/2",
+      "name": "rough_bin_maximum_is_not_lower_bound",
+      "reason": "s=1/2, two weights1, rho must be minimum2 not maximum4",
+      "valid": "5/4"
+    },
+    {
+      "invalid": "3/80000",
+      "name": "real_error_derivative_is_not_complex",
+      "reason": "r=qv constant, Theta=30x, |(exp(iTheta)r)prime|=30qv",
+      "valid": "0"
+    },
+    {
+      "invalid": "1/4",
+      "name": "heat_floor_not_backward_monotone",
+      "reason": "forward-heat h>=0 cannot be replaced by all real h",
+      "valid": "1/2"
+    },
+    {
+      "invalid": "1/10",
+      "name": "synthetic_norm_coordinate_is_essential",
+      "reason": "P=1/1000, empty rough sum: positive unsupplemented Gram supplies no1/10 floor",
+      "valid": "1/1000"
+    }
+  ],
+  "excess_components": 0,
+  "geometry_mutations": 12,
+  "initial_RH": {
+    "height": "3000175332800",
+    "margin": "350479773/2",
+    "required": "6000000185827/2",
+    "source": "PT2021 arXiv:2004.09765"
+  },
+  "missing_components": 0,
+  "mutations": [
+    {
+      "accepted": false,
+      "class": "scope",
+      "name": "scalar_only_is_not_complete_Gram"
+    },
+    {
+      "accepted": false,
+      "class": "scope",
+      "name": "synthetic_source_not_inferred_from_new_floor"
+    },
+    {
+      "accepted": false,
+      "class": "scope",
+      "name": "omit_last_entrant"
+    },
+    {
+      "accepted": false,
+      "class": "scope",
+      "name": "lower_Gram_floor_without_lift_price"
+    },
+    {
+      "accepted": false,
+      "class": "scope",
+      "name": "finite_module_cannot_be_unbounded_N"
+    },
+    {
+      "accepted": false,
+      "class": "scope",
+      "name": "derivative_uses_left_index"
+    },
+    {
+      "accepted": false,
+      "class": "scope",
+      "name": "complex_raw_derivative_not_real"
+    },
+    {
+      "accepted": false,
+      "class": "scope",
+      "name": "finite_off_axis_promotion"
+    },
+    {
+      "accepted": false,
+      "class": "scope",
+      "name": "source_at_earlier_time_unlicensed"
+    },
+    {
+      "accepted": false,
+      "class": "scope",
+      "name": "finite_last_time_is_open"
+    },
+    {
+      "accepted": false,
+      "class": "scope",
+      "name": "ceiling_seam_is_not_finite_rectangle"
+    },
+    {
+      "accepted": false,
+      "class": "scope",
+      "name": "tail_nominal_J_loses_predecessor"
+    },
+    {
+      "accepted": false,
+      "class": "scope",
+      "name": "finite_cap_is_not_infinite_tail"
+    },
+    {
+      "accepted": false,
+      "class": "scope",
+      "name": "tail_time_left_open"
+    },
+    {
+      "accepted": false,
+      "class": "scope",
+      "name": "tail_wrong_gauge"
+    },
+    {
+      "accepted": false,
+      "class": "scope",
+      "name": "tail_wrong_physical_function"
+    },
+    {
+      "accepted": false,
+      "class": "scope",
+      "name": "interior_t0_simplicity"
+    },
+    {
+      "accepted": false,
+      "class": "scope",
+      "name": "narrow_old_cover_is_not_new_band"
+    },
+    {
+      "accepted": false,
+      "class": "scope",
+      "name": "interior_artificial_index_range"
+    },
+    {
+      "accepted": false,
+      "class": "scope",
+      "name": "boundary_missing_initial_time"
+    },
+    {
+      "accepted": false,
+      "class": "scope",
+      "name": "boundary_y_join_removed"
+    },
+    {
+      "accepted": false,
+      "class": "scope",
+      "name": "boundary_padding_removed"
+    },
+    {
+      "accepted": false,
+      "class": "scope",
+      "name": "separator_wrong_initial_x"
+    },
+    {
+      "accepted": false,
+      "class": "scope",
+      "name": "all_complex_tail_required_for_stall"
+    },
+    {
+      "accepted": false,
+      "class": "scope",
+      "name": "remote_tail_only_y0"
+    },
+    {
+      "accepted": false,
+      "class": "scope",
+      "name": "remote_no_left_neighbourhood"
+    },
+    {
+      "accepted": false,
+      "class": "scope",
+      "name": "remote_arbitrary_radius"
+    },
+    {
+      "accepted": false,
+      "class": "scope",
+      "name": "remote_partial_cell_not_paid"
+    },
+    {
+      "accepted": false,
+      "class": "scope",
+      "name": "remote_finite_index_cap"
+    },
+    {
+      "accepted": false,
+      "class": "scope",
+      "name": "unbanked_smaller_anchor"
+    },
+    {
+      "accepted": false,
+      "class": "scope",
+      "name": "RH_at_the_tail_not_INITIAL"
+    },
+    {
+      "accepted": false,
+      "class": "scope",
+      "name": "additional_unproved_RH_height"
+    },
+    {
+      "accepted": false,
+      "class": "scope",
+      "name": "invented_anchor_in_header"
+    },
+    {
+      "accepted": false,
+      "class": "geometric",
+      "name": "isolated_spatial_6000000185827"
+    },
+    {
+      "accepted": false,
+      "class": "geometric",
+      "name": "isolated_spatial_66476100549959"
+    },
+    {
+      "accepted": false,
+      "class": "geometric",
+      "name": "no_tail_ray"
+    },
+    {
+      "accepted": false,
+      "class": "geometric",
+      "name": "no_exterior"
+    },
+    {
+      "accepted": false,
+      "class": "geometric",
+      "name": "removed_time_endpoint_4/25"
+    },
+    {
+      "accepted": false,
+      "class": "geometric",
+      "name": "removed_time_endpoint_3/16"
+    },
+    {
+      "accepted": false,
+      "class": "geometric",
+      "name": "single_missing_time_slice"
+    },
+    {
+      "accepted": false,
+      "class": "geometric",
+      "name": "endpoint_only_time_test"
+    },
+    {
+      "accepted": false,
+      "class": "geometric",
+      "name": "integer_adjacent_is_not_real_adjacent"
+    },
+    {
+      "accepted": false,
+      "class": "geometric",
+      "name": "finite_proxy_for_infinity"
+    },
+    {
+      "accepted": false,
+      "class": "geometric",
+      "name": "excess_time_zero"
+    },
+    {
+      "accepted": false,
+      "class": "geometric",
+      "name": "wrong_collision_y"
+    }
+  ],
+  "positive_boxes": 3,
+  "record_acceptance": false,
+  "recovery_external_audit": "not supplied by this artifact",
+  "scope_mutations": 33,
+  "smt": [
+    {
+      "mode": "missing",
+      "name": "original_three_box_union",
+      "status": "unsat"
+    },
+    {
+      "mode": "excess",
+      "name": "original_three_box_union",
+      "status": "unsat"
+    },
+    {
+      "mode": "missing",
+      "name": "isolated_spatial_6000000185827",
+      "status": "sat",
+      "witness": {
+        "t": "4/25",
+        "x": "6000000185827",
+        "y": "0"
+      }
+    },
+    {
+      "mode": "missing",
+      "name": "isolated_spatial_66476100549959",
+      "status": "sat",
+      "witness": {
+        "t": "4/25",
+        "x": "66476100549959",
+        "y": "0"
+      }
+    },
+    {
+      "mode": "missing",
+      "name": "no_tail_ray",
+      "status": "sat",
+      "witness": {
+        "t": "4/25",
+        "x": "66476100549960",
+        "y": "0"
+      }
+    },
+    {
+      "mode": "missing",
+      "name": "no_exterior",
+      "status": "sat",
+      "witness": {
+        "t": "4/25",
+        "x": "6000000185828",
+        "y": "0"
+      }
+    },
+    {
+      "mode": "missing",
+      "name": "removed_time_endpoint_4/25",
+      "status": "sat",
+      "witness": {
+        "t": "4/25",
+        "x": "0",
+        "y": "0"
+      }
+    },
+    {
+      "mode": "missing",
+      "name": "removed_time_endpoint_3/16",
+      "status": "sat",
+      "witness": {
+        "t": "3/16",
+        "x": "0",
+        "y": "0"
+      }
+    },
+    {
+      "mode": "missing",
+      "name": "single_missing_time_slice",
+      "status": "sat",
+      "witness": {
+        "t": "139/800",
+        "x": "0",
+        "y": "0"
+      }
+    },
+    {
+      "mode": "missing",
+      "name": "endpoint_only_time_test",
+      "status": "sat",
+      "witness": {
+        "t": "139/800",
+        "x": "0",
+        "y": "0"
+      }
+    },
+    {
+      "mode": "missing",
+      "name": "integer_adjacent_is_not_real_adjacent",
+      "status": "sat",
+      "witness": {
+        "t": "4/25",
+        "x": "66476100549959",
+        "y": "0"
+      }
+    },
+    {
+      "mode": "missing",
+      "name": "finite_proxy_for_infinity",
+      "status": "sat",
+      "witness": {
+        "t": "4/25",
+        "x": "100000000000001",
+        "y": "0"
+      }
+    },
+    {
+      "mode": "excess",
+      "name": "excess_time_zero",
+      "status": "sat",
+      "witness": {
+        "t": "0",
+        "x": "0",
+        "y": "0"
+      }
+    },
+    {
+      "mode": "missing",
+      "name": "wrong_collision_y",
+      "status": "sat",
+      "witness": {
+        "t": "4/25",
+        "x": "6000000185828",
+        "y": "0"
+      }
+    }
+  ],
+  "source_external_audit": 789,
+  "source_scope_match": true,
+  "strict_conclusion": "Lambda<4/25",
+  "target_direct_citations": 21,
+  "y": "0"
+}

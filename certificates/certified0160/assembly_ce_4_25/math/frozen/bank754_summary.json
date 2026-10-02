@@ -1,0 +1,23 @@
+{
+  "snapshot": 747,
+  "audited_modules": [
+    738,
+    744
+  ],
+  "scalar_enclosures_compared": 32,
+  "exact_fields_compared": 43,
+  "anchor_regimes": [
+    720,
+    729
+  ],
+  "wall_rows": 200002,
+  "included_wall_rows": 200000,
+  "exact_input_points": 12,
+  "adverse_math_controls": 29,
+  "adverse_scope_controls": 21,
+  "corrected_surplus_exact": "22375198391999/32000000000000000",
+  "source_supplied": false,
+  "physical_cover": false,
+  "official_attestation": false,
+  "new_Lambda": false
+}

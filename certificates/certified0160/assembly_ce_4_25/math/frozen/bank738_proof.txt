@@ -1,0 +1,335 @@
+# FOUNDATION — NEWTON-BAND SINGLE-CHANNEL COLLISION CERTIFICATE
+
+## 0. Statement, novelty and quantifier audit
+
+All polydiscs and distinguished tori in this manuscript are CLOSED. Every
+polynomial has FINITE support. No full-torus source certificate is supplied.
+The new reduction replaces the two-channel sector premise by a lower norm
+for the COMPLETE first channel and a weighted support bound. This is not
+another time-grid price or a re-claim of memory720/723's spatial theorem.
+
+### A. Weighted support lemma
+
+Let P(z)=sum_(alpha in I) c_alpha z^alpha be a finite polynomial in d
+variables, with I a nonempty subset of the nonnegative integer lattice,
+not identically zero, and NO zero on the closed unit polydisc. For EVERY
+positive real weight vector w define
+
+ D_w P=sum_alpha (w.alpha)c_alpha z^alpha,
+ L=max_(alpha in I, c_alpha!=0)(w.alpha).
+
+Then for EVERY z in that closed polydisc,
+
+              Re(D_w P(z)/P(z)) <= L/2.                 (A)
+
+The conclusion is an upper bound, not an absolute-value bound. The support
+maximum L is the Newton-polytope support function, NOT the sum of the
+separate coordinate degrees. A proof and an independently arranged
+reflection proof follow. This elementary zero-free polynomial inequality
+is not claimed to be a new theorem in the literature; its single-channel
+application to this complete heat model is the new campaign device.
+
+### B. Conditional physical theorem
+
+Set
+
+ a=4/25, b=3/16, X=6000000185827, H=2299999,
+ W=66476100549959,
+ N=floor(sqrt(x/(4*pi)+t/16)), y=0.
+
+For EVERY real t in CLOSED[a,b] and x in CLOSED[X,W], the natural N is in
+CLOSED[690988,H]. Put D=1+x^2 and use the EXACT elementary Polymath model
+
+ c(x)=log(sqrt(D)/(4*pi))/4-1/(2*D),
+ sigma=1/2+t*c(x), a_n=exp(t*log(n)^2/4-sigma*log(n)),
+ A_N(z)=sum_(1<=n<=N) a_n z^v(n),
+ L_N(z)=sum_(1<=n<=N) a_n*log(n)*z^v(n),
+ S_N(z)=ell*A_N(z)-2*L_N(z),
+ alpha(s)=1/(2*s)+1/(s-1)+Log(s/(2*pi))/2, s=(1+i*x)/2,
+ ell=2*Re(alpha)+t*Re(alpha*alpha')=4*Theta_x.
+
+The variable v(n) is the vector of valuations at EVERY prime through N;
+no coefficient is dropped or replaced by an independent product phase.
+IF at that point A_N is zero-free on the closed prime polydisc and
+|A_N|>=1/100 on its full distinguished torus, THEN
+
+              (H_t(x), partial_x H_t(x)) != (0,0).       (B)
+
+Equivalently one can assume only the FULL-TORUS floor |A_N|>=1/100:
+memory720's GENERAL positive-heat winding theorem supplies the required
+polydisc stability at natural indices. This does not hold for arbitrary
+polynomials and is NOT inferred merely from a sampled nonzero boundary.
+The conclusion is pointwise conditional; requiring that premise for EVERY
+point of a stated region makes it conditional on that whole region.
+
+No source companion norm, source pair angle, or mollifier is required.
+The universal inequalities certified here are
+
+ sum_(n<=N) a_n*log(n) < 200, ell<30, ell-log(N)>12.     (C)
+
+Combining(A),(C) with memory710's externally audited725 REAL-gauge errors
+leaves a strict positive Hermitian-product surplus >1/2000 when |A_N|
+>=1/100. The exact rational sufficient surplus is printed by the checker.
+
+### C. First-channel hybrid admission
+
+At any point of(B), choose a first-k-prime smooth core, 1<=k<=10. Let F1
+and the complete rough fibres Fr be EXACTLY the definitions in frozen
+memory713, with RF=sum_(r>1)|Fr|. If, for EVERY smooth phase,
+
+                        RF <= (9/10)*|F1|,              (D)
+
+then(B) holds for every completely multiplicative phase, including the
+physical shifted character. Memory713 supplies |F1|>1/10 and stability on
+the closed smooth-prime polydisc throughout the larger licensed domain.
+Only the FIRST-channel part of that banked theorem is consumed. Condition(D)
+is UNSUPPLIED. It is weaker than a complete two-channel hybrid sector
+premise; no performance or leaf saving is inferred without actual data.
+
+### D. Conditional source compression witness
+
+Suppose that at FIXED x=X,N0=690988, for EVERY t in CLOSED[4/25,33/200]
+and EVERY prime-torus phase, the COMPLETE A_N0 satisfies |A_N0|>=1/10.
+These source premises are UNSUPPLIED. Then there is no true multiple real
+zero for EVERY such t and
+
+              x in CLOSED_OPEN[X,4*pi*(790989^2-t/16)).  (E)
+
+The conclusion includes all internal natural RIGHT-index walls and stops
+before the wall entering790989. It follows from the complete entrant cap
+for N0<n<=790988, inward prime contraction, and(B). No time transfer is
+claimed. The source owes the entire closed time slab, not its endpoints.
+This is a witness for one block, NOT a whole-region cover, minimum source
+count, runtime, byte count, official checker output or new Lambda bound.
+
+## 1. Proof of the weighted support lemma
+
+First take positive integer weights k_j. Fix ANY z in the closed
+polydisc and form Q(zeta)=P(z_1*zeta^k_1,...,z_d*zeta^k_d). For |zeta|<=1
+the arguments remain in the closed polydisc, so Q has no zero there.
+It has degree d_Q<=D_k=max k.alpha; cancellations may decrease the degree,
+which only improves the estimate. Q is not identically zero. If constant,
+its logarithmic derivative is zero and the result is immediate.
+Otherwise factor Q=C product_(j=1)^d_Q(zeta-r_j), with EVERY |r_j|>1,
+counting multiplicities. At zeta=1,
+
+ Re(1/(1-r_j))
+  =1/2-(|r_j|^2-1)/(2*|1-r_j|^2) <1/2.
+
+Thus Re(Q'(1)/Q(1))<=d_Q/2<=D_k/2. The chain rule identifies
+Q'(1)=D_k P(z). If weights are positive rationals k_j/q, divide by q.
+For an arbitrary positive real vector w take positive rational vectors
+converging coordinatewise to w. The finite weighted sum D_w P/P and the
+finite maximum max w.alpha are continuous in w. Taking limits proves(A).
+No rational approximation of log primes is used as a numerical premise;
+this is an exact density argument. It covers boundary faces, zero
+coordinates, cancelled leading coefficients and repeated outside roots.
+For a constant P the convention L=0 gives equality.
+
+SECOND_PROOF.md instead uses the reciprocal polynomial and a radial
+maximum principle, avoiding factorwise outside-root estimates. The scripts
+verify both underlying algebraic identities and complete finite fixtures;
+those fixtures are controls, not a substitute for this universal proof.
+
+Closed stability is essential: P=1+2z has no zero on the unit circle and
+minimum boundary modulus1, but Re(z*P'/P)=2/3 at z=1, exceeding1/2.
+The torus-only inference is licensed for OUR positive heat class solely
+by the accepted zero-winding theorem720, not by(A).
+
+## 2. Raw Hermitian product from a single norm
+
+For the Dirichlet polynomial, w_p=log(p)>0 and w.v(n)=log n exactly,
+so L=log N (a_N>0). At any full-torus phase, (A) gives
+
+ Re(conj(A)*S)
+   =(ell-2*Re(L_N/A))*|A|^2
+   >=(ell-log N)*|A|^2.                                (F)
+
+This is a LOWER bound on the real part of the pair product, without
+having to compute its angle. It also implies S!=0 when ell>log N. It does
+NOT bound the imaginary part of L_N/A; the complete absolute moment in(C)
+is retained precisely to control perturbations in that direction.
+
+Memory710/725 uses the exact heat-shifted physical character n^(-i*tau),
+tau=Im(s+t*alpha(s)/2). A full-torus theorem includes that character without
+identifying it pointwise with n^(-i*x/2). With the exact real normalization
+u=H_t(x)/|Mt(s)|, there exist corrections
+
+ A_true=A+e_A, B_true=S+e_S,
+ |e_A|<p=1/800000,
+ |e_S|<q=1/25000+1/40000000000,
+ u=2*Re(exp(i*Theta)*A_true),
+ u_x=-(1/2)*Im(exp(i*Theta)*B_true).                    (G)
+
+These are exactly the REAL-gauge coordinate charges, not a substitution
+of r_x into a complex-raw derivative. The consumed model, branches, lift,
+time half-line and all natural-wall conventions are shipped byte-identical
+in bank710_theorem.txt and its independent audit bank725_audit.txt.
+
+Let r=|A| and M>=sum a_n log n. Then |S|<=ell*r+2*M. Expanding the
+Hermitian product and paying ALL cross terms gives
+
+ Re(conj(A_true)*B_true)
+ > (ell-log N)*r^2-(ell*p+q)*r-2*p*M-p*q
+ >= Q(r):=12*r^2-(30*p+q)*r-400*p-p*q.                 (H)
+
+For r>=1/100, Q'(r)=24*r-(30*p+q)>0. Exact rational arithmetic proves
+
+ Q(1/100)=22375198391999/32000000000000000 >1/2000.      (I)
+
+Thus the corrected Hermitian real part is strictly positive. At a true
+double zero u=u_x=0, the first rotated coordinate in(G) is purely
+imaginary while the second is real, making that real part zero. This
+contradiction proves(B). Positive nonzero normalization preserves the
+simultaneous vanishing of H,H_x. No quantitative floor for H itself is
+asserted away from a collision, and no off-axis reality follows.
+
+## 3. Complete absolute moment and phase bounds on the whole rectangle
+
+The endpoint geometry, computed from
+
+               w_j(t)=4*pi*(j^2-t/16),
+
+proves w_690988(a)<X<w_690989(b) and w_H(a)<W<w_(H+1)(b).
+Since each w_j decreases in t, the entire CLOSED rectangle has the
+natural indices claimed. W is the accepted729 predecessor seam, not the
+wall for index2300000. Both equal-time endpoints and x=W are included.
+
+Let c0=c(X). Direct differentiation gives c'>0. For n<=H and t>=a,
+
+ a_n=n^(-[1/2+t*(c(x)-log(n)/4)]) <= n^(-49/50),
+
+because c0-log H/4>0 and the machine verifies
+1/2+a*(c0-log H/4)>49/50. Thus no coefficient enumeration is needed.
+Put f(v)=log(v)*v^(-49/50). It is decreasing for v>=3 since
+(49/50)*log3>1. The complete discrete moment obeys
+
+ sum_(n=2)^N a_n log n
+ <= f(2)+f(3)+integral_3^H f(v)dv =: Cstar <200.       (J)
+
+For N<3 the same ceiling still works; here all N are larger. For each
+integer n>=4, f(n)<=integral_(n-1)^n f(v)dv. This is the exact endpoint
+direction: starting at4 would omit the n=4 contribution. With r0=1/50,
+an antiderivative is exp(r0*log v)*(r0*log v-1)/r0^2. Primary uses this
+expression. SECOND expands exp(r0*y) after v=exp y into an all-positive
+series for integral y*exp(r0*y)dy with an explicit geometric tail. The
+lines compare their complete enclosures, not samples of n or t.
+
+For phase bounds, write
+
+ beta=atan(x)/2-3*x/(1+x^2),
+ d=(7*x^2-5)/(1+x^2)^2,
+ e=-x*(x^2+5)/(1+x^2)^2,
+ ell=4*c+t*(2*c*d-beta*e).
+
+As proved in the GENERAL parts of720 and rechecked here, for all x>=X,
+0<beta<1, 0<d<7/x^2, 0<-e<2/x, 0<c<log x/4, hence
+
+ 0<2*c*d-beta*e<14*c/x^2+2/x<3/x.
+
+The last inequality follows from (7/2)*log x/x<1; the left side decreases
+for x>exp1, and the endpoint is checked. Consequently throughout x<=W,
+
+ ell-log N >=4*c(X)-log H>12,
+ ell <=4*c(W)+3*b/X<30.                                (K)
+
+All replacements have their adverse directions stated. The lower bound
+can also be read from710, but(K) uses the exact same c normalization.
+The production routines freshly reproduce720's accepted source C and
+complete old entrant charge, and729's accepted different-height real
+seam; they are arithmetic controls, NOT an extension of either old scope.
+
+## 4. First-channel hybrid proof
+
+At a fixed point let smooth variables be z and the remaining prime
+variables w. Then A=F1(z)+sum_(r>1)Fr(z)*w^v(r), retaining EVERY raw term.
+Rough integers need not be independent characters for the triangle upper
+bound RF. Memory713's F1 has no zero on the closed smooth polydisc and
+|F1|>1/10 there. Define R=(A-F1)/F1, holomorphic on a neighbourhood of the
+FULL closed polydisc. Condition(D) bounds |R|<=9/10 on its distinguished
+torus. Iterated one-variable maximum modulus extends that bound to every
+closed-polydisc point. Thus |A|>=|F1|/10>1/100 there, proving stability
+and the required floor simultaneously. This is the first-channel Schur
+part of723's philosophy, now sufficient because(A) supplies the missing
+pair orientation. No condition at all on the companion rough radius RK
+or core K1 is used; a bad second-channel disk test is not a negative for
+this different certificate class. Actual(D) data remain an open job.
+
+A NONPHYSICAL exact control shows why dropping the second radius is a real
+change of sufficient premise: P=1+(9/10)z, weight1 and ell=11/10 give
+S=11/10-(81/100)z. The first relative radius is9/10 and P is stable, while
+the specified two-core-disk sector test fails because
+(9/10)^2+(81/110)^2>1. Nonetheless the exact full-circle Hermitian minimum
+is191/1000>0. This is a finite proof-control fixture, not a campaign heat
+coefficient, physical phase scale or model speedup.
+
+## 5. One-source complete entrant witness
+
+At each fixed t in CLOSED[a,33/200], the source X has natural cutoff N0.
+The assumed full-torus |A_N0|>=1/10 implies closed-polydisc stability by720;
+maximum modulus for1/A_N0 extends the floor unchanged inside.
+Let N1=790988. At source x=X, every new term N0<n<=N1 has
+
+ a_n(t,X)<=f0=exp(a*log(N0)^2/4-(1/2+a*c0)*log(N0)),
+ J=(N1-N0)*f0<9/100.                                  (L)
+
+To justify the directions, log N1<4*c0 makes each heat coefficient
+decrease in t. On1<=n<=N1 its logarithmic derivative is
+-1/2+t*(log n/2-c0)<0; the checker verifies the whole-domain adverse
+endpoint using b. Consequently every entrant is <=f0. ALL entrants are
+added, including at a natural wall, not just the last term. For ANY
+N0<=Jindex<=N1 the enlarged polynomial at X therefore has modulus
+>1/10-9/100=1/100 on the full closed polydisc. It is stable even though
+Jindex may be greater than the natural source cutoff: the direct norm
+argument, not720, is what licenses this extension.
+
+For any target x>=X at the SAME t, each coefficient gets multiplied by
+n^(-delta), delta=t*(c(x)-c0)>=0. This is exactly the prime substitution
+z_p -> p^(-delta)*z_p, taking the full closed polydisc into itself.
+The enlarged polynomial thus retains its floor at the target. It has
+exactly the desired natural cutoff there. Apply(B) to get(E). No need
+to propagate a companion angle or charge its signed entrants. Since
+w_(N1+1)(a)<W, the whole(E) region lies within(B)'s licensed rectangle.
+Internal walls use the natural RIGHT index; the terminal one is excluded.
+Nothing about a continuum in t is inferred from a singleton source.
+
+## 6. Dependencies, independent checks and honesty
+
+Snapshot730. The locally frozen exact statements and objects are listed
+in frozen/BANK_SNAPSHOT.json, frozen/PROVENANCE.json and INPUTS.sha256.
+Consumed:710/725 exact balanced lift and errors;720 GENERAL positive-heat
+winding theorem (not its specific source hypothesis);713 stable first
+cores only. Context:723 pair transport,729 accepted early tail and its seam,
+730 selected-inventory gap. No memory is applied outside its quantifiers,
+no pending result is a premise, and no producer executable is run.
+
+FOUNDATION rung(b) requested for the weighted-support reduction and the
+single-channel real-jet admission: no captured bank fact asserts or
+exercises this weighted Newton-support implication, so existing sector
+or stability conclusions are not falsely treated as anchors for it. Use outside-root proof plus reciprocal/
+maximum-principle proof; Sympy/Arb256 versus separate rational complex
+polynomial algebra and mpmath.iv90 with rational Machin pi and a positive
+integral series. Both lines reach every stated endpoint. Rung(a) controls
+freshly reproduce accepted720's complete head entrant and729's remote
+predecessor seam THROUGH the same production arithmetic functions, with
+exact directed-output comparisons and source pins. These are not alleged
+to be banked anchors for the new universal Newton lemma. The independent
+verifier decides the rung. External numerics_astra record-use audit is OPEN.
+
+Every decimal is derived from an exact rational or an outward enclosure
+and labeled FLOOR or CEIL. Both signed rounding directions are self-tested.
+No floats decide a gate. Two source-only clean copies run
+`/usr/bin/python3 -B verify.py`; the only child is the same interpreter
+running second_line.py. All reads/writes are confined to this directory.
+
+Credit Kornaus PR#180 for the collision-exclusion motivation; no unrefereed
+file, code, number or theorem is consumed. The complete polynomial and
+balanced model are our banked definitions. No phase sweep, new coefficient
+production, official checker modification, background run or network.
+
+RH-height dependency: NONE for this conditional local theorem. Any eventual
+Lambda inference still uses only PT2021 T=3000175332800 at INITIAL
+X/2=6000000185827/2, margin350479773/2, anchorV1-H-213, and all remaining
+modules. Memory730's finite gap is NOT filled by an implication with an
+UNSUPPLIED source. No physical COVER, actual torus lower bound, tail
+extension, authenticated receipt, candidate or new Lambda bound is claimed.

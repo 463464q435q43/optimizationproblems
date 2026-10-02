@@ -1,0 +1,367 @@
+# FOUNDATION — External audit of EXACT memory786 global Gram composition
+
+## 0. Version, purpose, and independence
+
+Target: memory786 CE_GRAM_GLOBAL_COMPOSITION, producer snapshot777,
+ASSEMBLY.md sha256
+`a6c620eb9ffd110b641982129b1173bc4c7aa4262afc2f12ab08a2451f81773c`.
+The original assembly, contracts, results, readiness and full citation texts
+are frozen locally. This audit's bank snapshot is789. Its operator assignment
+is the FINAL COMPOSITION, not another source767 or recovery774 certificate.
+
+This is a new external second line for that exact composition. Memory684
+externally audits677, whose finite and tail modules, seam, time band and
+witnesses differ. It cannot license786 merely because both have three boxes.
+Memory789 supplies the complete external source767 audit; it explicitly
+DOES NOT audit774. Here we consume774's accepted theorem and repeat all
+arithmetic used LIVE at786's representation boundary. We do not replace
+strip_astra's designated complete external recovery audit.
+
+No producer executable or helper is copied, imported, translated or run.
+The integer/dyadic interval engine is this seat's own previously banked772
+qinterval.py, copied with its exact hash and disclosed as reuse. All new
+composition code is independent. The main integral uses symmetric positive
+cosh/exponential moments, not either producer's erfi or one-sided recurrence.
+A separate complex-Arb line uses automatic power series and a Cauchy-circle
+remainder; it imports none of the main numerical helper. Logical code uses
+an independently written multidimensional slab-difference identity plus a
+separate QF_LRA encoding with exact checked counterexample witnesses.
+
+Rung(a) requested: the SAME geometry/height functions reproduce accepted677
+via its external684's complete enclosures, and the distinct V1-H-213/V1-H-220
+site regime and height/criterion arithmetic. Rung(b) requested: new external
+proof/type/endpoint audit, independent arithmetic at every LIVE composition
+joint, complete original leaf-expression comparison, and genuine mutation
+controls. The verifier determines the accepted rung. No finite spot test
+is credited as universal numerical production or as proof of bank status.
+
+CITATIONS.json freezes every direct target citation plus precisely named
+inherited interfaces and memory789. ORIGINS.json identifies each byte input;
+INPUT_PINS.json and RELEASE_PINS.json enforce integrity. Original directories
+appear only as inert provenance strings; check.py reads only local files.
+The verifier must authenticate facts against its bank: matching hashes and
+copied fact texts alone do not prove they were ever accepted.
+
+## 1. Exact statement and dependency inventory
+
+Let a=4/25, b=3/16, X=6000000185827, C=690988, H=2299999,
+J=H+1=2300000, W=66476100549959. The statement audited is
+
+  for EVERY real t in CLOSED[a,b], EVERY real x, y=0,
+                    (H_t(x),H_t'(x)) != (0,0).
+
+Together with banked positive stall and V1-H-213's anchor this confirms
+memory786's STRICT Lambda<4/25. This is not a new candidate, board score,
+harness COVER attestation or publication authorization. The SOLE finite
+RH input is PT2021, arXiv:2004.09765, T=3000175332800, at INITIAL
+X/2=6000000185827/2; margin350479773/2. No RH is consumed at W/2 or at
+the remote radius. The exterior and both tail statements are locally RH-free.
+
+Every DIRECT memory consumed by786 is audited below; inherited restrictions
+are made explicit rather than promoted by a shared name.
+
+| exact memory | conclusion used, and restriction |
+|---|---|
+|526 = V1-H-213| unconditional anchor Lambda<=3/16; only its original PT2021 initial height; criterion arithmetic21/125+(39/1000)/2=3/16 |
+|549 = V1-H-220| external audit of that anchor and distinct site/height arithmetic; not a new lower-time collision module |
+|588| complete external all-complex uniform remote-tail/stall proof; all positive r and all t in[r,1/2], no finite N cap |
+|590| GENERAL compact-separator/Hermite theorem and SEPARATE positive-stall theorem; not its stronger sufficient composition that asks for an all-complex practical tail |
+|596| zero-free stationary vertical boundary at +/-X for t in[0,b], EVERY |y|<=1, natural C; no interior simplicity by itself |
+|599| its GENERAL reality interval[0,b] and simplicity interval(0,b], not just its older illustrative COVER beginning333/2000 |
+|616| complete external numerical boundary596 audit, discharging its explicit record-use condition; no new boundary sweep here |
+|617| external all-m Hermite/compact continuation and padded-boundary proof; the generic positive-time theorem restricts to[a,b] |
+|677| earlier complete global composition used only as a distinct geometry/height anchor, not extrapolated backwards in time |
+|684| external audit of677, supplies exact original anchor enclosures; not an audit of786 |
+|710| BALANCED REAL normalization value and real derivative caps on[7/50,b], x>=X, all right-hand natural walls; model norm premises in its example remain conditional |
+|720| GENERAL natural-or-smaller cutoff torus-to-CLOSED-polydisc stability and phase transport, t in[0,1/2], x>=X; no stability inference at an oversized base cutoff |
+|725| external real-jet error audit of710; its separate713 hybrid demonstration is NOT a premise |
+|729| supplied ALL-index REAL-axis tail on[a,b], N>=H, every left-closed/right-open natural cell; no off-axis reality or finite-source supply |
+|733| external audit of720 GENERAL stability; conditional first-halo example not promoted |
+|738| GENERAL weighted-support/log-derivative lemma and conditional physical lift on EXACT[a,b]x[X,W]; its first source-time demonstration is not used for the larger rectangle |
+|744| GENERAL fixed-cutoff forward-heat norm-preserving theorem for a stable finite polynomial, h>=0, 4*c>=actual support; not only its narrower first-halo example |
+|754| external audit of738/744 with EXACT710/725 REAL errors; supplies the corrected Hermitian reserve and general adoption, no unsupplied source inferred |
+|767| COMPLETE weighted Gram source at SINGLETON(a,X,C,y=0), all full-prime phases, synthetic fibre and all inverse/tail terms; not only scalar |A|>1/10 |
+|772| external complete new-time arithmetic and proof audit of729, retaining bank651's accepted reference production; its hypothetical finite-source fields remain historical |
+|774| supplied finite CLOSED physical rectangle[a,b]x[X,W], all natural C..H, EVERY closed full-prime-polydisc point; no unbounded spatial or lower-time extension |
+
+Additional frozen inherited statements607,651,652,657 prevent narrower
+examples from being accidentally consumed. GENERAL607 H5 holds at every
+x>=5100,t>=0; its example near333/2000 is not extended. GENERAL652's
+complete-coefficient identity and sharp scale inflation are algebraic
+pointwise statements. Its older raw-charge rows and657's older angular-
+error application start at33/200; neither supplies errors below that time.
+At the new time,729 uses DIRECT real-coordinate adoption of710/725 instead.
+651 supplies accepted positive reference bins, NOT its later-time4/5 wall
+at a. The new-time differential barrier is729/772, with cap9/10. These
+changes of role are indispensable to the valid earlier-time composition.
+
+## 2. Interior, initial RH, and strict time endpoints
+
+The elementary H_t is even, real-type, jointly analytic, and solves
+partial_t H=-partial_z^2 H. At time zero PT2021 gives REAL zeros with
+|Re z|<=X; no initial simplicity is assumed. The height check is exactly
+T-X/2=350479773/2>0.
+
+596/616 covers every point of both vertical segments |y|<=1 on CLOSED[0,b].
+The published de Bruijn strip puts every zero at |Im z|<=sqrt(1-2t)<=1.
+Padding to the CLOSED rectangle with |y|<=2 gives zero-free horizontal
+edges and the remaining vertical portions. The squared horizontal
+clearance is4-(1-2t)=3+2t>=3. The numerical y=+/-1 seams are included.
+Hence no identically-zero slice is possible. GENERAL590's compact local
+normal forms, externally audited617, propagate reality on[0,b]; backward
+splitting of a multiple real zero rules out multiplicity on(0,b].
+
+The all-m statement is a banked theorem, not inferred from our finite
+Hermite controls. They test sign convention and the representation boundary.
+In particular z^2-2t solves the same heat equation and has a multiple zero
+at t=0: a closed initial simplicity statement would be false. Since a>0,
+restriction from599's GENERAL statement licenses ALL[a,b]x[0,X]. Trying to
+use only its historical COVER would leave a real early-time gap; logical.py
+checks this failed containment. At x=X the boundary has no zero at all.
+
+No simplicity assertion at t=0, differentiability of a moving boundary,
+or new interior index restriction is needed. Both endpoints a and b
+survive literal restriction. This prevents a singleton endpoint hole from
+invalidating strictness of the final Lambda conclusion.
+
+## 3. Finite exterior: composition of the strong source and supplied recovery
+
+The raw heat polynomial has exact coefficients
+
+ c(x)=log(sqrt(1+x^2)/(4*pi))/4-1/(2*(1+x^2)),
+ a_n(t,x)=exp(t*log(n)^2/4-(1/2+t*c(x))*log(n)).
+
+Every n<=natural N and every prime coordinate are retained. 767 certifies
+its source at(a,X,C) through the stronger normalized Gram relation
+
+ |F_1|^2 > sum_(r>1)|F_r|^2/w_r + delta^2/w_*, delta=1/10,
+ w_r=v_r/(v_*+sum v_r)>0, including the synthetic coordinate.
+
+The positive preconditioned Gram polynomial is certified on the ENTIRE
+closed four-prime torus. Positivity establishes nonvanishing of the algebraic
+preconditioner where division is needed; it is not an unproved differentiated
+mollifier. 720/733 applies at this natural source, gives full closed-polydisc
+stability, and in particular stability of F_1 after zeroing all rough-prime
+coordinates. The normalized holomorphic Gram vector lies inside the unit
+ball throughout the closed smooth polydisc, by the dual-vector maximum
+principle. This is the strong input to774, not a scalar summary substituted
+for it. Memory789 independently supplies the complete source767 audit.
+
+774's accepted universal support-function argument yields for s>=0
+
+ m_exact(s)=delta*sqrt(1+sum_(r>1)v_r*(1-r^(-2s))/v_*).
+
+That is a lower bound for the contracted COMPLETE old cutoff, not the
+physical torus infimum. All224 positive rough bins and the synthetic bin
+are retained. Each bin uses its smallest rough rho; since s>=0, replacing
+r by rho DECREASES1-r^(-2s), the required lower-bound direction.
+
+For an accepted CLOSED index leaf[L,U], define x_L=X if L=C and otherwise
+4*pi*(L^2-b/16). Every target natural cutoff K in[L,U] has x>=x_L. The
+old floor increases with x because c'(x)>0, and every entrant decreases
+with x. At time a all C<n<=K are charged by
+
+ I(L,U)=integral_C^U exp(a*log(v)^2/4
+                       -(1/2+a*c(x_L))*log(v))dv.
+
+The density has negative logarithmic slope at U, hence on ALL[C,U].
+Integrating each[n-1,n] upper-bounds its term at n. The lower integral
+endpoint is C, not C+1; smooth entrants are not omitted. The complete
+count H-C=1609011 is not a sampled-point count. The binned source floor
+minus I exceeds1/100 on EVERY accepted leaf. numerical.py reconstructs
+ALL fourteen complete expressions from ALL bins; ARITHMETIC.md proves its
+new integral. Their minimum is obtained by disjoint enclosure comparisons,
+not displayed digit sorting. The machine gives minimum sufficient expression
+FLOOR12 0.011185589489, CEIL12 0.011185589490 at[1897746,2098872]. This is
+NOT a physical or torus infimum, and is not new full source/recovery production.
+
+Order of operations matters: at a fixed target x,K, the complete entrant
+perturbation establishes stability at BASE time a first. That cutoff can
+exceed the natural cutoff at(a,x), especially at a wall at later time b.
+There is NO application of720 to this oversized base polynomial. Instead,
+GENERAL744/754 applies to the ALREADY stable enlarged polynomial at fixed
+x,K. Actual Newton support log K<=log U<4*c(x_L)<=4*c(x). Forward heat
+therefore retains the SAME floor for every t in[a,b]. This justifies both
+time endpoints and every target natural index, with no time grid.
+
+The actual physical lift is EXACT738/754, not an unsupplied sector-angle
+interface. With r=|A|>=1/100, balanced real errors give
+
+ p=1/800000, q=1/25000+1/40000000000,
+ Q(r)=12*r^2-(30*p+q)*r-400*p-p*q.
+
+The complete moment is<200, ell<30, ell-log N>12. We independently regenerate
+these three bounds from their whole-region monotone envelopes, not only
+read banked digits. Q increases for r>=1/100, and exact arithmetic yields
+Q(1/100)=22375198391999/32000000000000000>1/2000. Every cross term is paid.
+At u=u_x=0, the rotated corrected first coordinate is imaginary and the
+second real, forcing their Hermitian real product to zero. Q>0 forbids it.
+This is a zero-jet implication, not nonvanishing of H itself for all x.
+
+## 4. Gauge and practical ALL-index tail, not the stall tail
+
+Both physical modules concern the SAME H_t. The common positive gauge is
+u=H_t/|M_t((1+i*x)/2)|, with the ELEMENTARY Polymath M, not an exact Gamma
+factor. The logarithmic derivative of M_0 is alpha; symbolic and separate
+complex-series controls verify the identity. For ANY smooth nonzero positive
+gauge g, (H,H_x)=(0,0) iff(H/g,(H/g)_x)=(0,0). Thus two different auxiliary
+witnesses may be glued through their true-H conclusions; their coefficients,
+phases or norm floors need not coincide at W. A gauge identity would matter
+again if their numerical u-jet estimates themselves were combined.
+
+729/772 covers ALL integer N>=H and EVERY x in the associated half-open
+natural cell, for every t in CLOSED[a,b]. Its complete current-time Euler13
+mass is<9/10 from a forced differential supersolution in log N. It retains
+all products above N and the moving upper-limit boundary forcing. Both
+initial and equilibrium ceilings are needed; no finite block cap, empirical
+monotonicity of actual mass, or sample at a large N proves infinity.
+
+The initial/equilibrium upper enclosures from729 and772 are banked inputs
+and are compared and re-gated here. We do NOT regenerate651's coefficients
+or729's differential proof. The real-coordinate conversion is fresh:
+
+ E0=19/10, E1=3/5, P0=27,
+ v=1/400000, d=1/50000, Y=H^2,
+ eps=2*b*(1/(4*Y)+1/Y^3), kbar=eps+eps^2/2,
+ D=sqrt((E0*v/2)^2+[2*(E1*v+E0*d)/P0]^2)+(9/10)*kbar
+   <1/200000.
+
+This uses |r_x| in the REAL gauge, not as the derivative of a complex
+remainder e^(i*Theta)r. The resulting linear reserve is
+
+ (179/180)|u|+(19/135)|u_x|>19999/200000.
+
+Cauchy-Schwarz independently gives exact quadratic reserve
+291570840729/29414500000000>9/1000. This excludes real multiple zeros
+through infinity; it makes NO all-complex reality assertion. The heat
+family z^2+1-2t supplies an attained countermodel to replacing absence of
+multiple REAL zeros by reality of ALL zeros: on[a,b] it has a nonreal pair.
+
+## 5. Geometry, curved walls, and the exact three-box union
+
+Write s_n(t)=4*pi*(n^2-t/16). Direct algebra, for EVERY integer n,
+
+ s_(n+1)-s_n=4*pi*(2*n+1)>0,
+ partial_t s_n=-pi/4<0,
+ s_n/(4*pi)+t/16=n^2.
+
+The natural index at a wall is the RIGHT index n. It is chosen before
+freezing the local analytic representation; we never differentiate a floor
+selector. Entire natural cells are left-closed, right-open and telescope
+through infinity. Their endpoint ownership is not the same as an open
+physical gap.
+
+Independent dyadic pi enclosures prove
+
+ s_C(a)<X<s_(C+1)(b),
+ s_H(a)<W<s_J(b)<W+1, W=floor(s_J(b)).
+
+Wall monotonicity implies X stays in cellC and W stays STRICTLY in
+predecessor cellH for EVERY t in[a,b]. The upper gap at W is machine-derived
+FLOOR18 0.877663713896968636, CEIL18 0.877663713896968637. Thus every
+finite target in[X,W] has C<=N<=H, and every x>=W has N>=H. The curved
+terminal J wall is excluded from the finite theorem but is INCLUDED by
+the tail's right-index cells. Starting the tail at J loses the collar
+between W and s_J(t); rounding W up while leaving the finite endpoint
+unchanged also fails. Neither defect is cured by a formal equality of labels.
+
+The exact licensed boxes, all at y=0, are
+
+ CLOSED[a,b] x CLOSED[0,X],
+ CLOSED[a,b] x CLOSED[X,W],
+ CLOSED[a,b] x [W,infinity).
+
+They are relatively closed subsets of finite real coordinates; infinity
+is not a real endpoint at which a zero could be missed. logical.py first
+licenses each box from its immutable theorem scope, including time, N,
+y, gauge and source type. It then proves the union is EXACTLY
+CLOSED[a,b]x[0,infinity)x{0}, with zero missing and zero excess components.
+Evenness of H and oddness of H_x reflect it to EVERY real x.
+
+For independent set arithmetic, intersect two intervals with exact closed/open
+bits, and form the two possible complement pieces with flipped intersection
+bits. An intersection singleton remains if and only if both endpoint bits
+are closed. For multidimensional boxes, their difference is the disjoint union
+of slabs whose earlier coordinates lie in the intersection, current coordinate
+lies outside it, and later coordinates remain unrestricted in the original
+box. This identity holds for singleton y and unbounded x as well as ordinary
+open cells. Inductively subtracting the three boxes proves the entire continuum,
+not a grid. Exhaustive endpoint-configuration controls test the implementation.
+
+A SEPARATE rational linear-order formula encodes target-minus-union and
+union-minus-target. Both are UNSAT. For every tested missing/excess mutant,
+the solver's SAT witness is parsed as exact rationals and checked again by
+ordinary membership inequalities. Tests remove the X seam, W seam, a or b,
+a single interior time, all open times, a positive real gap, and the infinite
+ray; they cannot pass by an area or integer-only test. Scope attacks include
+a formally contiguous but theorem-unlicensed ceiling seam. The soundness of
+the main proof does not rest on an uninspected solver verdict.
+
+## 6. Strict Lambda inference, ALL-complex time-uniform tail and anchor
+
+Memory590 also contains a stronger sufficient composition that requests an
+all-complex practical tail. We do not cite that stronger form with a weaker
+hypothesis. Instead consume its independently proved STALL theorem and588's
+external proof. For EVERY r in(0,1/2], EVERY t in[r,1/2], EVERY complex zero
+with |Re z|>=4*pi*exp(128/r)+1 is real and simple. This has unbounded N and
+ALL imaginary parts; the de Bruijn strip closes the outer y-domain.
+
+Choose ONCE r=a/2=2/25. The SAME finite radius
+
+ R=4*pi*exp(1600)+1
+
+is valid on CLOSED[2/25,1/2], including a LEFT time neighborhood of every
+hypothetical Lambda in[a,b]. The checker provides one common positive
+neighborhood width and checks the exact remote error
+
+ 9*(2^(-16)+2^(-15)/15)+41000/2^256+3/2^64 <1/1024.
+
+The +1 pays for the first incomplete phase cell in588; it is not deleted.
+No new enormous-height computation, finite RH verification or practical-tail
+surrogate is consumed here.
+
+Suppose Lambda>=a. V1-H-213/V1-H-220 gives0<a<=Lambda<=b. At the attained
+threshold H_Lambda is all-real. If its zeros were all simple, choose R'>R
+whose vertical real boundary avoids them, and a padded compact rectangle.
+Only finitely many zeros occur there. Conjugation-invariant disjoint disks
+isolate them; compact nonvanishing and Rouche preserve exactly one zero in
+each for sufficiently close real times. The zeros remain real by conjugation
+and simple by multiplicity count. The same tail handles EVERY zero outside
+that compact region for slightly earlier t still above r. Then some t<Lambda
+would be all-real, a contradiction. Hence H_Lambda has a finite multiple real
+zero, prohibited by the ENTIRE CLOSED collision band already proved.
+Thus Lambda<4/25, STRICT. If Lambda<=0 the inequality is immediate; no
+Rodgers-Tao lower bound is needed. Lack of a at the time endpoint would allow
+Lambda=a and would defeat this strict inference.
+
+## 7. Adversarial controls, execution and release limits
+
+Every original target scalar/exact field and every original transport
+leaf/directed pair is compared with fresh arithmetic. Every source leaf
+floor is re-gated as an ACCEPTED input, not relabeled a newly computed
+universal torus leaf. Separate direct complex-Arb checks retain ALL original
+thirty raw and twenty-one weight inputs from786/774, including their exact
+source hash selection and complete smooth fibres. It independently encloses
+all fourteen original entrant integrals with a Cauchy-circle remainder.
+Additional proof-hash gauge controls store exact(t,x,y) BEFORE calculation.
+These are representation checks, not a full source/fibre production claim.
+The rejected optimizer-hash replay problem cannot occur: no optimizer is
+rerun and no missing phase vector is reconstructed from its hash.
+
+Source-only execution calls the three own workers sequentially, on one CPU,
+with no network, binary build, pod, installation or background process. The
+installed z3 executable is used only in this CLAIM's check; a later confined
+RECORD executable must cite the banked audit, not launch this solver. No
+RECORD package is submitted here. A clean workspace copy reruns the entire
+checker and compares all deterministic outputs.
+
+The historical producer readiness remains snapshot777 HELD. At our snapshot789,
+the external complete source audit is banked789. This artifact supplies ONLY
+the external final composition audit when independently accepted. It does not
+supply the separate external recovery774 theorem audit, certify a future
+record header, waive a hold by changing a JSON flag, or imply official checker
+acceptance. Local matches and successful scripts are not a verifier verdict.
+
+Credit Daniel Martin Kornaus for the collision-exclusion architecture; every
+load-bearing theorem used here is our banked work. No unrefereed PR180 file
+or theorem is included or consumed. Publication remains the operator's decision.

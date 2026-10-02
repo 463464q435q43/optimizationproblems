@@ -1,0 +1,84 @@
+{
+  "accepted_only_qualification": {
+    "composition_boundary": {
+      "audit": 795,
+      "complete_recovery774_audit": false,
+      "leaf_comparisons": 14,
+      "original_citations": 21,
+      "record_acceptance": false,
+      "target": 786
+    },
+    "cut": {
+      "covered": {
+        "complete_source767": [
+          789
+        ],
+        "composition786": [
+          795
+        ],
+        "recovery774": []
+      },
+      "invalid_snapshot": false,
+      "missing": [
+        "recovery774"
+      ],
+      "ready": false
+    },
+    "scope": "accepted-only exact supplied inventory; recovery proof must actually execute LIVE",
+    "secondary_atoms": 27,
+    "snapshot": 796,
+    "source_boundary": {
+      "closed_source_leaves": 3524,
+      "composition786_audited": false,
+      "full_source_rerun_here": false,
+      "raw_terms": 690988,
+      "source_qualified_by": 789,
+      "target": 767,
+      "transport774_audited": false,
+      "weights_including_synthetic": 157940
+    }
+  },
+  "arithmetic": {
+    "CEIL10": "0.1600000000",
+    "FLOOR10": "0.1600000000",
+    "RH_height": "3000175332800",
+    "RH_margin": "350479773/2",
+    "X": "6000000185827",
+    "anchor_upper": "3/16",
+    "gain": "1/200",
+    "lambda_upper": "4/25",
+    "t_hi": "3/16",
+    "t_lo": "4/25"
+  },
+  "candidate_accepted": false,
+  "candidate_release": "CONSTRUCTIVE_COMPLETE",
+  "constructive_qualification": {
+    "historical_accepted_only_policy_unchanged": false,
+    "live_bank_acceptance_asserted": false,
+    "missing": [],
+    "policy": "EXACT_ACCEPTED_AUDIT_OR_COMPLETE_LIVE_INDEPENDENT_PROOF",
+    "ready": true,
+    "witnesses": {
+      "complete_source767": [
+        789
+      ],
+      "composition786": [
+        795
+      ],
+      "recovery774": [
+        "COMPLETE_LIVE:functional_astra-s27"
+      ]
+    }
+  },
+  "frozen_files": 82,
+  "live_execution_sha256": "8353e8c8e0a9e682a281cc155750fcb475c30be37cef56693dfd1f9ceade89b8",
+  "live_recovery_checks": 1701309,
+  "math_checks": 156550,
+  "math_second_checks": 435,
+  "mathematical_source": 786,
+  "mathematics_fresh": true,
+  "new_bound_claimed_as_fact": false,
+  "official_attestation": false,
+  "publication_approved": false,
+  "record_lines_emitted": 5
+}

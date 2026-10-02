@@ -1,0 +1,234 @@
+{
+  "emitted_boxes": [
+    {
+      "module": "interior",
+      "node": "interior",
+      "t": [
+        "4/25",
+        "3/16"
+      ],
+      "t_closed": [
+        true,
+        true
+      ],
+      "x": [
+        "0",
+        "6000000185827"
+      ],
+      "x_closed": [
+        true,
+        true
+      ]
+    },
+    {
+      "module": "exterior",
+      "node": "finite",
+      "t": [
+        "4/25",
+        "3/16"
+      ],
+      "t_closed": [
+        true,
+        true
+      ],
+      "x": [
+        "6000000185827",
+        "66476100549959"
+      ],
+      "x_closed": [
+        true,
+        true
+      ]
+    },
+    {
+      "module": "tail",
+      "node": "practical_tail",
+      "t": [
+        "4/25",
+        "3/16"
+      ],
+      "t_closed": [
+        true,
+        true
+      ],
+      "x": [
+        "66476100549959",
+        "inf"
+      ],
+      "x_closed": [
+        true,
+        false
+      ]
+    }
+  ],
+  "global": {
+    "A": "3/16",
+    "H": 2299999,
+    "J": 2300000,
+    "N0": 690988,
+    "W": "66476100549959",
+    "X": "6000000185827",
+    "anchor_source": "V1-H-213",
+    "anchor_upper": "3/16",
+    "l": "4/25",
+    "rh_height": "3000175332800"
+  },
+  "nodes": {
+    "anchor": {
+      "X": "6000000185827",
+      "kind": "unconditional-upper",
+      "rh_height": "3000175332800",
+      "second_lines": [
+        "V1-H-220"
+      ],
+      "source": "V1-H-213",
+      "upper": "3/16"
+    },
+    "boundary": {
+      "kind": "full-boundary-nonzero",
+      "padding_y": [
+        "-2",
+        "2"
+      ],
+      "second_lines": [
+        616
+      ],
+      "source": 596,
+      "strip_squared_clearance": "3",
+      "t": [
+        "0",
+        "3/16"
+      ],
+      "t_closed": [
+        true,
+        true
+      ],
+      "x": [
+        "6000000185827",
+        "6000000185827"
+      ],
+      "y": [
+        "-1",
+        "1"
+      ]
+    },
+    "finite": {
+      "N": [
+        690988,
+        2299999
+      ],
+      "cell": "left-closed-right-open",
+      "entrant_count": 1609011,
+      "external_audit": "OPEN_at_snapshot777",
+      "gauge": "elementary-Polymath-absMt",
+      "kind": "real-axis-no-double",
+      "modulus_floor": "1/100",
+      "new_source_production": false,
+      "official_attestation": false,
+      "source": 774,
+      "source_kind": "strong-normalized-Gram",
+      "source_memory": 767,
+      "t": [
+        "4/25",
+        "3/16"
+      ],
+      "t_closed": [
+        true,
+        true
+      ],
+      "wall_index": "right-frozen",
+      "witness": "complete-raw-Gram-recovery",
+      "x": [
+        "6000000185827",
+        "66476100549959"
+      ],
+      "x_closed": [
+        true,
+        true
+      ],
+      "y": "0"
+    },
+    "interior": {
+      "N": null,
+      "kind": "real-simple-interior",
+      "second_lines": [
+        616,
+        617
+      ],
+      "source": 599,
+      "t": [
+        "0",
+        "3/16"
+      ],
+      "t_closed": [
+        false,
+        true
+      ],
+      "x": [
+        "0",
+        "6000000185827"
+      ],
+      "x_closed": [
+        true,
+        true
+      ],
+      "y": "all-zero-imaginary-parts"
+    },
+    "practical_tail": {
+      "N": [
+        2299999,
+        null
+      ],
+      "cell": "left-closed-right-open",
+      "gauge": "elementary-Polymath-absMt",
+      "kind": "real-axis-no-double",
+      "second_lines": [
+        772
+      ],
+      "source": 729,
+      "t": [
+        "4/25",
+        "3/16"
+      ],
+      "t_closed": [
+        true,
+        true
+      ],
+      "wall_index": "right-frozen",
+      "witness": "Euler13-current-time",
+      "x": [
+        "66476100549959",
+        "inf"
+      ],
+      "x_closed": [
+        true,
+        false
+      ],
+      "y": "0"
+    },
+    "stall_tail": {
+      "N": [
+        null,
+        null
+      ],
+      "kind": "all-complex-real-simple-uniform-tail",
+      "r": "2/25",
+      "radius": "4*pi*exp(128/r)+1",
+      "radius_exponent": "1600",
+      "second_lines": [
+        588
+      ],
+      "source": 590,
+      "t": [
+        "2/25",
+        "1/2"
+      ],
+      "t_closed": [
+        true,
+        true
+      ],
+      "y": "all"
+    }
+  },
+  "version": "ce-gram-global-types-v1"
+}

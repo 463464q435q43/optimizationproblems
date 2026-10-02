@@ -1,0 +1,246 @@
+{
+  "accepted_only_missing": [
+    "recovery774"
+  ],
+  "accepted_witnesses": {
+    "complete_source767": 789,
+    "composition786": 795
+  },
+  "adverse_count": 87,
+  "adverse_rejections": [
+    "drop_role_complete_source767",
+    "drop_role_composition786",
+    "drop_role_recovery774",
+    "missing legacy scope 675 singleton33/200_X_N690988_y0",
+    "missing legacy scope 675 complete_fixed17_mass",
+    "missing legacy scope 675 inverse_frozen_once_through1024",
+    "missing legacy scope 675 every_product_through1024N",
+    "missing legacy scope 675 full_external_coefficient_rebuild",
+    "wrong legacy 675 target",
+    "wrong legacy 675 target_fact_sha256",
+    "wrong legacy 675 target_proof_sha256",
+    "wrong legacy 675 audit_fact_sha256",
+    "wrong legacy 675 audit",
+    "self audit 655",
+    "uncaptured accepted flag 655",
+    "partial scopes not one complete audit 655",
+    "missing legacy scope 676 closed33/200_3/16",
+    "missing legacy scope 676 natural690988_2199999",
+    "missing legacy scope 676 every_RIGHT_wall",
+    "missing legacy scope 676 same_complete_inverse",
+    "missing legacy scope 676 true_H_REAL_adoption",
+    "wrong legacy 676 target",
+    "wrong legacy 676 target_fact_sha256",
+    "wrong legacy 676 target_proof_sha256",
+    "wrong legacy 676 audit_fact_sha256",
+    "wrong legacy 676 audit",
+    "self audit 668",
+    "uncaptured accepted flag 668",
+    "partial scopes not one complete audit 668",
+    "missing legacy scope 684 exact_global_manuscript",
+    "missing legacy scope 684 all_three_boxes_closed",
+    "missing legacy scope 684 no_missing_or_excess_components",
+    "missing legacy scope 684 ALL_complex_uniform_stall_tail",
+    "missing legacy scope 684 positive_time_interior",
+    "missing legacy scope 684 sole_initial_PT2021",
+    "missing legacy scope 684 anchor3/16",
+    "wrong legacy 684 target",
+    "wrong legacy 684 target_fact_sha256",
+    "wrong legacy 684 target_proof_sha256",
+    "wrong legacy 684 audit_fact_sha256",
+    "wrong legacy 684 audit",
+    "self audit 677",
+    "uncaptured accepted flag 677",
+    "partial scopes not one complete audit 677",
+    "no_promotion_789",
+    "no_promotion_795",
+    "ignored_candidate_release",
+    "ignored_all_accepted",
+    "ignored_pending_result",
+    "live_witness_type",
+    "live_author",
+    "live_target",
+    "live_target_fact_sha256",
+    "live_target_proof_sha256",
+    "live_capsule_sha256",
+    "live_source_transformations",
+    "live_execution_exit",
+    "live_fresh_complete_execution",
+    "live_bank_acceptance_asserted",
+    "live_products",
+    "live_input_sha256",
+    "incomplete_complete_raw_cells",
+    "incomplete_complete_weight_cells",
+    "incomplete_positive_bins",
+    "incomplete_original_leaves",
+    "incomplete_original_scalar_slots",
+    "live_scope_entry_count",
+    "live_scope_t_closed",
+    "live_scope_x_closed",
+    "live_scope_terminal2300000",
+    "current_scope_789_source_singleton_4/25_X690988_y0",
+    "current_scope_789_all_prime_torus",
+    "current_scope_789_complete_weighted_Gram",
+    "current_scope_789_synthetic_delta_1/10",
+    "current_scope_789_positive_normalized_weights",
+    "current_scope_789_all_inverse_products",
+    "current_scope_789_complete_discarded_Fourier_l1",
+    "current_scope_789_all_3524_closed_leaves",
+    "current_scope_795_exact_pinned_manuscript",
+    "current_scope_795_all_consumed_bank_statements",
+    "current_scope_795_three_closed_boxes_no_gaps_or_excess",
+    "current_scope_795_all_axes_t_N_y",
+    "current_scope_795_positive_time_general_interior",
+    "current_scope_795_uniform_ALL_complex_stall_tail",
+    "current_scope_795_initial_PT2021_only",
+    "current_scope_795_anchor_V1-H-213",
+    "current_scope_795_strict_stall_contradiction"
+  ],
+  "candidate_acceptance_asserted": false,
+  "checks": 486,
+  "constructive_missing": [],
+  "current_proof_subsets": [
+    {
+      "mask": 0,
+      "missing": [
+        "complete_source767",
+        "composition786",
+        "recovery774"
+      ],
+      "ready": false
+    },
+    {
+      "mask": 1,
+      "missing": [
+        "composition786",
+        "recovery774"
+      ],
+      "ready": false
+    },
+    {
+      "mask": 2,
+      "missing": [
+        "complete_source767",
+        "recovery774"
+      ],
+      "ready": false
+    },
+    {
+      "mask": 3,
+      "missing": [
+        "recovery774"
+      ],
+      "ready": false
+    },
+    {
+      "mask": 4,
+      "missing": [
+        "complete_source767",
+        "composition786"
+      ],
+      "ready": false
+    },
+    {
+      "mask": 5,
+      "missing": [
+        "composition786"
+      ],
+      "ready": false
+    },
+    {
+      "mask": 6,
+      "missing": [
+        "complete_source767"
+      ],
+      "ready": false
+    },
+    {
+      "mask": 7,
+      "missing": [],
+      "ready": true
+    }
+  ],
+  "legacy_subsets": [
+    {
+      "mask": 0,
+      "missing": [
+        "stage2_complete_corner",
+        "stage2_global",
+        "stage2_true_finite"
+      ],
+      "ready": false
+    },
+    {
+      "mask": 1,
+      "missing": [
+        "stage2_global",
+        "stage2_true_finite"
+      ],
+      "ready": false
+    },
+    {
+      "mask": 2,
+      "missing": [
+        "stage2_complete_corner",
+        "stage2_global"
+      ],
+      "ready": false
+    },
+    {
+      "mask": 3,
+      "missing": [
+        "stage2_global"
+      ],
+      "ready": false
+    },
+    {
+      "mask": 4,
+      "missing": [
+        "stage2_complete_corner",
+        "stage2_true_finite"
+      ],
+      "ready": false
+    },
+    {
+      "mask": 5,
+      "missing": [
+        "stage2_true_finite"
+      ],
+      "ready": false
+    },
+    {
+      "mask": 6,
+      "missing": [
+        "stage2_complete_corner"
+      ],
+      "ready": false
+    },
+    {
+      "mask": 7,
+      "missing": [],
+      "ready": true
+    }
+  ],
+  "live_checks": 1701309,
+  "live_witness": "functional_astra-s27 COMPLETE execution; not a bank citation",
+  "math_primary_checks": 156550,
+  "math_second_checks": 435,
+  "name": "CE_GRAM_CONSTRUCTIVE_RECORD_DELIVERY",
+  "publication_approved": false,
+  "record_arithmetic": {
+    "CEIL10": "0.1600000000",
+    "FLOOR10": "0.1600000000",
+    "RH_height": "3000175332800",
+    "RH_margin": "350479773/2",
+    "X": "6000000185827",
+    "anchor_upper": "3/16",
+    "gain": "1/200",
+    "lambda_upper": "4/25",
+    "t_hi": "3/16",
+    "t_lo": "4/25"
+  },
+  "record_exit": 0,
+  "record_lines": 5,
+  "snapshot": 796,
+  "target_memory": 786
+}

@@ -1,0 +1,25 @@
+{
+  "accepted_only_missing": [
+    "recovery774"
+  ],
+  "asserts_new_Lambda_theorem": false,
+  "board_exact": "33/200",
+  "current_snapshot": 796,
+  "expected_emitted_RECORD_lines": 5,
+  "expected_missing": [],
+  "expected_record_exit": 0,
+  "historical_math_snapshot": 777,
+  "improvement_exact": "1/200",
+  "live_audit_accepted_bank_citation": false,
+  "live_recovery_required": true,
+  "math_input_files": 54,
+  "math_outputs": {
+    "RESULT.json": "82380d681729b0ba6c1bb6cb3ceb895eb0f48bd72de57035fe4bb6c75f6056b1",
+    "SECOND_RESULT.json": "fed4d06b5c2825f93e2dfa9b6dd2af4e1dbd0201b400014903ab4bd5988719e7",
+    "second_line.log": "a246341874dd66ea040acde612e22968bf355282c76beef857973dbc38703db1",
+    "second_line_stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "math_source_memory": 786,
+  "math_stdout_sha256": "e55cfc52690c2177ee2ec865dd8f2530ec71f2daa3e11e05012646c995bd95aa",
+  "target_score_exact": "4/25"
+}

@@ -1,0 +1,83 @@
+{
+  "675": {
+    "audit": 675,
+    "audit_fact_sha256": "82c0b6eb40b56e4c4a885e67fc4c682c91d647571e985a48cef15f330af41c64",
+    "obligations": [
+      "singleton33/200_X_N690988_y0",
+      "complete_fixed17_mass",
+      "inverse_frozen_once_through1024",
+      "every_product_through1024N",
+      "full_external_coefficient_rebuild"
+    ],
+    "target": 655,
+    "target_fact_sha256": "bf91c8f9d5b1f212440c9171afa879b3c2d1729486365307c1ebdb072002fc2e",
+    "target_proof_sha256": "c83692ad2a4d07ffd9682c81f8cadd06488fa1ccd5a0444f7f90c31f0d06896c"
+  },
+  "676": {
+    "audit": 676,
+    "audit_fact_sha256": "64381384e5d49d0936db4d1b5d9875090e4dcbc23eb86a325221c6413b862983",
+    "obligations": [
+      "closed33/200_3/16",
+      "natural690988_2199999",
+      "every_RIGHT_wall",
+      "same_complete_inverse",
+      "true_H_REAL_adoption"
+    ],
+    "target": 668,
+    "target_fact_sha256": "03b8dfdcfe6b7216e645dbb0800be91dfaea70c6bdd68e96df9b1f653afb6f20",
+    "target_proof_sha256": "c6416732533581fc04506d0befb3a2174fb027543b69b9c904df140971e22a81"
+  },
+  "684": {
+    "audit": 684,
+    "audit_fact_sha256": "7781d5f81d6adcc27581974751b30e0ab5bb909210f1728286d2520b9142ac83",
+    "obligations": [
+      "exact_global_manuscript",
+      "all_three_boxes_closed",
+      "no_missing_or_excess_components",
+      "ALL_complex_uniform_stall_tail",
+      "positive_time_interior",
+      "sole_initial_PT2021",
+      "anchor3/16"
+    ],
+    "target": 677,
+    "target_fact_sha256": "d1cb0ea61aa9c7fe8fe3c70798eaec510d959d42a06e283ea6f59c60b4f5a00f",
+    "target_proof_sha256": "8ba0a6be359135c733d23766c95992054dc901a3078bee4e2169f50c5d5eb065"
+  },
+  "789": {
+    "audit": 789,
+    "audit_fact_sha256": "b4839073a9061532ceb79aa5ee334a5cd42b0d554e4094d23c59b8ff75c3acbc",
+    "obligations": [
+      "source_singleton_4/25_X690988_y0",
+      "all_prime_torus",
+      "complete_weighted_Gram",
+      "synthetic_delta_1/10",
+      "positive_normalized_weights",
+      "all_inverse_products",
+      "complete_discarded_Fourier_l1",
+      "all_3524_closed_leaves"
+    ],
+    "target": 767,
+    "target_fact_sha256": "97d78eb2f4a973142a0f82f10a3b40a195f64df21f3a42264a187542f8b885ec",
+    "target_proof_sha256": "026b89ecc2fe2e42ef5dc62c513c01b567da609f4f73f7a6b7f6d8528022d806"
+  },
+  "795": {
+    "audit": 795,
+    "audit_fact_sha256": "9191507992e4b7d69ade77732a3d55fd2de8e0fe1ee5b0ff8f1a43c3600fdc74",
+    "external_proof": "frozen/external795_AUDIT.txt",
+    "external_summary": "frozen/external795_SUMMARY.json",
+    "obligations": [
+      "exact_pinned_manuscript",
+      "all_consumed_bank_statements",
+      "three_closed_boxes_no_gaps_or_excess",
+      "all_axes_t_N_y",
+      "positive_time_general_interior",
+      "uniform_ALL_complex_stall_tail",
+      "initial_PT2021_only",
+      "anchor_V1-H-213",
+      "strict_stall_contradiction"
+    ],
+    "target": 786,
+    "target_fact_sha256": "076bc7325cb326fdcf31fe5939a42f22d579190a56b40748ff5b7a9fa22c4aa3",
+    "target_proof_sha256": "a6c620eb9ffd110b641982129b1173bc4c7aa4262afc2f12ab08a2451f81773c"
+  }
+}

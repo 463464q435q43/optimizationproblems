@@ -1,0 +1,116 @@
+# Independent composition arithmetic and remainder proofs
+
+## A. Endpoint arithmetic
+
+qinterval.py is byte-identical to this seat's own banked memory772 helper,
+not to any target producer helper. ORIGINS.json pins that fact. Its proof is
+in OWN_BASE_ARITHMETIC.md. Endpoints are integers divided by2^272. Addition
+is exact at this scale; multiplication/division take all adverse products
+and directed integer floor/ceiling. Integer sqrt encloses the exact root.
+Logarithms reduce by powers of two and use the positive atanh series with
+a rational geometric tail. Exp reduces to[0,1/8], uses a positive Taylor
+polynomial plus its entire remainder, then directed squaring; negative
+arguments use reciprocal. Machin pi uses two alternating arctangent series.
+No binary floating number enters a gate. Explicit negative-direction tests
+precede every printed decimal. Fractions that are EXACT terminating decimals
+are formatted directly as Fractions, not first widened into dyadic balls.
+
+## B. New symmetric integral for every retained recovery leaf
+
+Let alpha>=0 and l<h be rigorous intervals, and define
+
+ m=(l+h)/2, R=(h-l)/2,
+ D=(2*alpha*m+beta)*R, V=alpha*R^2.
+
+Changing variables y=m+R*z and discarding odd terms by symmetry gives
+
+ integral_l^h exp(alpha*y^2+beta*y)dy
+ =2*R*exp(alpha*m^2+beta*m)
+      *sum_(j,k>=0) D^(2j)*V^k/((2j)! k! (2j+2k+1)).
+
+The equality follows either from absolute uniform convergence on[-1,1]
+or from the product cosh(D*z)*exp(V*z^2). All actual summands are nonnegative.
+The main engine takes0<=j,k<=M=32. It checks|D|<2 and0<=V<1 for every
+complete target integral before applying the remainder. If d bounds|D|
+and v bounds V, tails of the separate series satisfy
+
+ E_c <= d^(2M+2)/(2M+2)! / (1-d^2/((2M+3)*(2M+4))),
+ E_e <= v^(M+1)/(M+1)! / (1-v/(M+2)).
+
+All subsequent ratios are smaller, proving the geometric majorants. On
+|z|<=1 the product tail is at most E_c*exp(v)+E_e*cosh(d), at most3*E_c+4*E_e.
+The program independently proves exp1<3 and cosh2<4 with directed arithmetic.
+It adds[0,3*E_c+4*E_e] to the double sum BEFORE multiplying by the full
+positive scale2*R*exp(alpha*m^2+beta*m). No special-function cancellation,
+unknown asymptotic tail or empirical convergence is used.
+
+For the entrant integral put alpha=a/4, beta=1/2-a*c(X)-s,
+l=log C, h=log U. The +1 in the log-coordinate Jacobian is thus retained.
+Every original leaf is evaluated from its exact original[L,U] and all
+banked bin endpoints. The first leaf's s=0 is exact, not the difference of
+two independent rounded c(X)'s. Literal matching is not the proof of the
+integral; it independently confirms that the proved new enclosure agrees
+with every original directed pair and intersects every original enclosure.
+
+## C. Separate complex-Arb integral controls
+
+controls.py uses no qinterval/numerical helper. It obtains the exact real
+saddle amplitude from the COMPLEX formula
+
+ s=(1+i*x)/2, w=s+t*alpha(s)/2,
+ a_n=exp(t*log(n)^2/4-Re(w)*log n).
+
+For the same original integral, let l=log C, h=log U-l and write
+exp(D*z+V*z^2)=sum c_j*z^j after y=l+h*z. The automatic complex power-series
+engine produces c_j through j=109. On|z|=2 its modulus is at most
+M0=exp(2*|D|+4*|V|). Cauchy's coefficient inequality gives|c_j|<=M0/2^j.
+Therefore the ENTIRE omitted integral on[0,1] has modulus at most
+sum_(j>=110) M0/2^j =2*M0/2^110. Add a symmetric real ball of that radius
+to sum_(j<110)c_j/(j+1), then multiply by h*exp(alpha*l^2+beta*l).
+Its reality follows from the exact real input; imaginary balls containing
+zero are checked, not silently discarded from an arbitrary complex result.
+Every original integral is enclosed independently and compared, not a subset.
+
+All original source coefficient/weight probes are retained exactly and
+checked in the complex saddle representation. All smooth terms of each
+selected fibre are summed, including the synthetic weight's two profile
+denominators. Those controls do NOT certify the unselected source bins.
+Their complete values remain accepted767/774 inputs.
+
+## D. Complete moment and exact perturbation joints
+
+The finite moment is bounded by f(2)+f(3)+integral_3^H f(v)dv, where
+f(v)=log(v)*v^(-49/50). Directed gates prove f is decreasing above3 and
+all raw coefficients are at most n^(-49/50) throughout the physical rectangle.
+After y=log(v), expand y*exp(y/50). Integrating powers gives
+
+ sum_(k=0)^70 (1/50)^k * ((log H)^(k+2)-(log3)^(k+2))/(k!*(k+2)).
+
+The program checks0<(log H)/50<1. The positive omitted exponential tail
+is bounded by3/71!, uniformly; multiply by(log H-log3)*log H and add it
+outward. This proves a COMPLETE absolute moment envelope, not a finite
+summand sample. The adopted phase caps are computed from c(X),c(W) and the
+whole-domain bound0<ell-4*c<3*b/X, whose endpoint monotonic guard is checked.
+
+Finite Hermitian and tail squared-jet reserves are exact rational polynomials.
+The tail conversion uses one outward square root of an exact positive rational;
+its small scale inflation comes from sqrt(1+e^2)<=1+e^2/2, proved by squaring.
+The banked initial and equilibrium tail caps are compared as rational enclosures
+from both accepted729 and772. They are explicitly marked BANKED rather than
+advertised as fresh coefficient or integral production.
+
+## E. Geometry and representation controls
+
+Every wall is4*pi*(n^2-t/16). Exact symbolic identities prove its direction
+in both n and t and assign the RIGHT index at every curved wall. Endpoint
+inequalities use outward pi enclosures; FLOOR of the seam is accepted only
+if both rational enclosure endpoints have the same exact integer floor.
+The SAME production functions evaluate distinct accepted677 and V1 anchor
+regimes. No arbitrarily rounded pi wall is compared by binary64.
+
+All quantified coverage gates are described in AUDIT.md. A solver witness
+is checked independently with exact Fraction inequalities. Mutations are
+live falsifications of actual source/coverage conditions, not expected PASS
+labels. No check(name,True) is used as evidence. The child return codes,
+input pins, output scopes and deterministic clean-copy hashes are enforced
+by check.py; a successful run alone is not an independent verifier decision.

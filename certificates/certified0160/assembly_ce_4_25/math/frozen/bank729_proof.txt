@@ -1,0 +1,361 @@
+# FOUNDATION — CE0160 DIFFERENTIAL-BARRIER TAIL
+
+## 0. Statement, ownership, and quantifier audit
+
+Let a=4/25, b=3/16, H=2299999, J=H+1=2300000, X=6000000185827,
+P={2,3,5,7,11,13}, D=30030. For EVERY real t in CLOSED[a,b], EVERY
+integer N>=H, and EVERY real x in its natural LEFT-CLOSED/RIGHT-OPEN cell
+
+    s_N(t)<=x<s_(N+1)(t),  s_n(t)=4*pi*(n^2-t/16),  y=0,
+
+put u=H_t(x)/|M_t((1+i*x)/2)|, with exactly the elementary Polymath M_t
+in the frozen bank607/652/710 manuscripts. Then
+
+    (179/180)|u|+(19/135)|u_x| > 19999/200000,
+    u^2+u_x^2 > 9/1000.                                      (T)
+
+In particular there is no multiple REAL zero. Every internal RS wall is
+included using its natural RIGHT index frozen during differentiation. The
+closed rectangular version begins at W=floor(s_J(b)); the script derives
+its exact integer and proves W remains strictly inside predecessor cell H
+throughout the band. All x>=W are covered, and evenness gives x<=-W.
+This is a practical REAL-AXIS tail, not a statement about nonreal zeros.
+
+The new device is a first-order differential supersolution in U=log N.
+ONE fixed complete positive head and ONE corner integral suffice for the
+entire unbounded tail. There is no finite-N sweep and no infinity cutoff.
+The current-time Euler witness is NOT the reciprocal used in the finite
+stage-two region. Changing a printed time label in that region is invalid.
+
+The numerical forecast in PREREG.md passes. The sharper mass cap 9/10,
+conversion cap 1/200000, and reserve in(T) were selected AFTER the first
+local screen; they are certified conclusions, not calibrated predictions.
+
+All new tail/model statements are RH-free. No new Lambda bound follows.
+Any eventual Lambda conclusion uses ONLY PT2021 T=3000175332800, INITIAL
+height X/2=6000000185827/2, margin350479773/2, and anchor V1-H-213 (3/16).
+The new finite torus region and release/audit obligations remain OPEN.
+
+## 1. Exact dependencies and witness
+
+SNAPSHOT720 is frozen. We consume memory651's accepted COMPLETE positive
+Euler13 reference bins at r=333/2000, reference index R=6174242. Its two
+full C/Arb constructions and every output bin are frozen, source-pinned,
+and compared. They are accepted data, NOT re-created by selected tests.
+The script builds no binary. Memory651's numerical tail domain is NOT
+extended by citation: all new-time estimates below are proved afresh.
+Its graph representation is restated to make the positivity quantifier
+explicit. Memory607 supplies GENERAL H5; 652/657 supply the GENERAL
+completed model-resultant identity and coefficient norm. Memory710 supplies
+the earlier-time REAL-gauge errors. We prove the real-gauge adoption anew;
+we never substitute that derivative into a complex-raw slot.
+
+At each point set
+
+    alpha(s)=1/(2s)+1/(s-1)+Log(s/(2*pi))/2,
+    M0(s)=sqrt(2*pi)*s*(s-1)*pi^(-s/2)
+               *exp((s-1)*Log(s/2)/2-s/2)/16,
+    Mt(s)=M0(s)*exp(t*alpha(s)^2/4), s=(1+i*x)/2,
+    w=s+t*alpha(s)/2=sigma+i*tau, Theta=Im log Mt(s),
+    b_n(t)=exp(t*log(n)^2/4),
+    lambda_d(t)=mu(d)*product_(p|d)b_p(t), d|D,
+    E(w)=product_(p in P)(1-b_p(t)*p^(-w)),
+    c_m=sum_(d|D,d|m,m/d<=N)lambda_d(t)*b_(m/d)(t).
+
+All products through DN are retained, including m>N. E and A_N use the
+SAME heat-shifted exponent w. Freeze t,N,lambda locally for x derivatives.
+The exact saddle formulas are in bank607 and rechecked symbolically:
+
+    sigma=1/2+t*(log(sqrt(1+x^2)/(4*pi))/4-1/(2*(1+x^2))),
+    tau=x/2+t*atan(x)/4-3*t*x/(2*(1+x^2)),
+    sigma_x=t*x*(x^2+5)/(4*(1+x^2)^2),
+    tau_x-1/2=t*(7*x^2-5)/(4*(1+x^2)^2).
+
+Put c=500000000001/10^12, e=1/10^24, and eps=1/H^2 (eps and e are distinct).
+Let Lambda1=sum_p q_p*log(p)/(1-q_p), q_p=b_p(t)*p^(-sigma), and
+
+    Q0=log(x/(4*pi))-4*c*Lambda1, ell0=Q0/(1+2*e),
+    M=sum_(m>=2)max(1,2*log(m)/ell0-1)*|c_m|*m^(-sigma).
+
+We prove M<9/10 on the entire stated domain, plus same-domain interfaces
+
+    |E|>23/50, |E|<19/10, |E_x|<3/5, Lambda1<9/10,
+    |w_x|<c, 0<tau_x-1/2<e, Q0>27, ell0>27.           (I)
+
+## 2. Conservative physical height; every weight is ONE
+
+Write U=log N, U0=log H, and
+
+    sigma_bar(U,t)=1/2+t*(U/2-eps), Lbar(U)=2*U-eps.
+
+The exact natural left wall and log(1-z)>=-z/(1-z), z=t/(16*N^2),
+give x>N^2, log(x/(4*pi))>=2*log N-1/N^2>=Lbar(U), and
+sigma>=1/2+t*(log N/2-1/N^2)>=sigma_bar(U,t). The sufficient rational
+height inequalities are rechecked using b and H, not imported lower-time
+constants. Also s_H(b)>X, so710 applies everywhere. Direct differentiation
+and two positive polynomial differences give
+
+    0<tau_x-1/2<=7*b/(4*H^4)<e,
+    |w_x|<=1/2+7*b/(4*H^4)+b/(4*H^2)+b/H^6<c.
+
+Using sigma_bar, define qbar_p(U,t)=exp(t*log(p)^2/4-sigma_bar*log p)
+and L1bar=sum qbar_p*log p/(1-qbar_p). Since U0/2-eps>log(13)/4,
+all qbar decrease in U and t. The products and derivative interfaces in(I)
+are bounded at U0,a, with
+
+    |E_x|<=c*product(1+qbar)*sum qbar*log p/(1+qbar).
+
+Let ellbar(U,t)=(2U-eps-4c*L1bar)/(1+2e). The corner proves
+ellbar(U0,a)>27 and ellbar(U0,a)>U0+log D. Moreover
+
+    ellbar(U,t)-(U+log D)
+      =((1-2e)*U-eps-4c*L1bar)/(1+2e)-log D
+
+increases in U and t. Hence ell0>=ellbar>=log(DN) everywhere. Since every
+product m<=DN, EVERY weight in M is exactly one. This statement includes
+arbitrarily large N; no fixed denominator 27 is substituted into M.
+
+## 3. Fixed complete positive head; uniform time comparison
+
+Set K to the largest RIGHT endpoint <=H in651's reference bin partition;
+it is mechanically derived, not rounded from a logarithm. K>D and K<=N.
+Thus the coefficients through K are complete:
+
+    beta_m(t)=sum_(d|gcd(m,D))lambda_d(t)*b_(m/d)(t).
+
+For selected primes dividing m let k be their number and
+R_m=log(m/product_selected p). Put independent Poisson-arrival edges on
+those vertices, pair-edge rate log p*log q/2, loop rate R_m*log p/2.
+Inclusion-exclusion of uncovered vertices gives
+
+    beta_m(t)=b_m(t)*C_m(t)>=0,
+
+where C_m(t) is the probability every vertex is covered. This identity
+keeps repeated prime powers in R_m. Selected primes alone have beta=0.
+C_m is increasing. Any covering graph has a subcover with <=k edges;
+independent thinning from t2 to t1 has retention at least t1/t2, proving
+C_m(t1)>=(t1/t2)^k C_m(t2) and C_m'/C_m<=k/t. For m=6 one edge gives1/t.
+For k=0, C_m=1.
+
+For all applicable m<=K,
+
+    log m*(U0/2-eps-log m/4) > k/a                 (H)
+
+holds by concavity in log m at the two endpoints. The nonzero minimum
+indices for k=1,...,6 are4,10,30,210,2310,30030; m=6 is tested separately
+with1/a; selected prime coefficients vanish. Both arithmetic lines check
+all these endpoints. Consequently beta_m(t)*m^(-sigma_bar(U,t)) decreases
+for ALL t>=a, U>=U0. There is no sampled time argument.
+
+At r=333/2000 and sigma_ref=1/2+r*(log R/2-1/R^2), R=6174242, define
+mu_m=beta_m(r)*m^(-sigma_ref)>=0. As a<r and C_m(a)<=C_m(r),
+
+ beta_m(a)*m^(-sigma_bar(U,a))
+  <=mu_m*exp((sigma_ref-sigma_bar(U,a))*log m-(r-a)*log(m)^2/4).
+
+For each complete bin [l_i,u_i]<=K let mu_i be its accepted positive mass,
+and choose a certified h_i upper bound for
+
+ mu_i*exp(max_(v in [log l_i,log u_i])
+                   ((sigma_ref-sigma_bar(U0,a))*v-(r-a)*v^2/4)).
+
+The primary uses the concave quadratic's vertex/endpoints; the other line
+uses its endpoint chord plus (r-a)*(log u_i-log l_i)^2/16. Both are rigorous.
+Let alpha_i=a*log(l_i)/2. For every U>=U0 the entire true head is <=
+
+    Hfun(U)=sum_i h_i*exp(-alpha_i*(U-U0)).
+
+All h_i are frozen during this analytic transport, and alpha_i>0.
+
+## 4. Complete complement and the differential barrier
+
+For each d|D put q_d=sum_(p|d)log(p)^2/4, L_d=log(floor(K/d)), and
+
+ Rfun(U)=sum_(d|D) exp(a*q_d-sigma_bar(U,a)*log d)
+             *integral_(L_d)^U exp(a*v^2/4-(sigma_bar(U,a)-1)*v) dv.    (R)
+
+Because K>D, all lower limits are defined and <=U0. Every remaining pair
+has n>=floor(K/d)+1. The amplitude b_t(n)*n^(-sigma_bar) decreases in n
+on[1,N], since its logarithmic derivative is <=-1/2+b*eps<0. Therefore the
+sum-to-integral bound uses floor(K/d), NOT K/d or ceil(K/d). All pairs are
+included, even when dn>N.
+
+The product pair decreases in t: writing v=log n in[0,U], q_d<=log(d)^2/4,
+its time exponent is at most
+
+ log d*(log d/4-U/2+eps)+v*(v/4-U/2+eps)<=0.
+
+The endpoint checks log D/4<U0/2-eps and U0/4>eps prove the signs.
+Thus the complete physical complement is <=Rfun(U) for every t in[a,b].
+
+Let kappa=(a/2)*log(K-D)>0. For v>=L_d,
+log d+v>=log(d*floor(K/d))>log(K-D). Differentiating(R) with fixed lower
+limits, its internal derivative is <=-kappa times the integrand. The top
+boundary is
+
+ B(U)=exp(-a*U^2/4+U/2+a*eps*U)
+              *sum_(d|D)exp(a*q_d-sigma_bar(U,a)*log d).
+
+Each factor decreases for U>=U0: the scalar logarithmic derivative is
+-a*U/2+1/2+a*eps<0 at U0 and becomes more negative. Therefore
+
+    Rfun'(U)<=-kappa*Rfun(U)+B(U0).
+
+Also Hfun'(U)<=-kappa*Hfun(U)+C0, where
+
+    C0=sum_i max(kappa-alpha_i,0)*h_i.
+
+All retained terms decrease in U. With Z=Hfun+Rfun,
+
+    Z'(U)<=-kappa*Z(U)+B(U0)+C0.
+
+Multiplication by exp(kappa*(U-U0)) and integration prove for ALL U>=U0
+
+ Z(U)<=Z(U0)*exp(-kappa*(U-U0))
+       +(B(U0)+C0)/kappa*(1-exp(-kappa*(U-U0)))
+     <=max(Z(U0),(B(U0)+C0)/kappa).                         (B)
+
+Both arithmetic lines establish the last maximum<9/10, hence M<9/10.
+This is the complete infinite closure; no induction over sampled N, no
+unproved monotonicity of the actual mass, and no omitted entrants.
+
+## 5. True-H conversion in the CORRECT real gauge
+
+Memory607 GENERAL H5 gives
+
+ 4*Theta_x-log(x/(4*pi)) >=(t*pi*x/4-t/2-3/2)/(1+x^2)>0,
+
+where the sign follows from a*(3*H^2-2)>6. Set rho=|E|,
+theta=Theta-arg E, h=theta_x. By(I),
+
+    4h>=Q0>27, tau_x>0,
+    ell_actual=2h/tau_x>=Q0/(1+2e)=ell0.
+
+The completed RESULTANT from652 has the exact model identity
+
+ T=rho*V/2-i*(rho*V)_x/(2h), V=2*Re(exp(i*Theta)*A_N),
+ |T-exp(i*theta)|<=Keps*M, Keps=sqrt(1+epsilon^2)+|epsilon|,
+ epsilon=sigma_x/tau_x.
+
+Memory710 gives r=u-V real, |r|<v=1/400000, |r_x|<d=1/50000 on the
+entire domain, including natural walls. DIRECTLY, without using652's
+complex-raw-error hypothesis, set
+
+ Jtrue=rho*u/2-i*(rho_x*u+rho*u_x)/(2h).
+ Jtrue-T=rho*r/2-i*(rho_x*r+rho*r_x)/(2h).
+
+Both coordinates are real, so
+
+ |Jtrue-T|<=D0=sqrt((E0*v/2)^2+[2*(E1*v+E0*d)/P0]^2),
+ E0=19/10, E1=3/5, P0=27.
+
+This is why the REAL derivative bound is legitimate here. We do not claim
+it bounds the derivative of exp(i*Theta)*r.
+
+For Y=H^2, sigma_x<=b*(1/(4Y)+1/Y^3), tau_x>=1/2. Thus
+
+ epsbar=2*b*(1/(4Y)+1/Y^3),
+ Keps-1<=epsbar+epsbar^2/2=:kbar,
+ D0+(9/10)*kbar < 1/200000.
+
+The gate is exact rational arithmetic after squaring a positive difference.
+Hence |Jtrue|>1-9/10-1/200000=19999/200000. Moreover
+
+ |Jtrue|<=(E0/2+2*E1/P0)|u|+(2*E0/P0)|u_x|
+         =(179/180)|u|+(19/135)|u_x|.
+
+Cauchy-Schwarz and an exact rational inequality imply(T). The smooth
+positive normalization preserves simultaneous zero of H_t,H_t' and u,u_x.
+
+## 6. Geometry and the assembly seam
+
+Both lines independently enclose pi and prove
+
+    W=floor(s_J(b)),  s_H(a)<W<s_J(b).
+
+Since s_n decreases in t, W is in cell H for EVERY closed t in[a,b].
+Thus the CLOSED rectangle [a,b]x[W,infinity) is licensed. The natural
+finite torus range needed to meet it can stop at N=H, provided its CLOSED
+rectangle actually reaches W. Starting the tail at J would omit a real
+collar. Inward integer rectangles for disjoint finite-index blocks are
+not presumed to meet;713's source domain alone supplies no coverage.
+
+Using599 GENERAL positive-time interior with596/616/617 gives the closed
+rectangle [a,b]x[0,X] without any new separator sweep. Using677/684 on its
+exact accepted time band gives [33/200,b]x[0,infinity). Together with this
+tail, the exact missing set is
+
+    t in CLOSED_OPEN[4/25,33/200), x in OPEN(X,W), y=0.
+
+A sufficient new finite leg is CLOSED[4/25,33/200]xCLOSED[X,W], natural
+N in[690988,2299999], plus all its internal index seams. It is UNSUPPLIED.
+The closure formulation permits endpoint overlaps, not endpoint gaps.
+
+For every hypothetical Lambda in[a,b], use remote tail588/590 with
+r=a/2=2/25 and radius4*pi*exp(1600)+1, uniform on CLOSED[2/25,1/2].
+This ALL-complex tail remains DISTINCT from(T). After complete exclusion
+and V1-H-213, positive stall would imply Lambda<a. This implication is
+CONDITIONAL; the present package makes no new Lambda assertion.
+
+## 7. Balanced hybrid sink (conditional, not an official torus check)
+
+At a physical natural-index point in CLOSED[4/25,33/200], x>=X and
+N in[690988,2300000], use the EXACT raw heat coefficients and exact phase
+ell=4*Theta_x. For any first-k-prime smooth core,1<=k<=10, let F1,K1 and
+RF,RK be exactly memory713's COMPLETE core and rough radii. Its accepted
+uniform floors are |F1|>1/10, |K1|>2. IF an authenticated certificate proves
+
+ gamma+asin(RF/|F1|)+asin(RK/|K1|)<=pi/2-1/100,
+ gamma=abs(arg(K1/F1)), RF/|F1|<1, RK/|K1|<1,
+
+for EVERY required smooth phase at EVERY required physical point, use710's
+exact real-jet lift to add v/2 toRF and2*d+beta toRK, beta=1/40000000000.
+The summed normalized increment is less than
+
+    Echarge=1/80000+1/50000+1/80000000000
+           =2600001/80000000000.
+
+By713's proved sharp scalar slack lemma and the exact gate
+
+ cos(1/200)-cos(1/100)
+   >=((1/100)^2-(1/200)^2)/2-(1/100)^4/24 > Echarge,
+
+the corrected true pair has both channels nonzero and angular margin>1/200.
+At a true double zero the first rotated channel is purely imaginary and the
+second real, contradicting positive real inner product. No full-model norm
+floor is invented. The physical character is n^(-i*tau); full torus phase
+coverage absorbs the shift, but sampled or partial phase boxes do not.
+
+This improves the balanced interface used for this assembly. It supplies
+NO source tree, rectangle, attestation, checker release or physical COVER.
+Memory716's untrusted sampled-receipt counterexample is respected.
+
+## 8. Verification, second line, digit law, honesty
+
+Run /usr/bin/python3 -B verify.py in a source-only copy. It reads only local
+files, authenticates every accepted input and launches only a confined
+[sys.executable,'second_line.py'] child. Primary Arb256 vertex/erfi versus
+separate mpmath.iv90 endpoint-chord/convex-quadrature integrals, rational
+Machin pi and independent real-coordinate adoption all check the new
+certificate. The second integral uses the proved strictly positive second derivative
+to bound each integral between composite midpoints and trapezoids; it does not use erfi
+or import primary helpers or outputs. Every reference bin is compared;
+small complete exact convolution controls test support/witness conventions,
+not the large accepted coefficient computation.
+
+Two different banked tail seam regimes and two exact adoption controls are
+reproduced. Adverse tests remove the boundary forcing, alter the cutoff,
+misuse derivative type, and break time/real endpoint coverage. They are
+live reject tests, not PASS labels. FOUNDATION rung(b) requested for the
+new barrier, with additional known anchors; verifier decides. Numerics_astra's
+external record-use audit remains REQUIRED before release.
+
+Every reported decimal is generated from rational/outward endpoints by
+self-tested FLOOR/CEIL helpers, including negative-direction tests. No nearest
+printer output is a gate. Frozen historical outputs retain their own labels.
+
+Credit Kornaus PR#180 for collision-exclusion motivation, and our bank651
+for the positive graph/reference device. No upstream file or unrefereed claim
+is read or included. No new head convolution, phase sweep, tail grid, network,
+pod, publication or orchestrator modification. This closes an early practical
+tail and provides a conditional bridge/held assembly, NOT the record.

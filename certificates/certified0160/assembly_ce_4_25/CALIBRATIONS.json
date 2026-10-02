@@ -1,0 +1,91 @@
+{
+  "contract": {
+    "required": {
+      "stage2_complete_corner": {
+        "obligations": [
+          "singleton33/200_X_N690988_y0",
+          "complete_fixed17_mass",
+          "inverse_frozen_once_through1024",
+          "every_product_through1024N",
+          "full_external_coefficient_rebuild"
+        ],
+        "target": 655,
+        "target_fact_sha256": "bf91c8f9d5b1f212440c9171afa879b3c2d1729486365307c1ebdb072002fc2e",
+        "target_proof_sha256": "c83692ad2a4d07ffd9682c81f8cadd06488fa1ccd5a0444f7f90c31f0d06896c"
+      },
+      "stage2_global": {
+        "obligations": [
+          "exact_global_manuscript",
+          "all_three_boxes_closed",
+          "no_missing_or_excess_components",
+          "ALL_complex_uniform_stall_tail",
+          "positive_time_interior",
+          "sole_initial_PT2021",
+          "anchor3/16"
+        ],
+        "target": 677,
+        "target_fact_sha256": "d1cb0ea61aa9c7fe8fe3c70798eaec510d959d42a06e283ea6f59c60b4f5a00f",
+        "target_proof_sha256": "8ba0a6be359135c733d23766c95992054dc901a3078bee4e2169f50c5d5eb065"
+      },
+      "stage2_true_finite": {
+        "obligations": [
+          "closed33/200_3/16",
+          "natural690988_2199999",
+          "every_RIGHT_wall",
+          "same_complete_inverse",
+          "true_H_REAL_adoption"
+        ],
+        "target": 668,
+        "target_fact_sha256": "03b8dfdcfe6b7216e645dbb0800be91dfaea70c6bdd68e96df9b1f653afb6f20",
+        "target_proof_sha256": "c6416732533581fc04506d0befb3a2174fb027543b69b9c904df140971e22a81"
+      }
+    }
+  },
+  "edges": [
+    {
+      "audit": 675,
+      "audit_fact_sha256": "82c0b6eb40b56e4c4a885e67fc4c682c91d647571e985a48cef15f330af41c64",
+      "obligations": [
+        "singleton33/200_X_N690988_y0",
+        "complete_fixed17_mass",
+        "inverse_frozen_once_through1024",
+        "every_product_through1024N",
+        "full_external_coefficient_rebuild"
+      ],
+      "target": 655,
+      "target_fact_sha256": "bf91c8f9d5b1f212440c9171afa879b3c2d1729486365307c1ebdb072002fc2e",
+      "target_proof_sha256": "c83692ad2a4d07ffd9682c81f8cadd06488fa1ccd5a0444f7f90c31f0d06896c"
+    },
+    {
+      "audit": 676,
+      "audit_fact_sha256": "64381384e5d49d0936db4d1b5d9875090e4dcbc23eb86a325221c6413b862983",
+      "obligations": [
+        "closed33/200_3/16",
+        "natural690988_2199999",
+        "every_RIGHT_wall",
+        "same_complete_inverse",
+        "true_H_REAL_adoption"
+      ],
+      "target": 668,
+      "target_fact_sha256": "03b8dfdcfe6b7216e645dbb0800be91dfaea70c6bdd68e96df9b1f653afb6f20",
+      "target_proof_sha256": "c6416732533581fc04506d0befb3a2174fb027543b69b9c904df140971e22a81"
+    },
+    {
+      "audit": 684,
+      "audit_fact_sha256": "7781d5f81d6adcc27581974751b30e0ab5bb909210f1728286d2520b9142ac83",
+      "obligations": [
+        "exact_global_manuscript",
+        "all_three_boxes_closed",
+        "no_missing_or_excess_components",
+        "ALL_complex_uniform_stall_tail",
+        "positive_time_interior",
+        "sole_initial_PT2021",
+        "anchor3/16"
+      ],
+      "target": 677,
+      "target_fact_sha256": "d1cb0ea61aa9c7fe8fe3c70798eaec510d959d42a06e283ea6f59c60b4f5a00f",
+      "target_proof_sha256": "8ba0a6be359135c733d23766c95992054dc901a3078bee4e2169f50c5d5eb065"
+    }
+  ],
+  "scope": "Established stage2 source, finite-adoption and final-composition audit qualifications, using675/676/684 as recorded in captured memory. It is a release-policy calibration, not a new replay of their heavy computations or a claim about when the original record was accepted."
+}

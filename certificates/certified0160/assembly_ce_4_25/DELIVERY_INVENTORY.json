@@ -1,0 +1,21 @@
+{
+  "bytes_before_this_inventory": 2238284,
+  "clean_copy_products": 19,
+  "clean_copy_record_metadata_absent": true,
+  "files_before_this_inventory": 108,
+  "files_with_this_inventory": 109,
+  "local_score_receipt": "ev-bebea4c6a0",
+  "scope": "Delivered source/diagnostic inventory, not a mathematical input or independent attestation. Generated runtime tree intentionally absent.",
+  "source_sha256": {
+    "ASSEMBLY.md": "2b3dfe94fa9ca4a541f824abac045f581ad52a885f34608d07b87664489745e1",
+    "FROZEN.sha256": "a3ec59b1377515bd2564e75444082a394aa2308fd111dd05513c53a3748a46f4",
+    "LIVE_RECOVERY_PROOF.md": "8fea6e09a1a4001811e94bb4a467abe1cc8af1f81ae02fbb0983a0ec561c8ddc",
+    "RECOVERY_LIVE.json": "a4c29b98a06a07d0e896a1e4293fa47eac5a6bf5f4a32280532a8e0063d3329b",
+    "RELEASE_PROOF.md": "e2c0b8e7dc8e459b36e3ed1cc55c6ed76f890b8c313ab99e01b5f5ebbf8f64f0",
+    "SOURCES.sha256": "fb23e182df2f50fde289a45c43704213feb23d6d86a3c162cf33d99468ba14c3",
+    "check.py": "09e49ea36c82942b61e1e7d9a12ee28edf72ba2097729a40f04224a7db94d94b",
+    "recovery_live.py": "8a92674730cba7304b0616e666899b51b45a8bffb2bc8b88591f19a00222f4b2",
+    "release_gate.py": "85dcf600db1710081392506a38bbe27cf5df4c1c5f9747db4610dd1c7eab5328",
+    "verify.py": "a04ad84432521c572e7deefbe28626b2f39d5a55a17084bd03f960e82cc58543"
+  }
+}

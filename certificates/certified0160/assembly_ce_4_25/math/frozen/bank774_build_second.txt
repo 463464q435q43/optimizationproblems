@@ -1,0 +1,61 @@
+#!/usr/bin/python3
+"""Independent rough-first completed-square Arb256 source and geometric bins."""
+from flint import arb,ctx
+from fractions import Fraction as F
+from pathlib import Path
+import hashlib,json
+ctx.prec=256;ctx.threads=1
+N=690988;P=(2,3,5,7)
+def aq(v):v=F(v);return arb(v.numerator)/v.denominator
+def bounds(z,bits):
+ return ((z*2**bits).lower().floor().unique_fmpz(),(z*2**bits).upper().ceil().unique_fmpz())
+def dec(z):
+ return (int((z*10**12).lower().floor().unique_fmpz()),int((z*10**12).upper().ceil().unique_fmpz()))
+# Prime-power heap-free recursive enumeration, versus division per n.
+S={1:0}
+for p in P:
+ for n,o in list(S.items()):
+  m=n;k=o
+  while m<=N//p:m*=p;k+=1;S[m]=k
+smooth=sorted(S);rough=[r for r in range(1,N+1) if all(r%p for p in P)]
+assert len(smooth)==1160 and len(rough)==157940
+log=[arb(0)]+[arb(n).log() for n in range(1,N+1)]
+pi=16*(arb(1)/5).atan()-4*(arb(1)/239).atan();X=arb(6000000185827)
+c=((1+X*X).log()/2-(4*pi).log())/4-1/(2*(1+X*X))
+def amp(t):
+ t=aq(t);b=2*c+1/t;off=-t*b*b/4
+ return [arb(0),arb(1)]+[(t*(l-b)**2/4+off).exp() for l in log[2:]]
+a=amp('13/80');summary={'anchor745':dec(2*sum((a[s] for s in smooth),arb(0))-sum(a,arb(0)))}
+a=amp('4/25')
+with Path('s_raw.txt').open('w') as f:
+ for n in range(1,N+1):l,u=bounds(a[n],56);f.write(f'{n} {l} {u}\n')
+plus={};minus={};seen=ss=ss2=0
+for r in reversed(rough):
+ xp=arb(0);xm=arb(0)
+ for s in smooth:
+  n=r*s
+  if n>N:break
+  xp+=a[n];xm+=(-1 if S[s]%2 else 1)*a[n];seen+=1;ss+=n;ss2+=n*n
+ plus[r]=xp;minus[r]=xm
+assert seen==N and ss==N*(N+1)//2 and ss2==N*(N+1)*(2*N+1)//6
+cp=plus[1];cm=minus[1];assert cp>0 and cm>0
+vs=((8/cp**2+1/cm**2)/900).sqrt();v={r:((8*(plus[r]/cp)**2+(minus[r]/cm)**2)/9).sqrt() for r in rough[1:]};W=sum((v[r] for r in reversed(rough[1:])),vs)
+with Path('s_weights.txt').open('w') as f:
+ l,u=bounds(vs,56);f.write(f'0 {l} {u}\n')
+ for r in rough[1:]:
+  l,u=bounds(v[r],56);f.write(f'{r} {l} {u}\n')
+# Explicit exact rational geometric thresholds, binary search, not bit indexing.
+from bisect import bisect_right
+edges=[F((16+k)*2**e,16) for e in range(20) for k in range(16)]
+groups={}
+for r in reversed(rough[1:]):
+ j=bisect_right(edges,r)-1
+ if j not in groups:groups[j]=[r,r,0,0,arb(0)]
+ g=groups[j];g[0]=min(g[0],r);g[1]=max(g[1],r);g[2]+=1;g[3]+=r;g[4]+=v[r]
+with Path('s_bins.txt').open('w') as f:
+ l,u=bounds(vs,100);f.write(f'-1 0 0 0 0 {l} {u}\n')
+ for j,(lo,hi,n,s,z) in sorted(groups.items()):
+  l,u=bounds(z,100);f.write(f'{j} {lo} {hi} {n} {s} {l} {u}\n')
+for name,z in [('core_plus',cp),('core_minus',cm),('weight_sum',W),('synthetic_v',vs)]:summary[name]=dec(z)
+Path('s_summary.json').write_text(json.dumps(summary,sort_keys=True,indent=2)+'\n')
+print('SECONDARY COMPLETE source_N',N,'smooth',len(smooth),'rough',len(rough)-1,'bins',len(groups))

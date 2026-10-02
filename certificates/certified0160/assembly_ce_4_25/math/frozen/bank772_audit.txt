@@ -1,0 +1,335 @@
+# FOUNDATION — external whole-domain audit of memory729
+
+## 0. Scope, independence, and exact snapshot
+
+This is the record-use external audit explicitly left open by
+CE0160_DIFFERENTIAL_BARRIER_TAIL (memory729), not a new tail theorem or a
+new evaluation of its accepted coefficient source. Opening snapshot764 is
+frozen in CITATIONS.json. No producer program/helper is shipped, imported,
+or executed. Frozen proof manuscripts, original numerical outputs and the
+COMPLETE accepted651 positive reference measure are data. FROZEN_ORIGINS
+records direct byte comparisons against651's original accepted files, not
+just their descendants in729. The banked source is a premise, never inferred
+from selected numerical tests. No receipt, attestation or execution-origin
+assertion is consumed.
+
+The main line is our own integer/dyadic rational-series engine, inherited
+from external audits725/754/758/764, with new positive Taylor moments for
+all integrals. This is neither729's Arb vertex/erfi line nor its interval
+chord/convex-quadrature line. A separate exact-symbolic and complex-Arb
+control program imports no arithmetic helpers from the main line. Its
+library and erfi control deliberately coincide with the producer's primary
+library, but not with the independent production line. This limitation is
+explicit; independence of the full line does not rest on these controls.
+
+Requested L3 rung(a): SAME production interface/integral functions reproduce
+the accepted604 first complete-complement regime and the accepted651 first
+complete-complement regime, plus their six scalar interfaces and exact
+seams. Rung(b): the independent analytic audit below, a complete new-time
+head/integral/scalar reconstruction and fresh original-input controls. The
+verifier chooses the accepted rung; this artifact does not self-bank.
+
+Constants are exact:
+ a=4/25, b=3/16, H=2299999, J=2300000, X=6000000185827,
+ P={2,3,5,7,11,13}, D=30030, r=333/2000, R=6174242,
+ c=500000000001/10^12, e=1/10^24, eps=1/H^2.
+
+For EVERY real t in CLOSED[a,b], EVERY integer N>=H and EVERY real x in
+its LEFT-CLOSED/RIGHT-OPEN natural cell
+
+ s_N(t)<=x<s_(N+1)(t), s_n(t)=4*pi*(n^2-t/16), y=0,
+
+the pinned implication is
+
+ (179/180)|u|+(19/135)|u_x|>19999/200000,
+ u^2+u_x^2>9/1000,
+ u=H_t(x)/|M_t((1+i*x)/2)|.
+
+M_t is the SAME elementary Polymath normalization, not an exact Gamma
+factor. Its factors and branches are those of the frozen607/710 manuscripts.
+All x derivatives keep t, N and lambda fixed. Natural RIGHT indices at
+EVERY wall are licensed by710/725, not by differentiating a discontinuous
+selector. There is no finite upper N cutoff. The closed rectangular tail
+starts at W=66476100549959. No assertion for y!=0 is made.
+
+## 1. Independent reconstruction of the physical majorant
+
+Let b_t(n)=exp(t*log(n)^2/4), lambda_d=mu(d)*product_(p|d)b_t(p), d|D,
+ w=s+t*alpha(s)/2, s=(1+i*x)/2,
+ alpha(s)=1/(2s)+1/(s-1)+Log(s/(2*pi))/2,
+ A_N=sum_(n<=N)b_t(n)n^(-w), E=product_p(1-b_t(p)p^(-w)).
+
+Finite distributivity gives c_m=sum_(d|D,d|m,m/d<=N)lambda_d*b_t(m/d),
+including EVERY m>N through DN. The complete mass under audit is
+
+ M=sum_(m>=2)max(1,2*log(m)/ell0-1)*|c_m|m^(-sigma),
+ ell0=[log(x/(4*pi))-4*c*Lambda1]/(1+2*e),
+ Lambda1=sum_p q_p*log(p)/(1-q_p), q_p=b_t(p)p^(-sigma).
+
+The two factors use exactly the SAME w. No bounds from an earlier-time
+witness or a different denominator are substituted.
+
+Put U=log N and U0=log H. At the natural left wall, z=t/(16*N^2),
+log(1-z)>=-z/(1-z), pi>3, and the script's exact rational inequalities give
+
+ x>N^2, log(x/(4*pi))>=2U-eps,
+ sigma>=sigma_bar=1/2+t*(U/2-eps).
+
+For clarity, the adverse sigma loss is bounded by
+ t/N^2 * [b/(64*(1-b/(16*H^2)))+1/(2*H^2)] < t/N^2;
+using eps=1/H^2 is then conservative for every larger N. This retains
+both the logarithmic wall loss and the inverse-square saddle term.
+
+Differentiating alpha, or the explicit real and imaginary expressions,
+gives sigma_x=t*x*(x^2+5)/(4*(1+x^2)^2),
+ tau_x=1/2+t*(7*x^2-5)/(4*(1+x^2)^2).
+Thus 0<tau_x-1/2<=7*b/(4*H^4)<e and
+ |w_x|<=1/2+7*b/(4*H^4)+b/(4*H^2)+b/H^6<c.
+The rational polynomial differences behind these bounds have nonnegative
+coefficients. The symbolic control re-derives both exact derivatives; its
+finite complex-alpha controls check the representation boundary, not the
+half-line proof.
+
+Replace sigma by sigma_bar in q_p. The logarithmic t derivative is
+ log p*(log p/4-U/2+eps)<0, and its U derivative is -t*log p/2<0.
+Consequently the product lower bound for |E| improves, while each adverse
+upper bound decreases. The common production functions certify at(U0,a)
+
+ product(1-qbar)>23/50, product(1+qbar)<19/10,
+ c*product(1+qbar)*sum qbar*log(p)/(1+qbar)<3/5,
+ Lambdabar<9/10, Qbar>27, ellbar>27.
+
+These inequalities cover the entire time/index domain; sampling is not
+used. Most importantly, they also prove at the corner
+ ellbar>U0+log D. The difference for general U,t is
+
+ ellbar-(U+log D)
+ =[(1-2e)*U-eps-4c*Lambdabar]/(1+2e)-log D.
+
+It increases in U and t since1-2e>0 and Lambdabar decreases. Hence
+ell0>=ellbar>log(DN) at EVERY index. ALL mass weights are exactly one.
+A constant lower bound27 alone would not license this assertion at infinity.
+
+## 2. Positive complete head and its all-time comparison
+
+We consume the exact positive651 measure, not its later-time tail theorem.
+For m<=N, the complete coefficient beta_m equals c_m. Let V be selected
+primes dividing m, k=|V|, Rm=log(m/product_(p in V)p). Construct independent
+edge arrivals of rate log(p)*log(q)/2 and vertex-loop arrivals of rate
+Rm*log(p)/2. For any subset S of vertices, elementary expansion gives
+
+ exp(-t*sum rates incident to S)
+   = product_(p in S)b_t(p)*b_t(m/product S)/b_t(m).
+
+Our symbolic control checks the formal incidence identity for every subset;
+restriction to fewer vertices uses the same identity with unused variables
+zero. Inclusion-exclusion therefore gives beta_m=b_t(m)*C_m(t)>=0, where
+C_m is the probability all vertices are covered. Repeated prime powers
+remain in Rm. The only vanishing cases with k>=1 are selected primes alone;
+for k=0, C_m=1. No positivity is asserted for truncated coefficients above N.
+
+The function C_m increases in t. Conditional on a covered graph at t2,
+retain each present edge at t1<t2 with probability at least t1/t2, by
+concavity of1-exp(-rate*t). A covered graph contains a subcover of at most
+k edges. Therefore C_m(t1)>=(t1/t2)^k*C_m(t2), giving
+C_m'/C_m<=k/t for positive C_m. For m=6 its one edge gives1/t instead.
+
+For fixed K defined below, all nonzero k=1..6 coefficients other than6
+satisfy m>=4,10,30,210,2310,30030 respectively. This is a prime-divisibility
+classification; the exact integer check is supplemental. The function
+ v*(U0/2-eps-v/4) is concave. Independent endpoint enclosures at each lower
+log(m) and at log K are strictly larger than k/a; m=6 is checked against1/a.
+Thus for EVERY t>=a,U>=U0 and m<=K,
+
+ d/dt log[beta_m(t)*m^(-sigma_bar(U,t))]<0
+
+whenever beta_m is positive. Exact zero coefficients are harmless, and
+coprime coefficients use no graph derivative. Both closed time endpoints
+are included by continuity.
+
+Set mu_m=beta_m(r)*m^(-sigma_ref), sigma_ref=1/2+r*(log R/2-1/R^2).
+All mu_m are nonnegative. Since C_m(a)<=C_m(r), at earlier time a
+
+ beta_m(a)*m^(-sigma_bar(U,a))
+ <=mu_m*exp[(sigma_ref-sigma_bar(U,a))*log m-(r-a)*log(m)^2/4].
+
+The comparison direction and the heat reweighting are essential. The
+entire accepted partition, both1164-bin productions, totals and every
+endpoint are compared. Its largest COMPLETE right endpoint <=H is
+K=2291232; the next whole bin is not silently included. The negative lower
+endpoints of exact-zero bins are not treated as positive numerical evidence.
+
+For each complete bin[l_i,u_i], h_i is its nonnegative accepted upper mass
+times the maximum of the displayed exponential at U0. Our line proves
+ONCE that its quadratic derivative stays positive through log K, then uses
+u_i. This independently resolves all producer branch choices without
+copying its branch logic. Put alpha_i=a*log(l_i)/2>0. The complete head is
+bounded for all U>=U0 by
+ Hfun(U)=sum_i h_i*exp[-alpha_i*(U-U0)].
+
+All1064 h_i and damping contributions are re-derived, stored and separately
+corroborated by Arb. The producer has no stored per-bin h_i ledger; we claim
+agreement of its complete scalar outputs, not nonexistent logged cells.
+No new full651 coefficient convolution is claimed. All13 original logged
+small reference-bin controls and8 further proof-hash bins are retained as
+actual integer/time/index inputs and re-evaluated in their entirety by our
+divisor gather and the separate descending convolution. These controls test
+representations; the full accepted reference table remains the premise.
+
+## 3. Every complement pair, and the entire infinite barrier
+
+For m>K, apply the triangle inequality only after preserving the positive
+complete head. The remaining pairs are exactly d|D, n<=N, dn>K. Since
+K>D, m_d=floor(K/d)>=1. At fixed U,t,
+
+ d/dlog(n) log[b_t(n)n^(-sigma_bar)]
+ <=-1/2+t*eps<0, for1<=n<=N.
+
+The sum over integers n=m_d+1..N is therefore bounded by its integral
+from m_d to N, NOT K/d or ceil(K/d). Reindex v=log n. This includes all
+products dn>N. With q_d=sum_(p|d)log(p)^2/4, the positive pair time
+exponent is
+ q_d+v^2/4-(U/2-eps)*(log d+v)
+ <=log d*(log d/4-U/2+eps)+v*(v/4-U/2+eps)<=0.
+The endpoint gates log D/4<U0/2-eps and U0/4>eps give both signs.
+Consequently it suffices to use a, giving the complete complement envelope
+
+ Rfun(U)=sum_(d|D) exp[a*q_d-sigma_bar(U,a)*log d]
+     *integral_(log m_d)^U exp[a*v^2/4-(sigma_bar(U,a)-1)*v]dv.
+
+No cancellation or missing high-product support is presumed. All64 corner
+integrals are independently enclosed with the new positive-moment method.
+Every original erfi integral has matching directed digits, and every value
+lies inside the producer's other complete convex-quadrature bracket.
+
+Now differentiate with respect to U while K,m_d stay FIXED. Internal
+integrands have logarithmic U derivative -(a/2)*(log d+v). On every lower
+limit d*m_d>K-D, so this is <=-kappa, kappa=(a/2)*log(K-D)>0.
+The moving top contributes a POSITIVE boundary term
+
+ B(U)=exp[-a*U^2/4+U/2+a*eps*U]
+            *sum_d exp[a*q_d-sigma_bar(U,a)*log d].
+
+The first factor has negative logarithmic derivative at U0, and its
+logarithmic derivative decreases for larger U. Every summand in the second
+factor is nonincreasing. Hence B(U)<=B(U0), and
+ Rfun'+kappa*Rfun<=B(U0).
+
+Likewise Hfun'+kappa*Hfun is at most
+ C0=sum_i max(kappa-alpha_i,0)*h_i,
+because negative contributions may be dropped and positive exponentials
+are <=1. For Z=Hfun+Rfun we have Z'+kappa*Z<=B(U0)+C0. An integrating
+factor, on EVERY real U>=U0, gives
+
+ Z(U)<=Z(U0)*exp[-kappa*(U-U0)]
+       +(B(U0)+C0)/kappa*(1-exp[-kappa*(U-U0)]).
+
+Both coefficients are nonnegative. The corner and equilibrium are each
+strictly below9/10; their explicit comparison is printed and shows the
+corner is the larger certified ceiling. Thus M<=Z<9/10 for ALL indices.
+Neither actual mass monotonicity nor a finite terminal index is needed.
+Dropping the forcing, the initial-value gate or the equilibrium gate is
+unsound; explicit equality-solution countercontrols exercise each omission.
+
+## 4. Identification with the physical phase and REAL-gauge jet
+
+Memory607's GENERAL H5 holds below its illustrative numerical band:
+
+ 4*Theta_x-log(x/(4*pi))
+ >=(t*pi*x/4-t/2-3/2)/(1+x^2).
+
+The fresh exact gate a*(3*H^2-2)>6, with x>H^2 and pi>3, makes this positive
+on our whole domain. Thus, with rho=|E|, theta=Theta-arg E, h=theta_x,
+4h>=Q0>27, tau_x>0 and ell_actual=2h/tau_x>=ell0. This consumes the GENERAL
+identity, not607's narrower earlier numerical corollary.
+
+The COMPLETE model-resultant theorem652/657 is pointwise for any finite
+x-frozen mollifier with lambda_1=1, common w, E!=0,h>0,tau_x>0 and a positive
+lower proxy ell0. All have now been discharged. It gives
+
+ T=rho*V/2-i*(rho*V)_x/(2h), V=2*Re(exp(i*Theta)*A_N),
+ |T-exp(i*theta)|<=K(epsilon)*M,
+ K(epsilon)=sqrt(1+epsilon^2)+|epsilon|, epsilon=sigma_x/tau_x.
+
+Memory710, externally audited725, gives r=u-V REAL and |r|<v=1/400000,
+|r_x|<d=1/50000 on CLOSED[7/50,3/16], x>=X, every natural RIGHT index with
+no upper cutoff. Our band/tail is a subset. Adopt it by the DIRECT identity
+
+ J=rho*u/2-i*(rho_x*u+rho*u_x)/(2h),
+ J-T=rho*r/2-i*(rho_x*r+rho*r_x)/(2h).
+
+Both coordinates on the right are real. Since |rho_x|<=|E_x|, E0=19/10,
+E1=3/5, P0=27 give
+
+ |J-T|^2<=D2=(E0*v/2)^2+[2*(E1*v+E0*d)/P0]^2.
+
+This does NOT invoke652's old complex-raw-error numerical hypothesis with
+a changed derivative. The complex residual exp(i*Theta)*r would have
+squared derivative r_x^2+Theta_x^2*r^2, which is generally larger.
+
+For x>=H^2, |epsilon|<=s=2b*(1/(4H^2)+1/H^6). By sqrt(1+s^2)<=1+s^2/2,
+K-1<=s+s^2/2. Put inflation=(9/10)*(s+s^2/2). The main line proves
+cap>inflation and D2<(cap-inflation)^2 for cap=1/200000. Hence
+|J|>1-9/10-cap=19999/200000. Also
+
+ |J|<=(E0/2+2E1/P0)|u|+(2E0/P0)|u_x|
+       =(179/180)|u|+(19/135)|u_x|.
+
+Cauchy-Schwarz yields the stated squared-jet reserve, checked rationally
+strictly above9/1000. The positive smooth gauge preserves simultaneous
+zero of(H_t,H_t') and(u,u_x). Therefore the implication excludes all
+multiple REAL zeros on its stated domain. It says nothing about reality
+or simplicity of nonreal zeros.
+
+## 5. Exact walls, coverage, and non-claims
+
+Machin-series pi independently isolates W=floor(s_J(b)). The inequalities
+s_H(a)<W<s_J(b), and the fact each wall decreases with t, put W strictly
+in predecessor H for EVERY closed time. All x>=W are then licensed. At
+any later wall s_n(t), index n is natural and belongs to its left-closed
+cell. The preceding cell is right-open. Infinite cells have no terminal
+missing wall. The derivatives are local fixed-n analytic derivatives, as
+required by710. Starting only at J would omit the real collar containing W.
+
+This audit does not re-claim730's held preassembly coverage inventory,
+prove a finite exterior, nor replace588/590's remote off-axis real-simple
+tail used for the stall argument. The practical tail and the remote
+stall-tail theorem have DIFFERENT quantifiers. Its conditional hybrid
+paragraph is already externally audited725, with core scope now764; we
+reproduce its exact scalar joint for completeness, but do not claim a new
+hybrid source or duplicate that adoption theorem. Actual full source remains
+UNSUPPLIED, and official floating-checker correctness is a separate job.
+
+The local tail uses NO RH. Eventual Lambda initialization stays solely
+PT2021 T=3000175332800 at INITIAL X/2=6000000185827/2, with exact positive
+margin350479773/2 and anchorV1-H-213. No new Lambda bound or candidate is
+asserted. The far W is NOT an RH initialization height.
+
+## 6. Gates, evidence, and adversarial controls
+
+check.py authenticates the frozen and local source/proof/scope pins, checks
+exact cited fact hashes, and runs ONLY the two local Python programs. It
+requires their generated outputs, scalar counts, exact coverage joint and
+strict inequalities. There is no unconditional PASS used to discharge a
+mathematical gate. SOURCE-ONLY clean copies rebuild every derived output.
+
+The main line compares all24 original primary scalar fields and all28 exact
+fields. It also compares every secondary scalar and exact field with the
+appropriate SAME-formula or quadrature-bracket semantics. No enclosing
+quadrature interval is treated as an exact value. The same distinction is
+used for coefficient controls and all64 integral comparisons.
+
+The separate line corroborates every generated1064 head cell, all64 target
+integrals and all21 retained reference-bin inputs. Twelve original complex
+points include four closed-endpoint RS-wall inputs and eight hash draws,
+including large indices; all exact time/index/cell-fraction inputs are
+retained, not just hashes. The small finite sums at these points test the
+GENERAL algebraic identity only, not a raw-error bound at a nonnatural
+cutoff. Synthetic real errors are labeled; no H_t measurement is invented.
+
+Thirty-seven live scope mutations reject, along with thirteen exact
+mathematical countercontrols. The universal proof above is not inferred
+from these finite tests. Arithmetic/digit details are in ARITHMETIC.md.
+Any discrepancy kills a clean-audit claim; none is concealed by weakening
+its domain. Credit Kornaus PR#180 for collision-exclusion motivation only;
+no upstream unrefereed file or theorem is an input.

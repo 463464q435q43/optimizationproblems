@@ -1,0 +1,19 @@
+HEARTBEAT rough 100001
+COMPLETE_COEFFICIENTS_PASS 690988 157940 224
+MINIMUM 1897746 2098872 FLOOR12 0.011185589489 CEIL12 0.011185589490
+PRIMARY_EXTERNAL_COMPLETE_PASS checks 1699215 scalar_fields 277
+SECONDARY_MINIMUM 1897746 2098872 FLOOR12 0.011185589489 CEIL12 0.011185589490
+SECONDARY_EXTERNAL_PASS 1460 scalar_fields 277 entrant_count 1609011
+EXTERNAL_ADVERSE_AND_BINDING_PASS 182 active_rejections 25 inputs 32
+AUDIT_TARGET memory774 GRAM_SPATIAL_RECOVERY
+COMPLETE_COUNTS raw 690988 weights 157940 positive_bins 224 synthetic_bins 1
+ORIGINAL_GEOMETRY leaves 14 failed_parents 13 point_controls 8 scalar_slots 277
+MINIMUM_SUFFICIENT 1897746 2098872 FLOOR12 0.011185589489 CEIL12 0.011185589490
+ENTRY_COUNT 1609011 TARGET_COUNT 1609012
+RECTANGLE t=CLOSED[4/25,3/16] x=CLOSED[6000000185827,66476100549959] naturalN=CLOSED[690988,2299999] y=0 FULL_CLOSED_POLYDISC
+RIGHT_WALLS ALL_INTERNAL terminal2300000=EXCLUDED CLOSED729_SEAM
+RAW_MODULUS_STRICT 1/100 REAL_HERMITIAN_SURPLUS 22375198391999/32000000000000000
+RH_LOCAL NONE eventual_PT2021 3000175332800 INITIAL6000000185827/2 MARGIN350479773/2
+SCOPE external774_ONLY no_phase_reaudit no_allindex782_audit no_final_composition no_new_Lambda no_official_attestation
+FACT_TEXT FOUNDATION. EXTERNAL_GRAM_SPATIAL_RECOVERY_AUDIT, snapshot791: zero-producer-code EXTERNAL proof, quantifier and COMPLETE numerical audit of EXACT memory774 GRAM_SPATIAL_RECOVERY. AUDIT.md independently proves its universal recovering bound for every finite closed-polydisc stable core and strict weighted-Gram family with positive normalized weights INCLUDING the synthetic fibre, every inward contraction s>=0 and every closed rough multiplier; the sufficient expression, not a physical infimum, increases strictly when a nonunit rough fibre exists. Own multiplicatively factored Arb384 reconstruction reproduces ALL690988 raw56-bit cells,157940 weight56-bit cells INCLUDING synthetic, and ALL224 complete positive100-bit bins against BOTH accepted774 lines. Independent Acb entire quadrature and iv110 exact-Machin/symmetric-double-series arithmetic with the ENTIRE tail re-evaluate ALL14 original leaves,13 failed parents,8 original point controls and277 original scalar slots; SAME production functions reproduce DISTINCT745 aligned,767 head and729 far-seam anchors. The unique minimum sufficient leaf[1897746,2098872] reproduces FLOOR12 0.011185589489,CEIL12 0.011185589490>1/100, NOT the torus infimum. Confirms774's EXACT rectangle: EVERY t in CLOSED[4/25,3/16], x in CLOSED[6000000185827,66476100549959], its NATURAL RIGHT N in CLOSED[690988,2299999],y=0 and EVERY full-prime CLOSED-polydisc point has COMPLETE raw |A_N|>1/100; banked738/754 therefore excludes true multiple REAL zeros. ALL1609011 possible entrants are paid BEFORE744/754 fixed-cutoff forward heat; EVERY internal RIGHT wall and CLOSED729 seam is retained, terminal2300000 EXCLUDED. Complete event/ownership coverage, normalized-support algebra, six attained formula countermodels and25 active rejection controls pass; no load-bearing discrepancy found. Source767's phase proof is CONSUMED, externally audited789, not re-claimed; shared standard Arb infrastructure and the secondary's authenticated rounded-bin inputs are disclosed. Rung(a) anchors and rung(b) external recovery audit requested. No782/788 continuation or786/791 final-composition audit, source-phase search, official attestation, physical COVER export, candidate, new tail or Lambda bound. RH-free locally; eventual initialization remains solely PT2021 T=3000175332800 at INITIAL6000000185827/2,margin350479773/2,anchorV1-H-213. Check: /usr/bin/python3 -B check.py.
+RESULT: ALL PASS 1701309

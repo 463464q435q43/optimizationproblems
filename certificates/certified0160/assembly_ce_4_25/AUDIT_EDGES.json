@@ -1,0 +1,49 @@
+{
+  "edges": [
+    {
+      "audit": 789,
+      "audit_fact_sha256": "b4839073a9061532ceb79aa5ee334a5cd42b0d554e4094d23c59b8ff75c3acbc",
+      "external_proof": "frozen/external789_AUDIT.txt",
+      "external_summary": "frozen/external789_SUMMARY.json",
+      "obligations": [
+        "source_singleton_4/25_X690988_y0",
+        "all_prime_torus",
+        "complete_weighted_Gram",
+        "synthetic_delta_1/10",
+        "positive_normalized_weights",
+        "all_inverse_products",
+        "complete_discarded_Fourier_l1",
+        "all_3524_closed_leaves"
+      ],
+      "target": 767,
+      "target_fact_sha256": "97d78eb2f4a973142a0f82f10a3b40a195f64df21f3a42264a187542f8b885ec",
+      "target_proof_sha256": "026b89ecc2fe2e42ef5dc62c513c01b567da609f4f73f7a6b7f6d8528022d806"
+    },
+    {
+      "audit": 795,
+      "audit_fact_sha256": "9191507992e4b7d69ade77732a3d55fd2de8e0fe1ee5b0ff8f1a43c3600fdc74",
+      "external_proof": "frozen/external795_AUDIT.txt",
+      "external_summary": "frozen/external795_SUMMARY.json",
+      "obligations": [
+        "exact_pinned_manuscript",
+        "all_consumed_bank_statements",
+        "three_closed_boxes_no_gaps_or_excess",
+        "all_axes_t_N_y",
+        "positive_time_general_interior",
+        "uniform_ALL_complex_stall_tail",
+        "initial_PT2021_only",
+        "anchor_V1-H-213",
+        "strict_stall_contradiction"
+      ],
+      "target": 786,
+      "target_fact_sha256": "076bc7325cb326fdcf31fe5939a42f22d579190a56b40748ff5b7a9fa22c4aa3",
+      "target_proof_sha256": "a6c620eb9ffd110b641982129b1173bc4c7aa4262afc2f12ab08a2451f81773c"
+    }
+  ],
+  "live_only_roles": [
+    "recovery774"
+  ],
+  "open_owners": {},
+  "scope": "Accepted edges789->767 and795->786 only. Recovery774 is never admitted by a pending/uncaptured acceptance; its complete independent proof is executed LIVE under the new constructive contract.",
+  "snapshot": 796
+}
